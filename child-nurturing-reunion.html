@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Child Nurturing & Culture | Enjuba Ya Kasangati</title>
     
-    <meta property="og:title" content="Nurturing the Next Generation: The Fumbe Clan Reunion">
-    <meta property="og:description" content="Sammy Serwadda reports on how elders are using family reunions to teach culture and unity.">
-    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/reunion.jpg">
-
     <style>
-        :root { --red: #d32f2f; --blue: #1976d2; --white: #ffffff; --light-gray: #f4f4f4; --text: #333; }
+        :root { --red: #d32f2f; --blue: #1976d2; --green: #388e3c; --white: #ffffff; --light-gray: #f4f4f4; --text: #333; }
         [data-theme="dark"] { --light-gray: #121212; --white: #1e1e1e; --text: #e0e0e0; }
         
         body { font-family: 'Georgia', serif; line-height: 1.8; margin: 0; background: var(--light-gray); color: var(--text); }
@@ -21,19 +17,24 @@
             display: flex; justify-content: space-between; align-items: center; z-index: 100; 
         }
 
-        article { max-width: 800px; margin: 100px auto 40px; background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        article { max-width: 800px; margin: 100px auto 20px; background: var(--white); padding: 40px; border-radius: 8px; }
         
-        .category-tag { background: var(--green); color: white; padding: 4px 12px; font-family: sans-serif; font-size: 0.8rem; border-radius: 20px; font-weight: bold; }
-        h1 { font-size: 2.6rem; line-height: 1.2; margin: 15px 0; color: var(--dark); }
         .byline { font-family: sans-serif; color: #666; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 25px; }
-        
         .main-img { width: 100%; border-radius: 8px; margin-bottom: 25px; }
         .content p { margin-bottom: 22px; font-size: 1.2rem; }
-        
-        .culture-highlight { background: #fff9e6; border-left: 5px solid #ffcc00; padding: 20px; margin: 25px 0; font-style: italic; }
-        [data-theme="dark"] .culture-highlight { background: #2c2614; border-left-color: #ffcc00; color: #eee; }
 
-        .share-box { text-align: center; padding: 30px 0; border-top: 1px solid #eee; }
+        /* Navigation Grid */
+        .next-steps { max-width: 800px; margin: 20px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .nav-card { text-decoration: none; background: var(--white); padding: 20px; border-radius: 12px; border: 1px solid #ddd; display: block; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .nav-card:hover { border-color: var(--blue); transform: translateY(-3px); }
+        .nav-card h4 { margin: 5px 0; color: var(--text); font-family: sans-serif; }
+        
+        /* Ward Quick-Jump */
+        .ward-jump { max-width: 800px; margin: 40px auto; background: #eee; padding: 20px; text-align: center; border-radius: 12px; font-family: sans-serif; }
+        [data-theme="dark"] .ward-jump { background: #222; }
+        .ward-jump a { margin: 0 8px; color: var(--blue); text-decoration: none; font-size: 0.9rem; font-weight: bold; }
+
+        .share-box { text-align: center; padding: 30px 0; border-top: 1px solid #eee; margin-top: 20px;}
         .wa-btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; font-family: sans-serif; display: inline-block; }
 
         footer { background: #1a1a1a; color: white; text-align: center; padding: 30px; font-family: sans-serif; }
@@ -43,12 +44,12 @@
 <body>
 
     <header>
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back-link">← Back to News</a>
         <button onclick="document.body.toggleAttribute('data-theme')" style="cursor:pointer; background:none; border:1px solid #ccc; padding:5px 10px; border-radius:5px;">🌓 Mode</button>
     </header>
 
     <article>
-        <span class="category-tag">CULTURE & FAMILY</span>
+        <small style="color: var(--green); font-family: sans-serif; font-weight: bold;">CULTURE & FAMILY</small>
         <h1>Nurturing the Next Generation: Lessons from the Fumbe Clan Reunion</h1>
         
         <div class="byline">
@@ -60,25 +61,32 @@
 
         <div class="content">
             <p><strong>KASANGATI —</strong> As the long school holiday comes to a close, the question of how we nurture our children beyond the classroom has never been more vital. I recently had the privilege of attending a family reunion for the <strong>Fumbe Clan</strong>, where I witnessed a masterclass in community building and cultural preservation.</p>
-
-            <p>The family elders organized the day with a clear, strategic intention: to create an annual gathering where members from different families can reunite, share life updates, and introduce the newest members of the clan.</p>
-
-            <div class="culture-highlight">
-                "It was more than a party; it was a classroom without walls."
-            </div>
-
-            <p>The heart of the day was centered on teaching the young ones the beauty of <strong>Baganda culture</strong>. Children were guided on how to prepare traditional meals, the correct way to dress in cultural outfits, and the essential values of relating with their cousins and extended relatives.</p>
-
-            <p>The air was filled with the sounds of the <strong>Kiganda dance</strong> as the youth were inspired to embrace their roots. After a magnificent feast featuring a 'tribe' of local foods and drinks, the atmosphere shifted to high-energy games. From <em>Tug of War</em> to the focused challenge of <em>water bottle carrying</em> using only plates and threads, the joy was infectious.</p>
-
-            <p>For us at Enjuba Ya Kasangati, this event embodies the "Kingdom mindset"—seeing families come together to ensure the next generation is inspired to love their culture and stay connected. It is through these strong family bonds that we will develop a strategically thriving community.</p>
+            <p>The elders organized the day to ensure members from different families can reunite, share life updates, and teach the young ones the beauty of <strong>Baganda culture</strong>—from preparing traditional meals to the Kiganda dance.</p>
+            <p>It was fun seeing how the young ones are inspired to love their culture and to come together as families of the Fumbe clan. We are on ground to see our community thrive.</p>
         </div>
 
         <div class="share-box">
-            <p>Share this inspiring story with your family:</p>
-            <a href="https://wa.me/?text=Read this inspiring story by Sammy Serwadda on Enjuba Ya Kasangati: [YOUR-LINK-HERE]" class="wa-btn">Share on WhatsApp</a>
+            <p>Share this story with your family:</p>
+            <a href="https://wa.me/?text=Read this inspiring story by Sammy Serwadda on Enjuba Ya Kasangati: https://gayazab.github.io/EnjubaYaKasangati/child-nurturing-reunion.html" class="wa-btn">Share on WhatsApp</a>
         </div>
     </article>
+
+    <section class="next-steps">
+        <a href="index.html#news" class="nav-card">
+            <small style="color: var(--red); font-weight: bold;">EXPLORE</small>
+            <h4>More Local News</h4>
+        </a>
+        <a href="index.html#sports" class="nav-card" style="text-align: right;">
+            <small style="color: var(--blue); font-weight: bold;">UPDATES</small>
+            <h4>Sports & Events</h4>
+        </a>
+    </section>
+
+    <div class="ward-jump">
+        <h4 style="margin-top: 0;">News from your Ward:</h4>
+        <a href="index.html">Gayaza</a> | <a href="index.html">Kiteezi</a> | <a href="index.html">Masooli</a> | 
+        <a href="index.html">Wampewo</a> | <a href="index.html">Nangabo</a>
+    </div>
 
     <footer>
         <p><strong>Enjuba Ya Kasangati</strong></p>
