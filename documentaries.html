@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentary Hub | Enjuba Ya Kasangati</title>
+    <style>
+        :root { --red: #d32f2f; --white: #ffffff; --light-gray: #f4f4f4; --dark: #1a1a1a; --text: #333; }
+        [data-theme="dark"] { --light-gray: #121212; --white: #1e1e1e; --text: #e0e0e0; }
+        
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light-gray); color: var(--text); }
+        
+        header { 
+            position: fixed; top: 0; width: 100%; background: var(--white); 
+            padding: 15px 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            display: flex; justify-content: space-between; align-items: center; z-index: 100; 
+        }
+
+        main { max-width: 1100px; margin: 100px auto 40px; padding: 0 20px; }
+        
+        .hub-header { text-align: center; margin-bottom: 40px; }
+        .hub-header h1 { font-size: 2.5rem; color: var(--red); margin-bottom: 10px; }
+
+        /* Video Gallery Grid */
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        
+        .video-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: 0.3s; }
+        .video-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+        
+        .thumb-container { position: relative; width: 100%; height: 180px; background: #000; }
+        .thumb-container img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; }
+        .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: white; opacity: 0.9; }
+
+        .video-info { padding: 20px; }
+        .video-info h3 { margin: 0 0 10px; font-size: 1.2rem; line-height: 1.4; }
+        .video-info p { font-size: 0.9rem; color: #666; margin: 0; }
+
+        .yt-subscribe-bar { background: var(--red); color: white; padding: 20px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        .yt-subscribe-bar a { background: white; color: var(--red); padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 40px; margin-top: 60px; }
+        .back-link { text-decoration: none; color: var(--red); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-link">← Back to News</a>
+        <button onclick="document.body.toggleAttribute('data-theme')" style="cursor:pointer; background:none; border:1px solid #ccc; padding:5px 10px; border-radius:5px;">🌓 Mode</button>
+    </header>
+
+    <main>
+        <div class="hub-header">
+            <h1>Enjuba Media Hub</h1>
+            <p>On-ground documentaries, podcasts, and community interviews.</p>
+        </div>
+
+        <div class="yt-subscribe-bar">
+            <span>Get notified when Part 2 is released!</span>
+            <a href="https://www.youtube.com/@EnjubayaKasangati?sub_confirmation=1" target="_blank">SUBSCRIBE</a>
+        </div>
+
+        <div class="video-grid">
+            <a href="mayor-documentary.html" class="video-card">
+                <div class="thumb-container">
+                    <img src="mayor-thumb.jpg" alt="Mayor Muwonge Part 1">
+                    <span class="play-icon">▶</span>
+                </div>
+                <div class="video-info">
+                    <h3>Mayor Muwonge Tom Documentary (Part 1)</h3>
+                    <p>Achievements in education, sports, and the garbage management crisis.</p>
+                </div>
+            </a>
+
+            <div class="video-card" style="opacity: 0.6; cursor: not-allowed;">
+                <div class="thumb-container">
+                    <div style="height:100%; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">COMING SOON</div>
+                </div>
+                <div class="video-info">
+                    <h3>Mayor Muwonge Tom Documentary (Part 2)</h3>
+                    <p>The roadmap for 2026/31 and recommendations for the future.</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Enjuba Ya Kasangati | 0702 97 20 20</p>
+    </footer>
+
+</body>
+</html>
