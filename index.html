@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Enjuba Ya Kasangati | We are on ground</title>
+    <meta name="description" content="Community news for the nine wards of Kasangati Town Council. Bringing light to Gayaza, Kiteezi, and beyond.">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
+    <meta property="og:title" content="Enjuba Ya Kasangati - We are on ground">
+    <meta property="og:description" content="Local news, sports, and culture from Kasangati.">
+    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/fav.png">
+
+    <style>
+        :root {
+            --red: #d32f2f; --blue: #1976d2; --green: #388e3c;
+            --white: #ffffff; --dark: #1a1a1a; --light-gray: #f4f4f4; --text: #333;
+        }
+        [data-theme="dark"] {
+            --light-gray: #121212; --white: #1e1e1e; --text: #e0e0e0;
+        }
+
+        * { box-sizing: border-box; transition: 0.3s ease; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: var(--light-gray); color: var(--text); line-height: 1.6; }
+
+        /* Navigation */
+        header {
+            position: fixed; top: 0; width: 100%; height: 70px;
+            background: var(--white); display: flex; justify-content: space-between; align-items: center;
+            padding: 0 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1001;
+        }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-area img { height: 50px; border-radius: 5px; }
+        .logo-area h1 { font-size: 1.2rem; color: var(--red); margin: 0; letter-spacing: -0.5px; }
+
+        nav a { margin-left: 18px; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem; }
+        .theme-btn { cursor: pointer; background: none; border: 1px solid #ccc; padding: 5px 10px; border-radius: 20px; }
+
+        /* Breaking News Ticker */
+        .ticker-wrapper {
+            position: fixed; top: 70px; width: 100%; height: 38px;
+            background: var(--dark); color: white; display: flex; align-items: center; overflow: hidden; z-index: 1000;
+        }
+        .ticker-label { background: var(--red); padding: 0 20px; height: 100%; display: flex; align-items: center; font-weight: bold; font-size: 0.8rem; z-index: 2; box-shadow: 5px 0 15px rgba(0,0,0,0.3); }
+        .ticker-text-move { display: inline-block; white-space: nowrap; padding-left: 100%; animation: scrollText 30s linear infinite; }
+        @keyframes scrollText { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+        /* Layout */
+        main { margin-top: 130px; padding: 0 5%; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        
+        /* Modern Cards */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 20px 0; }
+        .card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+        
+        .card-img-wrap { width: 100%; height: 200px; overflow: hidden; position: relative; }
+        .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .card:hover .card-img-wrap img { transform: scale(1.1); }
+        .card-badge { position: absolute; top: 15px; left: 15px; background: var(--blue); color: white; padding: 4px 10px; font-size: 0.7rem; border-radius: 4px; font-weight: bold; }
+
+        .card-body { padding: 20px; flex-grow: 1; }
+        .card-body h3 { margin: 0 0 10px; font-size: 1.25rem; line-height: 1.3; }
+        .card-footer { padding: 15px 20px; border-top: 1px solid #eee; font-size: 0.8rem; color: #888; display: flex; justify-content: space-between; }
+
+        /* Ads */
+        .ad-banner { background: #fffde7; border: 2px dashed #fbc02d; padding: 20px; text-align: center; border-radius: 10px; margin: 30px 0; }
+        [data-theme="dark"] .ad-banner { background: #222; border-color: #444; }
+
+        /* About Section */
+        .about-section { background: var(--white); padding: 30px; border-radius: 15px; margin: 40px 0; border-left: 6px solid var(--green); }
+        .ward-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
+
+        /* Contact Tip Form */
+        .tip-form { background: #e8f5e9; padding: 30px; border-radius: 15px; margin: 40px 0; }
+        [data-theme="dark"] .tip-form { background: #1b2e1c; }
+        .tip-form input, .tip-form textarea { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc; }
+        .wa-btn { background: #25d366; color: white; border: none; padding: 15px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; }
+
+        /* Archive/Older Articles */
+        .archive-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 50px; }
+        .archive-item { display: flex; gap: 15px; background: var(--white); padding: 10px; border-radius: 10px; text-decoration: none; color: inherit; align-items: center; }
+        .archive-item img { width: 70px; height: 70px; border-radius: 8px; object-fit: cover; }
+
+        .section-title { font-size: 1.5rem; color: var(--text); border-left: 5px solid var(--red); padding-left: 15px; margin-bottom: 20px; }
+
+        footer { background: var(--dark); color: white; padding: 50px 5%; text-align: center; }
+
+        @media (max-width: 768px) { .ward-list { grid-template-columns: 1fr 1fr; } .logo-area h1 { font-size: 1rem; } nav { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="logo.png" alt="Enjuba Logo">
+            <div><h1>ENJUBA YA KASANGATI</h1><small style="color:var(--blue)">We are on ground</small></div>
+        </div>
+        <nav>
+            <a href="#news">News</a>
+            <a href="#about">About</a>
+            <button class="theme-btn" onclick="toggleTheme()">🌓</button>
+        </nav>
+    </header>
+
+    <div class="ticker-wrapper">
+        <div class="ticker-label">BREAKING</div>
+        <div class="ticker-text-move">
+            <span>☀️ Tuli Mu Kitundu Ku Lwe Kitundu...</span>
+            <span>☀️ Holidays are done, what have you achieved?...</span>
+            <span>☀️ Market prices: Matooke prices remain high in Gayaza...</span>
+        </div>
+    </div>
+
+    <main>
+        <div class="ad-banner">
+            <h3 style="margin:0; color:var(--blue)">ADVERTISE HERE</h3>
+            <p>Reach the people of Kasangati. Call 0702 97 20 20</p>
+        </div>
+
+        <h2 class="section-title" id="news">Latest News</h2>
+        <div class="news-grid">
+            <a href="child-nurturing-reunion.html" class="card">
+                <div class="card-img-wrap">
+                    <span class="badge" style="background:var(--green)">CULTURE</span>
+                    <img src="reunion.jpg" alt="Fumbe Reunion">
+                </div>
+                <div class="card-body">
+                    <h3>Lessons from the Fumbe Clan Reunion</h3>
+                    <p>Sammy Serwadda reports on child nurturing and cultural preservation during the holiday season...</p>
+                    <div class="card-footer"><span>By Sammy Serwadda</span><span>4 min read</span></div>
+                </div>
+            </a>
+            
+            <a href="#" class="card">
+                <div class="card-img-wrap">
+                    <span class="badge">COMMUNITY SPORTS</span>
+                    <img src="news2.jpg" alt="Roads">
+                </div>
+                <div class="card-body">
+                    <h3>Gayaza FC ready for the New Season?</h3>
+                    <p>Coach Derrick one of the managers of Gayaza Football Clubs narrates on how the team is getting ready for the 2026 FUFA 4th Division League</p>
+                    <div class="card-footer"><span>By Admin</span><span>2 min read</span></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="ad-banner" style="border-color: var(--green);">
+            <h4 style="margin:0; color:var(--green)">SPONSORED</h4>
+            <p>Affordable School Fees at JERO Junior School - Enrollment Open!</p>
+        </div>
+
+        <h2 class="section-title" id="about">Discover Our Community</h2>
+        <section class="about-section">
+            <p><strong>Enjuba ya Kasangati</strong> serves the nine wards of Kasangati Town Council. We are a Kingdom mindset team dedicated to community growth.</p>
+            <div class="ward-list">
+                <span>📍 Gayaza</span><span>📍 Bulamu</span><span>📍 Kabubbu</span>
+                <span>📍 Kiteezi</span><span>📍 Wattuba</span><span>📍 Nangabo</span>
+                <span>📍 Katadde</span><span>📍 Wampewo</span><span>📍 Masooli</span>
+            </div>
+        </section>
+
+        <section class="tip-form">
+            <h2>Send Us a News Tip</h2>
+            <p>See something happening on ground? Let us know!</p>
+            <input type="text" id="tipName" placeholder="Your Name (Optional)">
+            <textarea id="tipText" rows="3" placeholder="Describe what is happening..."></textarea>
+            <button class="wa-btn" onclick="sendTip()">Send to News Desk via WhatsApp</button>
+        </section>
+
+        <h2 class="section-title">In Case You Missed It</h2>
+        <div class="archive-list">
+            <a href="#" class="archive-item">
+                <img src="news3.jpg" alt="News">
+                <div><h4>Thanksgiving at Light Of The Nations</h4><small>Jan 12, 2026</small></div>
+            </a>
+            <a href="#" class="archive-item">
+                <img src="news1.jpg" alt="News">
+                <div><h4>Back To School Season</h4><small>Jan 10, 2026</small></div>
+		<div><p>Here is a shortlist of the schools you can choose from in Kasangati TC.....</p><small>Jan 10, 2026</small></div>
+            </a>
+            <a href="#" class="archive-item">
+                <img src="news5.jpg" alt="News">
+                <div><h4>Marriage, How the Waakos have moved 12 years</h4><small>Jan 05, 2026</small></div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Enjuba Ya Kasangati</h2>
+        <p>"We Are On Ground"</p>
+        <p><strong>0702 97 20 20</strong></p>
+        <div style="margin: 20px 0;">
+            <a href="#" style="color:white; margin:10px;">TikTok</a>
+            <a href="#" style="color:white; margin:10px;">YouTube</a>
+            <a href="#" style="color:white; margin:10px;">Facebook</a>
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Enjuba Media Group</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const b = document.body;
+            b.hasAttribute('data-theme') ? b.removeAttribute('data-theme') : b.setAttribute('data-theme', 'dark');
+        }
+
+        function sendTip() {
+            const name = document.getElementById('tipName').value || "Community Member";
+            const msg = document.getElementById('tipText').value;
+            if(!msg) return alert("Please type a message");
+            window.open(`https://wa.me/256702972020?text=News Tip from ${name}: ${msg}`);
+        }
+    </script>
+</body>
+</html>
