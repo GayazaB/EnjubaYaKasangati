@@ -130,6 +130,34 @@
     }
 }
 
+
+        /* FEATURED BADGE STYLES */
+.school-img-container {
+    position: relative; /* This is crucial for the badge placement */
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ffd700; /* Gold color */
+    color: #000;
+    padding: 5px 15px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Make featured cards stand out with a gold border */
+.school-card.featured {
+    border: 2px solid #ffd700;
+}
         /* THE CONNECTING INFO GRID */
         .details-grid {
             display: grid;
@@ -183,30 +211,36 @@
 
     <div class="ad-space">📢 FEATURED DEAL: Get 10% off School Uniforms at Kasangati Traders! Call 0702 97 20 20</div>
 
-    <div id="schoolList">
+   <div id="schoolList">
+    
+    <div class="school-card featured" data-area="gayaza">
         
-        <div class="school-card" data-area="gayaza">
-            <div class="school-img-container">
-                <img src="images/secondary-lab.jpg" alt="Science Lab" class="school-img">
-            </div>
-            <div class="school-info">
-                <h2 style="margin:0; color: var(--primary-blue);">Gayaza CU Secondary School Secondary School</h2>
-                <p class="motto">"Think Globally and Act Locally"</p>
-                <p>A top-tier secondary school offering both O and A-Level with a touch of excellency.</p>
-                
-                <div class="details-grid">
-                    <span>📍 <strong>Area:</strong> Gayaza Ward</span>
-                    <span>🏠 <strong>Type:</strong> Mixed Day and Boarding</span>
-                    <span>💰 <strong>Fees:</strong> 700k</span>
-                    <span>📞 <strong>Call:</strong> 0772 123 456</span>
-                </div>
+        <div class="school-img-container">
+            <div class="featured-badge">⭐ FEATURED</div>
+            
+            <img src="gacuss.jpg" alt="Gayaza CU SS" class="school-img">
+        </div>
 
-                <div class="btn-group">
-                    <a href="gacuss.html" class="btn-main">View Full Profile</a>
-                    <a href="https://wa.me/256772123456" class="btn-wa">WhatsApp</a>
-                </div>
+        <div class="school-info">
+            <h2 style="margin:0; color: var(--primary-blue);">Gayaza C.U. Secondary School</h2>
+            <p class="motto">"Think Globally and Act Locally"</p>
+            <p>A top-tier secondary school offering both O and A-Level with a touch of excellency.</p>
+            
+            <div class="details-grid">
+                <span>📍 <strong>Area:</strong> Gayaza Ward</span>
+                <span>🏠 <strong>Type:</strong> Mixed Day & Boarding</span>
+                <span>💰 <strong>Fees:</strong> 700k</span>
+                <span>📞 <strong>Call:</strong> 0772 123 456</span>
+            </div>
+
+            <div class="btn-group">
+                <a href="gacuss.html" class="btn-main">View Full Profile</a>
+                <a href="https://wa.me/256772123456" class="btn-wa">WhatsApp</a>
             </div>
         </div>
+    </div>
+
+</div>
 
         </div> 
 </div>
@@ -229,4 +263,5 @@
 </body>
 
 </html>
+
 
