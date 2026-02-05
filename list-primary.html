@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary Schools | Find A School Ug</title>
+    <style>
+        :root { --primary: #1976d2; --bg: #f4f7f6; --text: #333; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--bg); color: var(--text); }
+        
+        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo-font { font-weight: bold; color: var(--primary); text-decoration: none; font-size: 1.2rem; }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+
+        /* SEARCH BAR */
+        .filter-section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 40px; text-align: center; border-bottom: 5px solid var(--primary); }
+        .filter-section select { width: 100%; max-width: 400px; padding: 12px; border-radius: 8px; border: 2px solid #ddd; font-size: 1rem; margin-top: 10px; }
+
+        /* SCHOOL CARD */
+        .school-card { background: white; border-radius: 12px; overflow: hidden; display: flex; flex-wrap: wrap; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 8px solid var(--primary); }
+        .school-img { width: 250px; height: 250px; object-fit: cover; }
+        .school-info { padding: 25px; flex: 1; min-width: 300px; }
+        
+        .motto { font-style: italic; color: #666; font-size: 0.9rem; margin-top: -10px; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; font-size: 0.85rem; }
+        .tag { background: #e3f2fd; color: var(--primary); padding: 4px 10px; border-radius: 4px; font-weight: bold; }
+
+        .btn-group { display: flex; gap: 10px; margin-top: 20px; }
+        .btn-main { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        .btn-wa { background: #25d366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+        /* ADVERT SPACE */
+        .ad-space { background: #fff3e0; border: 2px dashed #ffb74d; padding: 20px; border-radius: 10px; text-align: center; margin: 30px 0; color: #e65100; font-weight: bold; }
+
+        @media (max-width: 768px) { .school-img { width: 100%; height: 200px; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="back-to-school.html" class="logo-font">← Find A School Ug</a>
+    <div style="font-size: 0.8rem; background: #eee; padding: 5px 10px; border-radius: 20px;">Primary Category</div>
+</header>
+
+<div class="container">
+    <section class="filter-section">
+        <h2 style="margin:0;">Select Your Preferred Area</h2>
+        <select id="areaSelector" onchange="filterSchools()">
+            <option value="all">📍 Show All Schools</option>
+            <optgroup label="The 9 Wards of Kasangati">
+                <option value="gayaza">Gayaza Ward</option>
+                <option value="kiteezi">Kiteezi Ward</option>
+                <option value="bulamu">Bulamu Ward</option>
+                <option value="wampewo">Wampewo Ward</option>
+                <option value="kabubbu">Kabubbu Ward</option>
+                <option value="nangabo">Nangabo Ward</option>
+                <option value="wattuba">Wattuba Ward</option>
+                <option value="kattade">Kattade Ward</option>
+                <option value="masooli">Masooli Ward</option>
+            </optgroup>
+            <optgroup label="Beyond Kasangati">
+                <option value="north">North of Kasangati</option>
+                <option value="east">East of Kasangati</option>
+                <option value="west">West of Kasangati</option>
+                <option value="kira">Kampala – Kira Area</option>
+                <option value="uganda">Rest of Uganda</option>
+            </optgroup>
+        </select>
+    </section>
+
+    <div class="ad-space">📢 ADVERTISE HERE: Call 0702 97 20 20 to feature your shop or school!</div>
+
+    <div id="schoolList">
+        
+        <div class="school-card" data-area="gayaza">
+            <img src="lgcc2.jpg" alt="LGCC" class="school-img">
+            <div class="school-info">
+                <h2 style="margin:0;">LGCC Gayaza</h2>
+                <p class="motto">"Excellence in Spirit and Truth"</p>
+                <p>A holistic primary school with a focus on moral values and modern learning facilities.</p>
+                
+                <div class="details-grid">
+                    <span>📍 <strong>Area:</strong> Gayaza Ward</span>
+                    <span>🏠 <strong>Type:</strong> Boarding & Day</span>
+                    <span>💰 <strong>Fees:</strong> 400k - 800k</span>
+                    <span>📞 <strong>Call:</strong> 0770 711 651</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="school-lgcc-gayaza.html" class="btn-main">View Full Profile</a>
+                    <a href="https://wa.me/256770711651" class="btn-wa">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card" data-area="kira" style="border-left-color: #6a1b9a;">
+            <img src="kirasch.jpg" alt="Kira School" class="school-img">
+            <div class="school-info">
+                <h2 style="margin:0; color: #6a1b9a;">Kira Excellence Academy</h2>
+                <p class="motto">"Leaders of Tomorrow"</p>
+                <p>Located in the Kampala-Kira area, we offer a specialized curriculum for talent discovery.</p>
+                
+                <div class="details-grid">
+                    <span>📍 <strong>Area:</strong> Kampala - Kira</span>
+                    <span>🏠 <strong>Type:</strong> Day Only</span>
+                    <span>💰 <strong>Fees:</strong> Above 1 Million</span>
+                    <span>📞 <strong>Call:</strong> 07XX XXX XXX</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="#" class="btn-main" style="background: #6a1b9a;">View Profile</a>
+                    <a href="#" class="btn-wa">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </div> </div> <script>
+    function filterSchools() {
+        let selection = document.getElementById('areaSelector').value;
+        let cards = document.querySelectorAll('.school-card');
+
+        cards.forEach(card => {
+            if (selection === 'all' || card.getAttribute('data-area') === selection) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

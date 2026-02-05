@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tertiary Institutions | Find A School Ug</title>
+    <style>
+        :root {
+            --tertiary-dark: #0f172a;
+            --cyber-blue: #0ea5e9;
+            --success-green: #10b981;
+            --soft-slate: #f1f5f9;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            margin: 0;
+            /* High-end Corporate Gradient */
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background-attachment: fixed;
+            color: #f8fafc;
+        }
+
+        /* HEADER */
+        header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-link { font-weight: bold; color: var(--cyber-blue); text-decoration: none; font-size: 1.2rem; }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+
+        /* TERTIARY FILTER SECTION */
+        .filter-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .filter-section h2 { margin-top: 0; color: var(--cyber-blue); }
+        .filter-section select {
+            width: 100%;
+            max-width: 450px;
+            padding: 12px;
+            border-radius: 10px;
+            background: var(--tertiary-dark);
+            color: white;
+            border: 1px solid var(--cyber-blue);
+            font-size: 1rem;
+        }
+
+        /* PREMIUM AD SPACE */
+        .ad-space {
+            background: rgba(14, 165, 233, 0.15);
+            border: 1px solid var(--cyber-blue);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--cyber-blue);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* COLLEGE CARD - GLASSMORPHISM STYLE */
+        .school-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            color: #1e293b;
+            border: none;
+        }
+
+        .school-img-container { width: 320px; }
+        .school-img { width: 100%; height: 100%; object-fit: cover; min-height: 280px; }
+        
+        .school-info { padding: 30px; flex: 1; min-width: 320px; }
+        
+        .category-badge {
+            background: var(--soft-slate);
+            color: var(--tertiary-dark);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .college-name { font-size: 1.6rem; margin: 15px 0 5px 0; color: var(--tertiary-dark); }
+
+        /* THE CONNECTING INFO GRID - MODERNIZED */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+            background: var(--soft-slate);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+        }
+        .details-grid strong { color: var(--tertiary-dark); }
+
+        .btn-group { display: flex; gap: 12px; margin-top: 25px; }
+        .btn-main { background: var(--tertiary-dark); color: white; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: bold; flex: 1; text-align: center; transition: 0.3s; }
+        .btn-wa { background: #25d366; color: white; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: bold; flex: 1; text-align: center; }
+
+        .btn-main:hover { background: var(--cyber-blue); }
+
+        @media (max-width: 768px) {
+            .school-img-container { width: 100%; height: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo-link">← Find A School Ug</a>
+    <div style="font-weight: bold; color: white;">Tertiary & Career</div>
+</header>
+
+<div class="container">
+    
+    <section class="filter-section">
+        <h2>Advance Your Career</h2>
+        <select id="areaSelector" onchange="filterSchools()">
+            <option value="all">📍 Show All Institutions</option>
+            <optgroup label="Kasangati Region">
+                <option value="gayaza">Gayaza Schools</option>
+                <option value="wattuba">Wattuba Areas</option>
+                <option value="kiteezi">Kiteezi Centers</option>
+            </optgroup>
+            <option value="kampala">Kampala Central</option>
+            <option value="upcountry">Rest of Uganda</option>
+        </select>
+    </section>
+
+    <div class="ad-space">🚀 ADVERTISE YOUR COLLEGE: Reach 5,000+ students monthly. WhatsApp 0702 97 20 20</div>
+
+    <div id="schoolList">
+        
+        <div class="school-card" data-area="gayaza">
+            <div class="school-img-container">
+                <img src="images/secondary-lab.jpg" alt="Nursing Students" class="school-img">
+            </div>
+            <div class="school-info">
+                <span class="category-badge">Medical & Health</span>
+                <h2 class="college-name">Victoria Institute of Nursing</h2>
+                <p style="margin: 0; color: #64748b;">"Healing Minds, Saving Lives"</p>
+                
+                <div class="details-grid">
+                    <span>📍 <strong>Location:</strong> Gayaza Ward</span>
+                    <span>🎓 <strong>Level:</strong> Diploma & Cert</span>
+                    <span>💰 <strong>Entry:</strong> S.4 or S.6</span>
+                    <span>📞 <strong>Registrar:</strong> 0700 111 222</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="college-victoria.html" class="btn-main">Course Details</a>
+                    <a href="https://wa.me/256700111222" class="btn-wa">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card" data-area="wattuba">
+            <div class="school-img-container">
+                <img src="images/ict-hub.jpg" alt="ICT Center" class="school-img">
+            </div>
+            <div class="school-info">
+                <span class="category-badge">Business & Tech</span>
+                <h2 class="college-name">Kasangati Tech Academy</h2>
+                <p style="margin: 0; color: #64748b;">"Innovation for Development"</p>
+                
+                <div class="details-grid">
+                    <span>📍 <strong>Location:</strong> Wattuba Ward</span>
+                    <span>🎓 <strong>Level:</strong> Short Courses</span>
+                    <span>💰 <strong>Fees:</strong> From 300k</span>
+                    <span>📞 <strong>Office:</strong> 0701 333 444</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="#" class="btn-main">View Courses</a>
+                    <a href="https://wa.me/256701333444" class="btn-wa">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+</div>
+
+<script>
+    function filterSchools() {
+        let selection = document.getElementById('areaSelector').value;
+        let cards = document.querySelectorAll('.school-card');
+
+        cards.forEach(card => {
+            if (selection === 'all' || card.getAttribute('data-area') === selection) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

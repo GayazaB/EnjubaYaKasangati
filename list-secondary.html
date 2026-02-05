@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secondary Schools | Find A School Ug</title>
+    <style>
+        :root {
+            --primary-blue: #1a237e;
+            --accent-gold: #ffd700;
+            --whatsapp-green: #25d366;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            /* Improved Attractive Gradient */
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo-link { font-weight: bold; color: var(--primary-blue); text-decoration: none; font-size: 1.2rem; }
+
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+
+        /* IMPROVED FILTER SECTION */
+        .filter-section {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-blue);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        .filter-section select {
+            width: 100%;
+            max-width: 450px;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #cbd5e1;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        /* ADVERT SPACE */
+        .ad-space {
+            background: linear-gradient(to right, #fff3e0, #ffecb3);
+            border: 2px dashed #ffb74d;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #e65100;
+            font-weight: bold;
+        }
+
+        /* SCHOOL CARD - THE DRESSED UP LOOK */
+        .school-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .school-card:hover { transform: translateY(-5px); }
+
+        .school-img-container { width: 300px; position: relative; }
+        .school-img { width: 100%; height: 100%; object-fit: cover; min-height: 250px; }
+        
+        .school-info { padding: 30px; flex: 1; min-width: 320px; }
+        
+        .motto { font-style: italic; color: #64748b; font-size: 0.95rem; margin-top: -5px; margin-bottom: 15px; }
+
+        /* THE CONNECTING INFO GRID */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+        .details-grid span { display: flex; align-items: center; gap: 8px; }
+
+        .btn-group { display: flex; gap: 12px; margin-top: 25px; }
+        .btn-main { background: var(--primary-blue); color: white; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; flex: 1; text-align: center; }
+        .btn-wa { background: var(--whatsapp-green); color: white; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; flex: 1; text-align: center; }
+
+        @media (max-width: 768px) {
+            .school-img-container { width: 100%; height: 200px; }
+            .details-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo-link">← Find A School Ug</a>
+    <div style="font-weight: bold; color: var(--primary-blue);">Secondary Category</div>
+</header>
+
+<div class="container">
+    
+    <section class="filter-section">
+        <h2 style="margin-bottom: 15px; color: var(--primary-blue);">Find Schools in Your Neighborhood</h2>
+        <select id="areaSelector" onchange="filterSchools()">
+            <option value="all">📍 Show All Secondary Schools</option>
+            <optgroup label="The 9 Wards of Kasangati">
+                <option value="gayaza">Gayaza Ward</option>
+                <option value="kiteezi">Kiteezi Ward</option>
+                <option value="bulamu">Bulamu Ward</option>
+                <option value="wampewo">Wampewo Ward</option>
+                <option value="kabubbu">Kabubbu Ward</option>
+                <option value="nangabo">Nangabo Ward</option>
+                <option value="wattuba">Wattuba Ward</option>
+                <option value="kattade">Kattade Ward</option>
+                <option value="masooli">Masooli Ward</option>
+            </optgroup>
+            <option value="uganda">Outside Kasangati / Boarding Only</option>
+        </select>
+    </section>
+
+    <div class="ad-space">📢 FEATURED DEAL: Get 10% off School Uniforms at Kasangati Traders! Call 0702 97 20 20</div>
+
+    <div id="schoolList">
+        
+        <div class="school-card" data-area="gayaza">
+            <div class="school-img-container">
+                <img src="images/secondary-lab.jpg" alt="Science Lab" class="school-img">
+            </div>
+            <div class="school-info">
+                <h2 style="margin:0; color: var(--primary-blue);">St. Kizito Secondary School</h2>
+                <p class="motto">"Knowledge is Power"</p>
+                <p>A top-tier secondary school offering both O and A-Level with a specialized science wing.</p>
+                
+                <div class="details-grid">
+                    <span>📍 <strong>Area:</strong> Gayaza Ward</span>
+                    <span>🏠 <strong>Type:</strong> Mixed Boarding</span>
+                    <span>💰 <strong>Fees:</strong> 700k - 1.2M</span>
+                    <span>📞 <strong>Call:</strong> 0772 123 456</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="profile-st-kizito.html" class="btn-main">View Full Profile</a>
+                    <a href="https://wa.me/256772123456" class="btn-wa">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        </div> 
+</div>
+
+<script>
+    function filterSchools() {
+        let selection = document.getElementById('areaSelector').value;
+        let cards = document.querySelectorAll('.school-card');
+
+        cards.forEach(card => {
+            if (selection === 'all' || card.getAttribute('data-area') === selection) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

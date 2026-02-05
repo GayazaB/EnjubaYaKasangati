@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindergartens & Daycare | Find A School Ug</title>
+    <style>
+        :root {
+            --nursery-green: #4caf50;
+            --nursery-yellow: #ffeb3b;
+            --nursery-orange: #ff9800;
+            --soft-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif; /* Playful font for kids */
+            margin: 0;
+            /* Warm, playful gradient background */
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2f1 100%);
+            background-attachment: fixed;
+            color: #2e7d32;
+        }
+
+        /* HEADER */
+        header {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 5px solid var(--nursery-yellow);
+        }
+        .logo-link { font-weight: bold; color: var(--nursery-green); text-decoration: none; font-size: 1.2rem; }
+
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+
+        /* NURSERY FILTER SECTION */
+        .filter-section {
+            background: white;
+            padding: 25px;
+            border-radius: 30px; /* More rounded for a kid-friendly look */
+            margin-bottom: 30px;
+            text-align: center;
+            border: 3px dashed var(--nursery-green);
+        }
+        .filter-section h2 { margin-top: 0; color: var(--nursery-orange); }
+        .filter-section select {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            border-radius: 15px;
+            border: 2px solid var(--nursery-green);
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* PLAYFUL AD SPACE */
+        .ad-space {
+            background: #fff9c4;
+            border: 2px solid var(--nursery-orange);
+            padding: 15px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #e65100;
+            font-weight: bold;
+        }
+
+        /* KINDERGARTEN CARD */
+        .school-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border: 1px solid #c8e6c9;
+        }
+
+        .school-img-container { width: 280px; }
+        .school-img { width: 100%; height: 100%; object-fit: cover; min-height: 240px; }
+        
+        .school-info { padding: 25px; flex: 1; min-width: 300px; }
+        
+        .age-tag {
+            background: #e8f5e9;
+            color: var(--nursery-green);
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .school-name { font-size: 1.5rem; margin: 15px 0 5px 0; color: #1b5e20; }
+        .motto { font-style: italic; color: #757575; font-size: 0.9rem; margin-bottom: 15px; }
+
+        /* THE CONNECTING INFO GRID - KID THEMED */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 15px 0;
+            background: #f1f8e9;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #333;
+        }
+
+        .btn-group { display: flex; gap: 10px; margin-top: 20px; }
+        .btn-main { background: var(--nursery-orange); color: white; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: bold; flex: 1; text-align: center; }
+        .btn-wa { background: #25d366; color: white; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: bold; flex: 1; text-align: center; }
+
+        @media (max-width: 768px) {
+            .school-img-container { width: 100%; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo-link">← Find A School Ug</a>
+    <div style="font-weight: bold; color: var(--nursery-green);">Baby & Nursery Section</div>
+</header>
+
+<div class="container">
+    
+    <section class="filter-section">
+        <h2>Find the Best Start for Your Child</h2>
+        <select id="areaSelector" onchange="filterSchools()">
+            <option value="all">📍 Show All Kindergartens</option>
+            <optgroup label="Kasangati Wards">
+                <option value="gayaza">Gayaza Ward</option>
+                <option value="bulamu">Bulamu Ward</option>
+                <option value="wampewo">Wampewo Ward</option>
+            </optgroup>
+            <option value="kiteezi">Kiteezi Area</option>
+        </select>
+    </section>
+
+    <div class="ad-space">🎨 BABY SHOP SPECIAL: Diapers and Toys at 20% off in Gayaza Market! Call 0702 97 20 20</div>
+
+    <div id="schoolList">
+        
+        <div class="school-card" data-area="gayaza">
+            <div class="school-img-container">
+                <img src="images/kindergarten-play.jpg" alt="Play Area" class="school-img">
+            </div>
+            <div class="school-info">
+                <span class="age-tag">Ages 2 - 6 Years</span>
+                <h2 class="school-name">Little Lambs Kindergarten</h2>
+                <p class="motto">"Small Steps, Big Dreams"</p>
+                
+                <div class="details-grid">
+                    <span>📍 <strong>Area:</strong> Gayaza Ward</span>
+                    <span>🚌 <strong>Transport:</strong> Van Available</span>
+                    <span>🥣 <strong>Meals:</strong> Breakfast & Lunch</span>
+                    <span>📞 <strong>Call:</strong> 0770 000 111</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="#" class="btn-main">Visit School</a>
+                    <a href="https://wa.me/256770000111" class="btn-wa">WhatsApp Mom</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card" data-area="bulamu">
+            <div class="school-img-container">
+                <img src="images/kindergarten-learning.jpg" alt="Classroom" class="school-img">
+            </div>
+            <div class="school-info">
+                <span class="age-tag">Ages 3 - 6 Years</span>
+                <h2 class="school-name">Bright Kids Nursery</h2>
+                <p class="motto">"Where Learning is Fun"</p>
+                
+                <div class="details-grid">
+                    <span>📍 <strong>Area:</strong> Bulamu Ward</span>
+                    <span>🏠 <strong>Type:</strong> Day Only</span>
+                    <span>💰 <strong>Fees:</strong> Affordable</span>
+                    <span>📞 <strong>Call:</strong> 0701 222 333</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="#" class="btn-main">View Photos</a>
+                    <a href="https://wa.me/256701222333" class="btn-wa">WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card" data-area="wampewo">
+            <div class="school-img-container">
+                <img src="images/kindergarten-outdoor.jpg" alt="Outdoor" class="school-img">
+            </div>
+            <div class="school-info">
+                <span class="age-tag">6 Months - 4 Years</span>
+                <h2 class="school-name">Home-Away Daycare</h2>
+                <p class="motto">"Your Child's Second Home"</p>
+                
+                <div class="details-grid">
+                    <span>📍 <strong>Area:</strong> Wampewo Ward</span>
+                    <span>⏰ <strong>Hours:</strong> 7am - 6pm</span>
+                    <span>🚼 <strong>Care:</strong> Potty Training</span>
+                    <span>📞 <strong>Call:</strong> 0755 444 555</span>
+                </div>
+
+                <div class="btn-group">
+                    <a href="#" class="btn-main">See Daycare</a>
+                    <a href="https://wa.me/256755444555" class="btn-wa">Chat Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div> 
+</div>
+
+<script>
+    function filterSchools() {
+        let selection = document.getElementById('areaSelector').value;
+        let cards = document.querySelectorAll('.school-card');
+        cards.forEach(card => {
+            if (selection === 'all' || card.getAttribute('data-area') === selection) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gayaza C.O.U. SS - Profile | Find A School Ug</title>
+    <style>
+        :root { 
+            --cou-green: #2e7d32; /* O-Level Green */
+            --cou-navy: #1a237e;  /* A-Level Navy */
+            --cou-white: #ffffff;
+            --text: #333; 
+        }
+        
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; line-height: 1.6; color: var(--text); background-color: #f9f9f9; }
+        
+        header { 
+            background: white; 
+            padding: 10px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            position: sticky; 
+            top:0; 
+            z-index:100; 
+        }
+
+        .logo-box { display: flex; align-items: center; gap: 15px; }
+        .school-crest { 
+            width: 50px; height: 50px; 
+            background: linear-gradient(to bottom, var(--cou-green) 50%, var(--cou-navy) 50%); 
+            border-radius: 8px; color: white; 
+            display: flex; align-items: center; justify-content: center; 
+            font-weight: bold; font-size: 0.8rem; text-align: center;
+        }
+        
+        /* HERO SECTION with Green & Navy Gradient Overlay */
+        .hero { 
+            height: 350px; 
+            background: linear-gradient(45deg, rgba(46, 125, 50, 0.8), rgba(26, 35, 126, 0.8)), url('gacuss.jpg') center/cover; 
+            color: white; display: flex; align-items: center; justify-content: center; text-align: center; 
+        }
+        
+        .main-grid { max-width: 1100px; margin: -50px auto 40px; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; position: relative; }
+        
+        .info-content { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        /* Quick Facts Bar */
+        .quick-facts { 
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; 
+            margin-bottom: 25px; text-align: center; 
+        }
+        .fact-item { background: #f1f8e9; padding: 10px; border-radius: 8px; border-bottom: 3px solid var(--cou-green); }
+        .fact-item.alevel { background: #e8eaf6; border-bottom: 3px solid var(--cou-navy); }
+
+        .enroll-card { background: white; padding: 25px; border-radius: 12px; border-top: 5px solid var(--cou-navy); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; color: var(--cou-navy); }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        
+        .submit-btn { width: 100%; background: var(--cou-navy); color: white; padding: 14px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background: #000051; }
+        
+        .wa-btn { display: block; background: #25d366; color: white; text-align: center; padding: 14px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+
+        @media (max-width: 768px) { .main-grid { grid-template-columns: 1fr; margin-top: 20px; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-box">
+        <div class="school-crest">GCOU SS</div>
+        <h2 style="margin: 0; font-size: 1.2rem; color: var(--cou-navy);">Gayaza C.O.U. Secondary School</h2>
+    </div>
+    <nav><a href="list-secondary.html" style="text-decoration: none; color: var(--cou-green); font-weight: bold;">← Back to List</a></nav>
+</header>
+
+<div class="hero">
+    <div style="padding: 20px;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Gayaza Church of Uganda S.S.</h1>
+        <p style="font-size: 1.2rem; font-weight: 300;">"To God be the Glory"</p>
+    </div>
+</div>
+
+<div class="main-grid">
+    <div class="info-content">
+        <div class="quick-facts">
+            <div class="fact-item"><strong>O-Level</strong><br>Green & White</div>
+            <div class="fact-item alevel"><strong>A-Level</strong><br>Navy Blue</div>
+            <div class="fact-item"><strong>Center</strong><br>UNEB U00XX</div>
+        </div>
+
+        <h3>About the School</h3>
+        <p>Gayaza Church of Uganda Senior Secondary School is a government-aided Church-founded school located in the heart of Gayaza. We provide a balanced education that caters to both spiritual growth and academic excellence.</p>
+        
+        <h3>Academic Excellence</h3>
+        <p>Our school is renowned for strong performance in both Science and Arts subjects. We offer a wide range of vocational subjects alongside the standard UNEB curriculum, ensuring our students are ready for the modern workforce.</p>
+        
+        <div style="background: #f0f0f0; height: 350px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #666; border: 2px dashed #ccc;">
+            <p>🎥 [Virtual Tour: Gayaza C.O.U Campus]</p>
+            <p style="font-size: 0.8rem;">(Insert YouTube Embed Code Here)</p>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="enroll-card">
+            <h3 style="margin-top: 0; color: var(--cou-navy);">Admission Inquiry</h3>
+            <p style="font-size: 0.8rem; color: #666;">Apply now for S.1 or S.5 placements.</p>
+            
+            <form action="https://formspree.io/f/sammyemail@gmail.com" method="POST">
+                <div class="form-group">
+                    <label>Parent/Guardian Name</label>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" placeholder="07XX XXX XXX" required>
+                </div>
+                <div class="form-group">
+                    <label>Applying for Class</label>
+                    <select name="class" required>
+                        <option value="">Select Class</option>
+                        <option value="S1">Senior One (O-Level)</option>
+                        <option value="S2">Senior Two</option>
+                        <option value="S3">Senior Three</option>
+                        <option value="S4">Senior Four</option>
+                        <option value="S5">Senior Five (A-Level)</option>
+                        <option value="S6">Senior Six</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">SEND INQUIRY</button>
+            </form>
+
+            <a href="https://wa.me/2567XXXXXXX?text=Hello%20Gayaza%20COU%20SS,%20I%20am%20inquiring%20about%20admission%20for%20my%20child." class="wa-btn">
+                Chat with Bursar
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 20px; color: #888; font-size: 0.9rem;">
+    <p>&copy; 2026 Find A School Ug | Promoting Educational Excellence</p>
+</footer>
+
+</body>
+</html>

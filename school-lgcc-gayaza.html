@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGCC Gayaza - Profile | Find A School Ug</title>
+    <style>
+        :root { --school-blue: #0d47a1; --school-gold: #ffc107; --text: #333; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; line-height: 1.6; color: var(--text); }
+        
+        header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top:0; z-index:100; }
+        .logo-box { display: flex; align-items: center; gap: 10px; }
+        
+        .hero { height: 300px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('lgcc.jpg') center/cover; color: white; display: flex; align-items: center; justify-content: center; text-align: center; }
+        
+        .main-grid { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        
+        .enroll-card { background: #fdfdfd; padding: 25px; border-radius: 12px; border: 1px solid #eee; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+        .form-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        
+        .submit-btn { width: 100%; background: var(--school-blue); color: white; padding: 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        .wa-btn { display: block; background: #25d366; color: white; text-align: center; padding: 12px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 15px; }
+
+        @media (max-width: 768px) { .main-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-box">
+        <div style="width: 50px; height: 50px; background: var(--school-blue); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">LGCC</div>
+        <h2 style="margin: 0; font-size: 1.1rem;">LGCC GAYAZA</h2>
+    </div>
+    <nav><a href="back-to-school.html" style="text-decoration: none; color: var(--school-blue); font-weight: bold;">← Back</a></nav>
+</header>
+
+<div class="hero">
+    <div>
+        <h1>Welcome to LGCC Gayaza</h1>
+        <p>Providing Quality Education and Moral Integrity</p>
+    </div>
+</div>
+
+<div class="main-grid">
+    <div class="info-content">
+        <h3>About the School</h3>
+        <p>LGCC Gayaza is committed to developing well-rounded students who excel academically and socially. We focus on cultural protection, discipline, and modern skill development.</p>
+        
+        <div style="background: #000; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white;">
+            <p>[YouTube Video: Interview with Administrator]</p>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="enroll-card">
+            <h3 style="margin-top: 0;">Enrollment Inquiry</h3>
+            <p style="font-size: 0.8rem;">Sent directly to <strong>lgccgayaza@gmail.com</strong></p>
+            
+            <form action="https://formspree.io/f/lgccgayaza@gmail.com" method="POST">
+                <div class="form-group">
+                    <label>Parent Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Class for Child</label>
+                    <input type="text" name="class" required>
+                </div>
+                <button type="submit" class="submit-btn">SEND INQUIRY</button>
+            </form>
+
+            <a href="https://wa.me/256770711651?text=Hello LGCC Gayaza, I saw your school on Enjuba Ya Kasangati and I would like to inquire about admission." class="wa-btn">
+                Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
