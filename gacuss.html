@@ -43,19 +43,13 @@
         .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
         
         /* IMAGE ZOOM FEATURE STYLES */
-        .zoomable { transition: transform 0.3s ease, z-index 0s; cursor: pointer; position: relative; }
+        .zoomable { transition: transform 0.3s ease; cursor: pointer; position: relative; }
         .img-zoomed { 
-            transform: scale(1.5); 
+            transform: scale(1.1); 
             z-index: 1001; 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5) !important;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3) !important;
+            border: 3px solid var(--cou-gold) !important;
         }
-
-        /* HEADTEACHER SECTION */
-        .ht-section { 
-            display: flex; align-items: center; gap: 40px; background: white; padding: 30px; 
-            border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 50px; border-left: 8px solid var(--cou-green-dark);
-        }
-        .ht-img { width: 250px; height: 300px; object-fit: cover; border-radius: 15px; border: 4px solid var(--cou-gold); }
 
         /* SECTIONS & ROWS */
         .section-card { background: white; padding: 40px; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
@@ -71,15 +65,8 @@
         .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; transition: 0.3s; border: 2px solid transparent; }
         .gallery img:hover { border-color: var(--cou-gold); }
 
-        /* MODAL POPUP */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(13, 33, 13, 0.85); display: none; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(8px); }
-        .modal-content { background: white; width: 90%; max-width: 450px; padding: 35px; border-radius: 25px; position: relative; animation: slideUp 0.3s ease-out; border-top: 10px solid var(--cou-green-dark); }
-        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #94a3b8; }
-
         /* BUTTONS */
         .btn-apply { background: var(--cou-green-dark); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; transition: 0.3s; }
-        .btn-apply:hover { background: var(--cou-green-mid); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
 
         @media (max-width: 768px) { 
             .ht-section, .row, .row.reverse { flex-direction: column; text-align: center; }
@@ -93,11 +80,21 @@
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 6px 15px rgba(0,0,0,0.15); text-decoration: none;
         }
 
-        /* WhatsApp Button - Icon Zoomed */
-        #whatsappBtn { left: 25px; background-color: #25D366; font-size: 32px; } /* Increased from 20px to 32px */
+        /* WhatsApp Button - Large Icon */
+        #whatsappBtn { left: 25px; background-color: #25D366; font-size: 32px; }
 
         #playPauseBtn { left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #6e8efb, #a777e3); font-size: 20px; }
-        #backTopBtn { right: 25px; background-color: rgba(30, 30, 30, 0.85); backdrop-filter: blur(8px); opacity: 0; pointer-events: none; transform: translateY(20px); font-size: 20px; }
+
+        /* Back to Top - Forest Green Glass */
+        #backTopBtn { 
+            right: 25px; 
+            background-color: rgba(27, 94, 32, 0.85); 
+            backdrop-filter: blur(8px); 
+            opacity: 0; 
+            pointer-events: none; 
+            transform: translateY(20px); 
+            font-size: 20px; 
+        }
         #backTopBtn.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
         .float-btn:hover { filter: brightness(1.1); box-shadow: 0 10px 25px rgba(0,0,0,0.25); }
@@ -115,9 +112,9 @@
             <p style="margin: 0; font-size: 0.7rem; text-transform: uppercase; color: #64748b; font-weight: bold;">Think Globally & Act Locally</p>
         </div>
     </div>
-    <button onclick="toggleModal()" class="btn-apply">REGISTER TODAY!</button>
+    <button class="btn-apply" onclick="alert('Registration form coming soon!')">REGISTER TODAY!</button>
 </header>
-
+    
 <nav class="page-nav">
     <a href="#about">The School</a>
     <a href="#headteacher">About Us</a>
@@ -175,15 +172,38 @@
             <img src="CU20.jpg" alt="Sports" class="zoomable">
             <img src="CU23.jpg" alt="Chapel" class="zoomable">
             <img src="CU16.jpg" alt="Learning" class="zoomable">
+	    <img src="CU3.jpg" alt="Chapel" class="zoomable">
+            <img src="CU27.jpg" alt="Learning" class="zoomable">
         </div>
     </section>
 </div>
 
+    <footer style="background: var(--cou-green-dark); color: white; padding: 60px 5% 30px 5%; border-top: 5px solid var(--cou-gold);">
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+        <div style="flex: 1.5; min-width: 280px;">
+            <h3 style="color: var(--cou-gold); font-size: 1.5rem; margin-top: 0;">Gayaza CU Secondary School</h3>
+            <p style="font-size: 0.95rem; opacity: 0.9; line-height: 1.8;">"Think Globally & Act Locally".</p>
+            <p style="font-size: 0.85rem; color: var(--cou-gold); font-weight: bold;">📍 Gayaza, Zirobwe Road</p>
+        </div>
+        <div style="flex: 1; min-width: 250px;">
+            <h4 style="border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">Quick Contact</h4>
+            <p style="margin: 10px 0;">📞 +256 700 699 951</p>
+            <p style="margin: 10px 0;">✉️ gayazacuss@gmail.com</p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.75rem; opacity: 0.6;">
+        &copy; 2026 Find A School Ug. Created by EyaKa Media House.
+    </div>
+    </footer>
+    
 <audio id="anthem" loop>
-  <source src="school_anthem.mp3" type="audio/mpeg">
+  <source src="Happy House.mp3" type="audio/mpeg">
 </audio>
 
-<a id="whatsappBtn" href="https://wa.me/256700699951" class="float-btn" target="_blank">
+<a id="whatsappBtn" 
+   href="https://wa.me/256700699951?text=Hello%20Gayaza%20CU%20Secondary%20Sch.%20I%20would%20like%20to%20know%20about%20registration%20requirements%20and%20the%20school%20fees%20structures.%20Do%20you%20have%20a%20boarding%20section%3F" 
+   class="float-btn" 
+   target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -196,7 +216,7 @@
 </button>
 
 <script>
-    // 1. Audio Logic
+    // Audio Logic
     const anthem = document.getElementById('anthem');
     const playIcon = document.getElementById('playIcon');
     function togglePlay() {
@@ -204,7 +224,7 @@
         else { anthem.pause(); playIcon.className = 'fas fa-play'; }
     }
 
-    // 2. Scroll Logic
+    // Scroll Logic
     const backTopBtn = document.getElementById('backTopBtn');
     function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
     window.onscroll = () => {
@@ -212,29 +232,21 @@
         else backTopBtn.classList.remove('visible');
     }
 
-    // 3. Double Tap Zoom Logic
+    // Double Tap Zoom Logic
     let lastTap = 0;
     document.querySelectorAll('.zoomable').forEach(img => {
         img.addEventListener('touchstart', function(e) {
             const now = new Date().getTime();
-            const timesince = now - lastTap;
-            if (timesince < 300 && timesince > 0) {
+            if (now - lastTap < 300) {
                 this.classList.toggle('img-zoomed');
                 e.preventDefault(); 
             }
             lastTap = now;
         });
-        // Desktop support (double click)
         img.addEventListener('dblclick', function() {
             this.classList.toggle('img-zoomed');
         });
     });
-
-    // 4. Modal Logic
-    function toggleModal() {
-        const modal = document.getElementById('admissionModal');
-        modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
-    }
 </script>
 
 </body>
