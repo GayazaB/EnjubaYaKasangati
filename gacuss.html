@@ -45,11 +45,18 @@
         /* IMAGE ZOOM FEATURE STYLES */
         .zoomable { transition: transform 0.3s ease; cursor: pointer; position: relative; }
         .img-zoomed { 
-            transform: scale(1.1); 
+            transform: scale(1.1) !important; 
             z-index: 1001; 
             box-shadow: 0 20px 50px rgba(0,0,0,0.3) !important;
             border: 3px solid var(--cou-gold) !important;
         }
+
+        /* HEADTEACHER SECTION */
+        .ht-section { 
+            display: flex; align-items: center; gap: 40px; background: white; padding: 30px; 
+            border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 50px; border-left: 8px solid var(--cou-green-dark);
+        }
+        .ht-img { width: 250px; height: 300px; object-fit: cover; border-radius: 15px; border: 4px solid var(--cou-gold); }
 
         /* SECTIONS & ROWS */
         .section-card { background: white; padding: 40px; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
@@ -64,6 +71,12 @@
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
         .gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; transition: 0.3s; border: 2px solid transparent; }
         .gallery img:hover { border-color: var(--cou-gold); }
+
+        /* MODAL POPUP */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(13, 33, 13, 0.85); display: none; align-items: center; justify-content: center; z-index: 2000; backdrop-filter: blur(8px); }
+        .modal-content { background: white; width: 90%; max-width: 450px; padding: 35px; border-radius: 25px; position: relative; animation: slideUp 0.3s ease-out; border-top: 10px solid var(--cou-green-dark); }
+        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #94a3b8; }
 
         /* BUTTONS */
         .btn-apply { background: var(--cou-green-dark); color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; transition: 0.3s; }
@@ -80,20 +93,11 @@
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 6px 15px rgba(0,0,0,0.15); text-decoration: none;
         }
 
-        /* WhatsApp Button - Large Icon */
         #whatsappBtn { left: 25px; background-color: #25D366; font-size: 32px; }
-
         #playPauseBtn { left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #6e8efb, #a777e3); font-size: 20px; }
-
-        /* Back to Top - Forest Green Glass */
         #backTopBtn { 
-            right: 25px; 
-            background-color: rgba(27, 94, 32, 0.85); 
-            backdrop-filter: blur(8px); 
-            opacity: 0; 
-            pointer-events: none; 
-            transform: translateY(20px); 
-            font-size: 20px; 
+            right: 25px; background-color: rgba(27, 94, 32, 0.85); backdrop-filter: blur(8px); opacity: 0; 
+            pointer-events: none; transform: translateY(20px); font-size: 20px; 
         }
         #backTopBtn.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
@@ -112,9 +116,9 @@
             <p style="margin: 0; font-size: 0.7rem; text-transform: uppercase; color: #64748b; font-weight: bold;">Think Globally & Act Locally</p>
         </div>
     </div>
-    <button class="btn-apply" onclick="alert('Registration form coming soon!')">REGISTER TODAY!</button>
+    <button onclick="toggleModal()" class="btn-apply">REGISTER TODAY!</button>
 </header>
-    
+
 <nav class="page-nav">
     <a href="#about">The School</a>
     <a href="#headteacher">About Us</a>
@@ -132,12 +136,13 @@
 </div>
 
 <div class="container">
+
     <section id="headteacher" class="ht-section">
         <img src="CU11.jpg" alt="Mr. Wamusai Richard" class="ht-img zoomable">
         <div>
-            <span style="color: var(--cou-green-mid); font-weight: 800; text-transform: uppercase; font-size: 0.75rem;">Headteacher's Desk</span>
-            <h2 style="margin: 5px 0 15px 0;">Mr. Wamusai Richard</h2>
-            <p style="font-style: italic; border-left: 4px solid var(--cou-green-mid); padding-left: 20px;">
+            <span style="color: var(--cou-green-mid); font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1.5px;">Headteacher's Desk</span>
+            <h2 style="margin: 5px 0 15px 0; color: var(--cou-green-dark);">Mr. Wamusai Richard</h2>
+            <p style="font-style: italic; color: #334155; font-size: 1.1rem; border-left: 4px solid var(--cou-green-mid); padding-left: 20px; line-height: 1.8;">
                 "Welcome to Gayaza C.O.U. S.S. Our commitment is to offer a holistic education that transforms students into God-fearing, innovative, and productive citizens."
             </p>
         </div>
@@ -145,94 +150,107 @@
 
     <section id="about" class="section-card">
         <h2 style="text-align: center;">About Our School</h2>
-        <img src="CU14.jpg" alt="Students Group Photo" class="zoomable" style="width: 100%; border-radius: 20px; margin: 25px 0;">
-        <p style="text-align: center;">Founded on strong Anglican traditions, Gayaza C.O.U. S.S. is a pillar of academic and spiritual growth.</p>
+        <img src="CU14.jpg" alt="Students Group Photo" class="zoomable" style="width: 100%; height: auto; border-radius: 20px; margin: 25px 0; border: 1px solid #eee;">
+        <p style="font-size: 1.1rem; text-align: center; max-width: 800px; margin: 0 auto;">Founded on strong Anglican traditions, Gayaza C.O.U. S.S. is a pillar of academic and spiritual growth in Gayaza. We provide an environment where every student is challenged to lead and excel.</p>
+        
+        <div style="margin-top: 40px; position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
+            <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
     </section>
 
     <div class="row" id="academics">
+<div class="row-text">
+		<h2>Academic Excellence</h2>
+	 </div>
         <img src="CU15.jpg" alt="Academics" class="zoomable">
         <div class="row-text">
-            <h2>Academic Excellence</h2>
-            <p>Our academic record speaks for itself with modern Science and Computer labs.</p>
+         <p>Our academic record speaks for itself. With modern Science and Computer labs, we prepare students for the demands of high-level higher education and the modern professional world.</p>
         </div>
     </div>
 
     <div class="row reverse" id="vocational">
+	 <div class="row-text">
+		<h2>Vocational Training</h2>
+	 </div>
         <img src="CU4.jpg" alt="Vocational Skills" class="zoomable">
         <div class="row-text">
-            <h2>Vocational Training</h2>
-            <p>Education for Self-Reliance: Tailoring, Art & Design, and ICT projects.</p>
+        <p>We believe in "Education for Self-Reliance." Students participate in Tailoring, Art & Design, and ICT projects, giving them a head-start in entrepreneurship.</p>
+        </div>
+    </div>
+
+    <div class="row" id="activities">
+	<div class="row-text">
+		<h2>School Clubs: Boys & Girls Brigade</h2>
+	 </div>
+        <img src="CU22.jpg" alt="Youth Brigade" class="zoomable">
+        <div class="row-text">
+          <p>Discipline is our core value. Through the boys and girls Brigade and other students' clubs, we build character, physical fitness, creativity and community spirit.</p>
         </div>
     </div>
 
     <section id="gallery" class="section-card">
-        <h2 style="text-align: center;">Campus Life</h2>
+        <h2 style="margin-bottom: 25px; text-align: center;">Campus Life in Photos</h2>
         <div class="gallery">
             <img src="CU28.jpg" alt="Campus" class="zoomable">
             <img src="CU20.jpg" alt="Sports" class="zoomable">
             <img src="CU23.jpg" alt="Chapel" class="zoomable">
             <img src="CU16.jpg" alt="Learning" class="zoomable">
-	    <img src="CU3.jpg" alt="Chapel" class="zoomable">
+            <img src="CU8.jpg" alt="Chapel" class="zoomable">
+            <img src="CU29.jpg" alt="Learning" class="zoomable">
+            <img src="CU3.jpg" alt="Chapel" class="zoomable">
             <img src="CU27.jpg" alt="Learning" class="zoomable">
         </div>
     </section>
+
 </div>
 
-<div style="text-align: center; margin-top: 50px;">
-        <a href="school-hub.html" style="
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 35px;
-            background: #1e3a8a; /* Deep Navy Blue */
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        " 
-        onmouseover="this.style.background='#2563eb'; this.style.transform='translateX(-8px)'; this.style.boxShadow='0 6px 20px rgba(37, 99, 235, 0.4)';" 
-        onmouseout="this.style.background='#1e3a8a'; this.style.transform='translateX(0)'; this.style.boxShadow='0 4px 15px rgba(30, 58, 138, 0.3)';"
-        >
-            <i class="fas fa-arrow-left"></i> 
-            Find A School Ug
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="index.html" style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 35px; background: #1e3a8a; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 1rem; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3); text-transform: uppercase; letter-spacing: 1px;" onmouseover="this.style.background='#2563eb'; this.style.transform='translateX(-8px)';" onmouseout="this.style.background='#1e3a8a'; this.style.transform='translateX(0)';">
+            <i class="fas fa-arrow-left"></i> Find A School Ug
         </a>
     </div>
-
 </div>
 
-
-	
-    <footer style="background: var(--cou-green-dark); color: white; padding: 60px 5% 30px 5%; border-top: 5px solid var(--cou-gold);">
+<footer style="background: var(--cou-green-dark); color: white; padding: 60px 5% 30px 5%; border-top: 5px solid var(--cou-gold);">
     <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
         <div style="flex: 1.5; min-width: 280px;">
             <h3 style="color: var(--cou-gold); font-size: 1.5rem; margin-top: 0;">Gayaza CU Secondary School</h3>
-            <p style="font-size: 0.95rem; opacity: 0.9; line-height: 1.8;">"Think Globally & Act Locally".</p>
+            <p style="font-size: 0.95rem; opacity: 0.9;">"Think Globally & Act Locally".</p>
             <p style="font-size: 0.85rem; color: var(--cou-gold); font-weight: bold;">📍 Gayaza, Zirobwe Road</p>
         </div>
         <div style="flex: 1; min-width: 250px;">
             <h4 style="border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">Quick Contact</h4>
-            <p style="margin: 10px 0;">📞 +256 700 699 951</p>
-            <p style="margin: 10px 0;">✉️ gayazacuss@gmail.com</p>
+            <p>📞 +256 700 699 951</p>
+            <p>✉️ gayazacuss@gmail.com</p>
         </div>
     </div>
     <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.75rem; opacity: 0.6;">
         &copy; 2026 Find A School Ug. Created by EyaKa Media House.
     </div>
-    </footer>
-    
+</footer>
+
+<div id="admissionModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" onclick="toggleModal()">&times;</span>
+        <h2 style="color: var(--cou-green-dark); margin-top: 0; text-align: center;">Admission Inquiry</h2>
+        <form action="https://formspree.io/f/enjubayakasangati@gmail.com" method="POST">
+            <input type="text" name="student_name" placeholder="Student Name" required style="width: 100%; padding: 14px; margin: 10px 0; border: 2px solid #e2e8f0; border-radius: 10px; box-sizing: border-box;">
+            <input type="tel" name="parent_phone" placeholder="Parent WhatsApp" required style="width: 100%; padding: 14px; margin: 10px 0; border: 2px solid #e2e8f0; border-radius: 10px; box-sizing: border-box;">
+            <select name="level" required style="width: 100%; padding: 14px; margin: 10px 0; border: 2px solid #e2e8f0; border-radius: 10px; box-sizing: border-box;">
+                <option value="">Select Level...</option>
+                <option value="S1">Senior One</option>
+                <option value="S5">Senior Five</option>
+            </select>
+            <button type="submit" style="width: 100%; background: var(--cou-green-dark); color: white; border: none; padding: 16px; border-radius: 12px; font-weight: bold; cursor: pointer;">SUBMIT</button>
+        </form>
+    </div>
+</div>
+
 <audio id="anthem" loop>
   <source src="Happy House.mp3" type="audio/mpeg">
 </audio>
 
-<a id="whatsappBtn" 
-   href="https://wa.me/256700699951?text=Hello%20Gayaza%20CU%20Secondary%20Sch.%20I%20would%20like%20to%20know%20about%20registration%20requirements%20and%20the%20school%20fees%20structures.%20Do%20you%20have%20a%20boarding%20section%3F" 
-   class="float-btn" 
-   target="_blank">
+<a id="whatsappBtn" href="https://wa.me/256700699951?text=Hello%20Gayaza%20CU%20Secondary%20Sch.%20I%20would%20like%20to%20know%20about%20registration%20requirements%20and%20the%20school%20fees%20structures.%20Do%20you%20have%20a%20boarding%20section%3F" class="float-btn" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -245,7 +263,11 @@
 </button>
 
 <script>
-    // Audio Logic
+    function toggleModal() {
+        const modal = document.getElementById('admissionModal');
+        modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+    }
+
     const anthem = document.getElementById('anthem');
     const playIcon = document.getElementById('playIcon');
     function togglePlay() {
@@ -253,7 +275,6 @@
         else { anthem.pause(); playIcon.className = 'fas fa-play'; }
     }
 
-    // Scroll Logic
     const backTopBtn = document.getElementById('backTopBtn');
     function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
     window.onscroll = () => {
@@ -261,7 +282,7 @@
         else backTopBtn.classList.remove('visible');
     }
 
-    // Double Tap Zoom Logic
+    // Advanced Double Tap / Click Zoom Logic
     let lastTap = 0;
     document.querySelectorAll('.zoomable').forEach(img => {
         img.addEventListener('touchstart', function(e) {
@@ -280,5 +301,3 @@
 
 </body>
 </html>
-
-
