@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasangati High School | Determined to Succeed | Admissions 2026</title>
+<meta name="description" content="Kasangati High School offers O & A Level mixed day/boarding. Located in Kasangati, we provide half & full bursaries for talented learners. Join us for academic and spiritual excellence.">
+<meta name="keywords" content="Kasangati High School, Schools in Kasangati, Bursaries in Uganda, O Level, A Level, Mixed Boarding Schools Uganda">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/kasangati-high.html">
+<meta property="og:title" content="🏫 Kasangati High School - Join a Legacy of Success">
+<meta property="og:description" content="Mixed Day & Boarding. Discover your talent through our bursary schemes. Located 10 Miles Gayaza Road.">
+<meta property="og:image" content="khs.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kasangati High School | Admissions Open">
+<meta name="twitter:description" content="Apply for half and full bursaries at Kasangati High. O & A Level mixed day and boarding.">
+<meta name="twitter:image" content="khs.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+    :root { 
+        --khs-red: #cc0000; 
+        --khs-brown: #5d4037;  
+        --khs-cream: #fffdd0; 
+        --khs-cream-dark: #f5f5dc; 
+        --text-slate: #334155; 
+    }
+        
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #fafaf3; color: var(--text-slate); scroll-behavior: smooth; }
+
+    /* IMAGE ZOOM EFFECT */
+    .zoomable { 
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        cursor: pointer; 
+        display: block;
+        width: 100%;
+        border-radius: 15px;
+    }
+    .img-zoomed { 
+        transform: scale(1.08) !important; 
+        z-index: 1001; 
+        box-shadow: 0 20px 50px rgba(0,0,0,0.3) !important;
+        border: 3px solid var(--khs-red) !important;
+    }
+
+    /* HEADER & HERO */
+    header { background: white; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top:0; z-index: 100; }
+    .hero { 
+        height: 450px; 
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('khs.jpg') center/cover; 
+        color: white; display: flex; align-items: center; justify-content: center; text-align: center; 
+    }
+
+    /* FIXED CONTAINER: This forces sections to stack vertically (DOWN) */
+    .container { 
+        max-width: 1100px; 
+        margin: 40px auto; 
+        padding: 0 20px; 
+        display: flex;
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    /* THE BOLD RED BORDER DESIGN */
+    .section-card { 
+        background: white; 
+        display: flex; 
+        align-items: center; 
+        gap: 40px; 
+        padding: 35px; 
+        border-radius: 25px; 
+        margin-bottom: 30px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border-left: 10px solid var(--khs-red); 
+        border-right: 1px solid #eee;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        width: 100%; /* Ensures card takes full row */
+        box-sizing: border-box;
+    }
+
+    /* Redesigning the Portrait Frame */
+    .portrait-box {
+        flex: 0 0 280px; 
+        height: 380px;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 8px solid var(--khs-cream-dark); 
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .portrait-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Style the text section to align with the bold border */
+    .card-content h2 {
+        color: var(--khs-red);
+        font-size: 2rem;
+        margin-top: 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Alternating the border for the reverse sections */
+    .section-card.reverse {
+        flex-direction: row-reverse;
+        border-left: 1px solid #eee; 
+        border-right: 10px solid var(--khs-red); 
+    }
+
+    /* VIDEO CONTAINER */
+    .video-wrapper { 
+        position: relative; 
+        padding-bottom: 56.25%; 
+        height: 0; 
+        overflow: hidden; 
+        border-radius: 20px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+        margin-top: 20px;
+        width: 100%; 
+    }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+    /* GALLERY GRID */
+    .gallery-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 15px; 
+        margin-top: 20px; 
+        width: 100%;
+    }
+    .gallery-grid img { height: 200px; object-fit: cover; }
+
+    /* FLOATING BUTTONS */
+    .float-btn { position: fixed; bottom: 25px; border-radius: 14px; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; z-index: 1500; color: white; text-decoration: none; box-shadow: 0 6px 15px rgba(0,0,0,0.2); transition: 0.3s; }
+    #whatsappBtn { left: 25px; background: #25D366; font-size: 30px; }
+    #backTopBtn { right: 25px; background: var(--khs-red); opacity: 0; pointer-events: none; }
+    #backTopBtn.visible { opacity: 1; pointer-events: auto; }
+
+    /* Ensure the Modal is the top-most layer */
+    .modal-overlay { 
+        z-index: 3000 !important; 
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.8);
+        align-items: center;
+        justify-content: center;
+    }
+    .modal-content { background: white; padding: 30px; border-radius: 20px; position: relative; width: 90%; max-width: 450px; }
+
+    /* Footer Styling */
+    .khs-footer {
+        background: var(--khs-brown);
+        color: var(--khs-cream);
+        padding: 60px 5% 100px 5%; 
+        text-align: center;
+        border-top: 5px solid var(--khs-red);
+    }  
+
+    @media (max-width: 768px) { 
+        .section-card, .section-card.reverse { 
+            flex-direction: column; 
+            border-left: none;
+            border-right: none;
+            border-top: 8px solid var(--khs-red); 
+        }
+        .portrait-box {
+            flex: 0 0 300px;
+            width: 100%;
+        }
+        .hero h1 { font-size: 2rem; } 
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="width: 40px; height: 40px; background: var(--khs-red); color: white; display: flex; align-items: center; justify-content: center; border-radius: 5px; font-weight: bold;">K</div>
+        <h2 style="margin: 0; font-size: 1rem; color: var(--khs-red);">KASANGATI HIGH SCHOOL</h2>
+    </div>
+    <button onclick="toggleModal()" style="background: var(--khs-red); color: white; border: none; padding: 10px 20px; border-radius: 20px; font-weight: bold; cursor: pointer;">INQUIRE NOW</button>
+</header>
+
+<div class="hero">
+    <div>
+        <h1 style="font-size: 3.5rem; margin: 0;">Kasangati High School</h1>
+        <p style="font-size: 1.5rem;">"Determined to Succeed"</p>
+    </div>
+</div>
+
+<div class="container">
+
+
+<section class="section-card">
+    <div class="portrait-box">
+        <img src="khalid.jpg" alt="Director Khalid Simbwa" class="zoomable">
+    </div>
+    <div class="card-content">
+        <h2 class="section-title">Director's Message</h2>
+      <p style="font-style: italic; border-left: 4px solid var(--khs-red); padding-left: 20px;">
+                "We welcome you to Kasangati High School. We are looking forward to building all learners into productive adults through talent discovery and empowerment. We offer full and half bursaries to unprivileged but talented learners. Come join us."
+            </p>
+        <p><strong>- Mr. Khalid Simbwa</strong></p>
+    </div>
+
+<section class="section-card">
+    <div class="card-content">
+        <h2 class="section-title"><i class="fab fa-youtube" style="color: #ff0000; margin-right: 10px;"></i>School Experience</h2>
+        
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+        <p style="text-align: center; margin-top: 15px; color: var(--khs-brown); font-weight: 500;">
+            Watch our students in action during the Music, Dance, and Drama competitions.
+        </p>
+    </div>
+</section>
+
+    <section class="section-card">
+        <h2 class="section-title">O & A Level Excellence</h2>
+        <img src="khs1.jpg" alt="Kasangati High Students" class="section-img zoomable">
+        <p>Our curriculum is designed to produce spiritually and academically upright children. We maintain high ethics and honesty in all our learners.</p>
+    </section>
+
+<section class="section-card reverse">
+    <div class="portrait-box">
+        <img src="khs7.jpg" alt="Kasangati High Learning" class="zoomable">
+    </div>
+    <div class="card-content">
+        <h2 class="section-title">Academic Excellence</h2>
+        <p>We offer both O and A Level classes with a focus on honesty and integrity. Our students are trained to be academically upright and ethically strong.</p>
+    </div>
+</section>
+
+    <section class="section-card">
+        <h2 class="section-title">Sports & Talent Discovery</h2>
+        <img src="khs2.jpg" alt="KHS Sports" class="section-img zoomable">
+        <p>We do sports, music, and drama. Talent discovery is at the heart of our mission to empower learners for the future.</p>
+    </section>
+
+    <section class="section-card">
+        <h2 class="section-title">Life at Kasangati High</h2>
+        <div class="gallery-grid">
+            <img src="khs3.jpg" alt="Campus Life" class="zoomable">
+            <img src="khs4.jpg" alt="Dorms" class="zoomable">
+            <img src="khs5.jpg" alt="Classroom" class="zoomable">
+            <img src="khs6.jpg" alt="Events" class="zoomable">
+        </div>
+    </section>
+
+</div>
+
+<div style="max-width: 1100px; margin: 40px auto; text-align: center;">
+    <a href="list-secondary.html" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px; background: #1e3a8a; color: white; text-decoration: none; border-radius: 50px; font-weight: bold;" onmouseover="this.style.transform='translateX(-5px)'" onmouseout="this.style.transform='translateX(0)'">
+        <i class="fas fa-arrow-left"></i> Find A School Ug
+    </a>
+</div>
+
+<div id="admissionModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" onclick="toggleModal()" style="position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer;">&times;</span>
+        <h2 style="color: var(--khs-red); text-align: center; margin-bottom: 20px;">Admission Inquiry</h2>
+        
+        <form action="https://formspree.io/f/mqedkyoa" method="POST">
+            <input type="hidden" name="_next" value="https://gayazab.github.io/EnjubaYaKasangati/thanks.html">
+            
+            <input type="text" name="student_name" placeholder="Student Name" required style="width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 10px; box-sizing: border-box;">
+            
+            <input type="email" name="email" placeholder="Email Address" required style="width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 10px; box-sizing: border-box;">
+            
+            <input type="tel" name="phone" placeholder="WhatsApp Number" required style="width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 10px; box-sizing: border-box;">
+
+            <textarea name="message" placeholder="Ask about bursaries or requirements..." rows="3" style="width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #ddd; border-radius: 10px; box-sizing: border-box;"></textarea>
+
+            <button type="submit" style="width: 100%; background: var(--khs-red); color: white; border: none; padding: 18px; border-radius: 12px; font-weight: bold; cursor: pointer; font-size: 1rem;">SUBMIT INQUIRY</button>
+        </form>
+    </div>
+</div>
+
+
+<footer class="khs-footer">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: left;">
+        <div>
+            <h3 style="color: var(--khs-red); margin-top: 0;">Kasangati High School</h3>
+            <p><i>"Determined to Succeed"</i></p>
+            <p>Educating academically and spiritually upright children.</p>
+        </div>
+        <div>
+            <h4 style="color: var(--khs-red);">Quick Links</h4>
+            <ul style="list-style: none; padding: 0; line-height: 2;">
+                <li><a href="#director" style="color: inherit; text-decoration: none;">Director's Message</a></li>
+                <li><a href="index.html" style="color: inherit; text-decoration: none;">Find A School Ug</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 style="color: var(--khs-red);">Visit Us</h4>
+            <p>📍 10 Miles Gayaza Road,<br>Opposite Equity Bank - Kasangati</p>
+            <p>📞 0752 511131 / 0772 687417</p>
+        </div>
+    </div>
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; opacity: 0.7;">
+        &copy; 2026 Kasangati High School. Member of the Find A School Ug Network.
+    </div>
+</footer>
+
+
+<a id="whatsappBtn" href="https://wa.me/256752511131?text=Hello%20Kasangati%20High.%20I%20am%20interested%20in%20the%20bursary%20opportunities." class="float-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<audio id="anthem" loop>
+  <source src="kasangati anthem.mp3" type="audio/mpeg">
+</audio>
+
+<button id="playPauseBtn" class="float-btn" onclick="togglePlay()" style="left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #cc0000, #5d4037); font-size: 20px;">
+  <i id="playIcon" class="fas fa-play"></i>
+</button>
+
+<button id="backTopBtn" class="float-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+
+
+
+<script>
+    // 1. MODAL LOGIC
+    function toggleModal() {
+        const modal = document.getElementById('admissionModal');
+        modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    // 2. AUDIO LOGIC (School Anthem)
+    const anthem = document.getElementById('anthem');
+    const playIcon = document.getElementById('playIcon');
+
+    function togglePlay() {
+        if (anthem.paused) { 
+            anthem.play(); 
+            playIcon.className = 'fas fa-pause'; 
+        } else { 
+            anthem.pause(); 
+            playIcon.className = 'fas fa-play'; 
+        }
+    }
+
+    // 3. SCROLL & BACK-TO-TOP LOGIC
+    const backTopBtn = document.getElementById('backTopBtn');
+    window.onscroll = () => {
+        if (window.scrollY > 300) {
+            backTopBtn.classList.add('visible');
+        } else {
+            backTopBtn.classList.remove('visible');
+        }
+    }
+
+    // 4. DOUBLE-TAP / DOUBLE-CLICK ZOOM LOGIC
+    let lastTap = 0;
+    document.querySelectorAll('.zoomable').forEach(img => {
+        // Mobile Double Tap
+        img.addEventListener('touchstart', function(e) {
+            const now = new Date().getTime();
+            if (now - lastTap < 300) {
+                this.classList.toggle('img-zoomed');
+                e.preventDefault(); 
+            }
+            lastTap = now;
+        });
+        // Desktop Double Click
+        img.addEventListener('dblclick', function() {
+            this.classList.toggle('img-zoomed');
+        });
+    });
+
+    // 5. PLAY BUTTON HOVER EFFECT (For the Centered Button)
+    const playBtn = document.getElementById('playPauseBtn');
+    playBtn.onmouseover = () => { 
+        playBtn.style.transform = 'translateX(-50%) translateY(-5px)'; 
+    };
+    playBtn.onmouseout = () => { 
+        playBtn.style.transform = 'translateX(-50%) translateY(0)'; 
+    };
+</script>
+
+</body>
+</html>
