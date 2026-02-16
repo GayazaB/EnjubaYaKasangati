@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Nursery & Junior Schools | Enjuba Ya Kasangati</title>
-    <meta property="og:title" content="Best Nursery & Junior Schools in Gayaza">
-    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/uniforms.jpg">
-    <meta property="og:description" content="Find the perfect start for your child. Explore the top-rated kindergartens in Kasangati and neighborhood.">
+        
+<title>Find The Best Nursery & Junior Schools in Kasangati TC & Beyond!</title>
+<meta name="description" content="The #1 directory for schools inKasangati TC and surrounding areas. Filter through top nursery and junior schools by location, fees, and facilities.">
+<meta name="keywords" content="Gayaza schools, Kasangati nursery schools, Schools in Manyangwa, Uganda school directory, Find A School Ug, Nursery schools in Wakiso">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/list-kindergarten.html">
+<meta property="og:title" content="Find the Perfect School for Your Child 🎈">
+<meta property="og:description" content="Explore 18+ Nursery and Junior schools in the Gayaza-Kasangati community. Photos, fees, and direct WhatsApp contacts all in one place.">
+<meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/uniforms.jpg"> <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Find A School Uganda | Local School Directory">
+<meta name="twitter:description" content="Helping parents in Gayaza and Kasangati make the best educational choices.">
+<meta name="twitter:image" content="https://gayazab.github.io/EnjubaYaKasangati/uniforms.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-green: #2e7d32;
-            --accent-gold: #fbc02d;
-            --text-dark: #2c3e50;
+            --sky-blue: #00d2ff;
+            --soft-pink: #ff758c;
+            --sunny-yellow: #ffed4a;
+            --navy: #1a365d;
+            --wa-green: #25d366;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
         body {
-            font-family: 'Century Gothic', 'Segoe UI', sans-serif;
+            font-family: 'Nunito', sans-serif;
             margin: 0;
-            background-color: #f8fafc;
-            color: var(--text-dark);
+            background: #fdfdfd;
+            color: #333;
         }
 
         header {
@@ -29,307 +43,709 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 4px solid var(--primary-green);
+            border-bottom: 6px solid;
+            border-image: linear-gradient(to right, var(--soft-pink), var(--sunny-yellow), var(--sky-blue), var(--wa-green)) 1;
         }
 
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
 
-        .intro-header { text-align: center; margin-bottom: 50px; }
-        .intro-header h1 { font-size: 2.2rem; color: var(--primary-green); margin-bottom: 10px; }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: #e0f7fa;
+            border-radius: 40px;
+            margin-bottom: 40px;
+            border: 3px dashed var(--sky-blue);
+        }
 
-        /* SCHOOL CARD SYSTEM */
+        .hero h1 { 
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2.2rem; 
+            color: var(--navy);
+            margin: 0;
+        }
+
+        /* CLOUD CARD DESIGN */
         .school-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 35px;
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 35px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
             overflow: hidden;
-            border: 1px solid #edf2f7;
-            transition: 0.3s ease;
+            border: 1px solid #f0f0f0;
+            transition: transform 0.3s ease;
         }
-        .school-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .school-card:hover { transform: scale(1.01); }
 
-        .img-box { width: 320px; min-height: 250px; background: #e2e8f0; position: relative; }
+        .img-box { width: 300px; min-height: 250px; background: #eee; }
         .img-box img { width: 100%; height: 100%; object-fit: cover; }
 
         .content-box { padding: 30px; flex: 1; min-width: 300px; }
         
-        /* Playful color variety for tags */
-        .tag { display: inline-block; padding: 5px 15px; border-radius: 50px; font-size: 0.75rem; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .tag-green { background: #dcfce7; color: #166534; }
-        .tag-blue { background: #dbeafe; color: #1e40af; }
-        .tag-orange { background: #ffedd5; color: #9a3412; }
+        .tag { 
+            display: inline-block; 
+            padding: 5px 15px; 
+            border-radius: 50px; 
+            font-size: 0.7rem; 
+            font-weight: 800; 
+            margin-bottom: 12px; 
+            text-transform: uppercase;
+            color: white;
+        }
+        .tag-pink { background: var(--soft-pink); }
+        .tag-blue { background: var(--sky-blue); }
+        .tag-yellow { background: #fbc02d; color: #333; }
 
-        .school-name { font-size: 1.6rem; margin: 0 0 5px 0; color: #1a365d; letter-spacing: -0.5px; }
-        .motto { font-style: italic; color: #718096; font-size: 0.9rem; margin-bottom: 15px; display: block; }
-        .desc { font-size: 0.9rem; line-height: 1.6; color: #4a5568; margin-bottom: 20px; }
+        .school-name { 
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.6rem; 
+            margin: 0 0 5px 0; 
+            color: var(--navy); 
+            font-weight: 700;
+        }
+        .motto { color: var(--soft-pink); font-size: 0.9rem; font-weight: 700; display: block; margin-bottom: 15px; }
+        .desc { font-size: 0.85rem; line-height: 1.6; color: #555; margin-bottom: 15px; }
 
-        .contact-info { background: #f7fafc; padding: 15px; border-radius: 12px; font-size: 0.85rem; margin-bottom: 20px; }
-        .contact-info div { margin-bottom: 6px; }
+        .info-pill {
+            background: #f8fafc;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--sky-blue);
+        }
 
-        .btn-row { display: flex; gap: 12px; }
-        .btn { flex: 1; padding: 12px; text-align: center; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
-        .btn-call { background: var(--primary-green); color: white; }
-        .btn-wa { background: #25d366; color: white; }
+        /* BUTTONS */
+        .btn-row { display: flex; gap: 8px; }
+        .btn { 
+            flex: 1; 
+            padding: 12px 5px; 
+            text-align: center; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            font-weight: 800; 
+            font-size: 0.75rem; 
+            color: white;
+            transition: 0.2s;
+        }
+        .btn-profile { background: var(--navy); }
+        .btn-call { background: var(--soft-pink); }
+        .btn-wa { background: var(--wa-green); }
 
-        @media (max-width: 768px) { .img-box { width: 100%; height: 220px; } .school-name { font-size: 1.4rem; } }
+        @media (max-width: 768px) { .img-box { width: 100%; height: 220px; } }
+
+/* STYLISH DARK NAVY FOOTER */
+footer {
+    background: linear-gradient(180deg, #1a365d 0%, #0d1b2a 100%);
+    color: #e2e8f0;
+    padding: 60px 5% 30px;
+    margin-top: 80px;
+    /* Stylish curved top edge */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-col { flex: 1; min-width: 250px; }
+
+.footer-logo {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #00d2ff; /* Bright sky blue to pop against navy */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.footer-col h4 {
+    font-family: 'Quicksand', sans-serif;
+    color: #ff758c; /* Playful pink for footer headings */
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 15px; }
+.footer-links a { 
+    text-decoration: none; 
+    color: #cbd5e0; 
+    font-size: 0.95rem; 
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover { 
+    color: white; 
+    transform: translateX(8px);
+}
+
+.copyright {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: #718096;
+    text-align: center;
+}
+
+/* Add a little flair: social/contact icons */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    footer { border-top-left-radius: 30px; border-top-right-radius: 30px; text-align: center; }
+    .footer-links a:hover { transform: none; color: #00d2ff; }
+    .contact-item { justify-content: center; }
+}
+
+
+/* MODERN SEARCH & FILTER BAR - EXPANDED */
+.search-section {
+    display: flex;
+    gap: 0; /* Removing gap to make the divider look seamless */
+    margin-bottom: 40px;
+    background: white;
+    padding: 8px;
+    border-radius: 50px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#schoolSearch {
+    flex: 2; /* Takes up remaining space */
+    min-width: 200px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    background: transparent;
+    padding: 15px 25px;
+    color: var(--navy);
+}
+
+#locationFilter {
+    flex: 1.5; /* INCREASED FLEX to give more room for long area names */
+    min-width: 220px; /* SET MIN-WIDTH so "All Neighborhoods" is never squeezed */
+    border: none;
+    border-left: 2px solid #f1f5f9; /* Soft vertical divider */
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    outline: none;
+    background: transparent;
+    color: var(--soft-pink);
+    cursor: pointer;
+    appearance: none;
+    /* Custom Pink Arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ff758c' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 25px center;
+    padding: 15px 45px 15px 25px; /* Added right padding for the arrow */
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+    .search-section {
+        border-radius: 25px;
+        flex-direction: column;
+        padding: 10px;
+    }
+    #locationFilter {
+        border-left: none;
+        border-top: 2px solid #f1f5f9;
+        width: 100%;
+        min-width: 100%;
+        text-align: center;
+        background-position: right 15px center;
+    }
+    #schoolSearch {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.results-bar {
+    margin: -20px 0 25px 10px; /* Positions it nicely below the search pill */
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 0.95rem;
+}
+
+#schoolCounter {
+    background: #e0f7fa; /* Light blue highlight */
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: var(--navy);
+    border-bottom: 2px solid var(--sky-blue);
+}
+
     </style>
 </head>
 <body>
 
 <header>
-    <a href="index.html" style="text-decoration: none; color: var(--primary-green); font-weight: bold;">← ENJUBA YA KASANGATI</a>
-    <span style="font-size: 0.8rem; font-weight: bold; color: #666;">NURSERY & JUNIOR SECTION</span>
+    <a href="index.html" style="text-decoration:none; color:var(--soft-pink); font-weight:800; font-family:'Quicksand';">Find A School Ug</a>
+    <span style="font-weight:800; color:var(--sky-blue); font-size:0.8rem;">KIDS' CORNER 🎈</span>
 </header>
 
 <div class="container">
-    <div class="intro-header">
-        <h1>Nurturing Great Minds</h1>
-        <p>Explore the finest early childhood learning centers in our community.</p>
+    <div class="hero">
+        <h1>Early Learning Discovery</h1>
+        <p>Providing the most loving and fun foundation for your child.</p>
     </div>
 
-    <div class="school-card">
-        <div class="img-box"><img src="kash_top.jpg" alt="Kash Top School"></div>
-        <div class="content-box">
-            <span class="tag tag-green">Academic Excellence</span>
-            <h2 class="school-name">Kash Top School</h2>
-            <span class="motto">“Always at the top”</span>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Gayaza next to Gayaza High School</div>
-                <div>📞 <b>Tel:</b> 0783 121 569 / 0707 693 718</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0783121569" class="btn btn-call">Call School</a>
-                <a href="https://wa.me/256783121569" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="school-card">
-        <div class="img-box"><img src="ocean.jpg" alt="Ocean of Knowledge"></div>
-        <div class="content-box">
-            <span class="tag tag-blue">Skills & Talent</span>
-            <h2 class="school-name">The Ocean of Knowledge School</h2>
-            <span class="motto">“Up with skills”</span>
-            <p class="desc">Hands-on skills in Fashion, Music, Bakery, Salon, and Swimming. Holistic education with a well-balanced diet.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Kasangati-Bulamu Rd, after Kasangati High</div>
-                <div>📞 <b>Tel:</b> 0706 501 032 / 0704 801 045</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0706501032" class="btn btn-call">Inquire Now</a>
-                <a href="https://wa.me/256706501032" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
+<div class="search-section">
+    <input type="text" id="schoolSearch" placeholder="🔍 Type school name or area..." onkeyup="filterSchools()">
+    
+    <select id="locationFilter" onchange="filterSchools()">
+        <option value="">📍 Filter by Area </option>
+        <option value="Bulamu">Bulamu</option>
+        <option value="Busukuma">Busukuma</option>
+        <option value="Buwaga">Buwaga</option>
+        <option value="Buwambo">Buwambo</option>
+        <option value="Gayaza">Gayaza</option>
+        <option value="Gitta">Gitta</option>
+        <option value="Jokolera">Jokolera</option>
+        <option value="Kabubbu">Kabubbu</option>
+        <option value="Kalagi">Kalagi</option>
+        <option value="Kasangati">Kasangati</option>
+        <option value="Katadde">Katadde</option>
+        <option value="Kayebe">Kayebe</option>
+        <option value="Kijabijjo">Kijabijjo</option>
+        <option value="Kira">Kira</option>
+        <option value="Kiteezi">Kiteezi</option>
+        <option value="Kitegomba">Kitegomba</option>
+	<option value="Kitetikka">Kitetikka</option>
+        <option value="Kiti">Kiti</option>
+        <option value="Kiwalimu">Kiwalimu</option>
+        <option value="Kyabakadde">Kyabakadde</option>
+        <option value="Kyanja">Kyanja</option>
+        <option value="Kyankima">Kyankima</option>
+        <option value="Kyetume">Kyetume</option>
+        <option value="Luteete">Luteete</option>
+        <option value="Magere">Magere</option>
+        <option value="Makenke">Makenke</option>
+        <option value="Manyangwa">Manyangwa</option>
+        <option value="Masooli">Masooli</option>
+        <option value="Matugga">Matugga</option>
+        <option value="Nakasajja">Nakasajja</option>
+        <option value="Nakwero">Nakwero</option>
+        <option value="Namavundu">Namavundu</option>
+        <option value="Namayina">Namayina</option>
+        <option value="Nangabo">Nangabo</option>
+        <option value="Ndazabazadde">Ndazabazadde</option>
+        <option value="Seeta">Seeta</option>
+        <option value="Wampewo">Wampewo</option>
+        <option value="Wattuba">Wattuba</option>
+    </select>
+</div>
 
-    <div class="school-card">
-        <div class="img-box"><img src="cradle.jpg" alt="Cradle Land"></div>
-        <div class="content-box">
-            <span class="tag tag-orange">Best Value</span>
-            <h2 class="school-name">Cradle Land Primary & Kindergarten</h2>
-            <span class="motto">“Nurture to greater heights”</span>
-            <p class="desc">International standards with Ugandan curriculum. Free mattresses for boarding and free books for Nursery–P.3.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Nangabo along Kasangati-Nangabo road</div>
-                <div>📞 <b>Tel:</b> 0753 500 900</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0753500900" class="btn btn-call">Call Admin</a>
-                <a href="https://wa.me/256753500900" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
+<div class="results-bar">
+    <span id="schoolCounter">Showing all schools</span>
+</div>
 
-    <div class="school-card">
-        <div class="img-box"><img src="bereans.jpg" alt="Bereans School"></div>
-        <div class="content-box">
-            <span class="tag tag-green">Global Competence</span>
-            <h2 class="school-name">Bereans Early Years Foundation</h2>
-            <span class="motto">“Arise and Shine”</span>
-            <p class="desc">High quality education aimed at developing well-rounded individuals with global competence.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Manyangwa Canan Sites</div>
-                <div>📞 <b>Tel:</b> 0772 480 879</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0772480879" class="btn btn-call">Call School</a>
-                <a href="https://wa.me/256772480879" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
+    <div id="schoolList">
 
-    <div class="school-card">
-        <div class="img-box"><img src="holyfamily.jpg" alt="Holy Family School"></div>
-        <div class="content-box">
-            <span class="tag tag-blue">Faith Based</span>
-            <h2 class="school-name">Holy Family Junior School Nakasajja</h2>
-            <span class="motto">“Timor dei principum sapientiae”</span>
-            <p class="desc">Emphasizing the fear of God. All religious backgrounds are respected and moral values are prioritized.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Nakasajja along Gayaza-Kalagi Road</div>
-                <div>📞 <b>Tel:</b> 0394 812 505</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0394812505" class="btn btn-call">Call School</a>
-                <a href="https://wa.me/256774305717" class="btn btn-wa">WhatsApp</a>
+	<div class="school-card">
+            <div class="img-box"><img src="bereans.jpg" alt="Bereans"></div>
+            <div class="content-box">
+                <span class="tag tag-yellow">Global Competence</span>
+                <h2 class="school-name">Bereans Early Years Foundation Sch.</h2>
+                <span class="motto">“Arise and Shine”</span>
+                <p class="desc">High quality education aimed at developing well-rounded individuals.</p>
+                <div class="info-pill">📍 Manyangwa Canan Sites</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0772480879" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256772480879" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="school-card">
-        <div class="img-box"><img src="smiling.jpg" alt="Smiling with Hope"></div>
-        <div class="content-box">
-            <span class="tag tag-orange">Day Care & Talent</span>
-            <h2 class="school-name">Smiling with Hope Junior School</h2>
-            <span class="motto">“Empowered Minds”</span>
-            <p class="desc">Day Care, Baby Class to P.1. High quality education at very affordable fees. We develop talents!</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Kasangati Masooli</div>
-                <div>📞 <b>Tel:</b> 0747 989 491</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0747989491" class="btn btn-call">Call School</a>
-                <a href="https://wa.me/256747989491" class="btn btn-wa">WhatsApp</a>
+
+      <div class="school-card">
+            <div class="img-box"><img src="victorious.jpg" alt="Victorious"></div>
+            <div class="content-box">
+                <span class="tag tag-blue">Character Building</span>
+                <h2 class="school-name">Victorious Kindergarten Gayaza</h2>
+                <span class="motto">“Attitude governs destiny”</span>
+                <div class="info-pill">📍 Gayaza B, 200m off Orime Petrol Stn</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0759448378" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256759448378" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
             </div>
         </div>
-    </div>
+
+
+        <div class="school-card">
+            <div class="img-box"><img src="jero.jpg" alt="Jero"></div>
+            <div class="content-box">
+                <span class="tag tag-blue">Light of Learning</span>
+                <h2 class="school-name">Jero Junior School - Gayaza</h2>
+                <span class="motto">“Be The Light”</span>
+                <div class="info-pill">📍 Gayaza Town, Behind Family Stores</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0701027228" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256701027228" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="school-card">
+            <div class="img-box"><img src="smiling.jpg" alt="Smiling"></div>
+            <div class="content-box">
+                <span class="tag tag-pink">Talent Dev</span>
+                <h2 class="school-name">Smiling With Hope Junior Sch.</h2>
+                <span class="motto">“Empowered Minds”</span>
+                <p class="desc">Day Care, Baby Class to P.1. High quality at affordable fees.</p>
+                <div class="info-pill">📍 Kasangati Masooli</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0747989491" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256747989491" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+ <div class="school-card">
+            <div class="img-box"><img src="ocean.jpg" alt="Ocean"></div>
+            <div class="content-box">
+                <span class="tag tag-pink">Skills Training</span>
+                <h2 class="school-name">The Ocean of Knowledge School</h2>
+                <span class="motto">“Up with skills”</span>
+                <p class="desc">Fashion, Music, Bakery, Salon, and Swimming.</p>
+                <div class="info-pill">📍 Kasangati – Bulamu road</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0706501032" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256706501032" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+
+ <div class="school-card">
+            <div class="img-box"><img src="kindmothers.jpg" alt="Kind Mothers"></div>
+            <div class="content-box">
+                <span class="tag tag-yellow">Loving Care</span>
+                <h2 class="school-name">Kind Mothers Nursery & Primary School</h2>
+                <span class="motto">“Forward ever, backward never”</span>
+                <div class="info-pill">📍 Kasangati along Kazinga – Kira road</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0772824731" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256772824731" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
 
 <div class="school-card">
-        <div class="img-box"><img src="jero.jpg" alt="Jero Junior School"></div>
-        <div class="content-box">
-            <span class="tag tag-blue">Quality Education</span>
-            <h2 class="school-name">Jero Junior School</h2>
-            <span class="motto">“Be The Light”</span>
-            <p class="desc">Commendable, affordable, and quality education for the Gayaza community.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Gayaza Town, Behind Family Stores</div>
-                <div>📞 <b>Tel:</b> 0701 027 228 / 0776 027 228</div>
+            <div class="img-box"><img src="passion_junior.jpg" alt="Passion Junior School"></div>
+            <div class="content-box">
+                <span class="tag tag-pink">Faith & Excellence</span>
+                <h2 class="school-name">Passion Junior School</h2>
+                <span class="motto">“God is my provider”</span>
+                <p class="desc">A nurturing environment located in the heart of NalyaMagonja, dedicated to holistic growth.</p>
+                <div class="info-pill">📍 Gayaza - Naalya, Magonja</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0742186834" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256742186834" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
             </div>
-            <div class="btn-row">
-                <a href="tel:0701027228" class="btn btn-call">Call School</a>
-                <a href="https://wa.me/256701027228" class="btn btn-wa">WhatsApp</a>
+        </div>
+
+
+        <div class="school-card">
+            <div class="img-box"><img src="mirembe_royal.jpg" alt="Mirembe Royal School"></div>
+            <div class="content-box">
+                <span class="tag tag-blue">Royal Wisdom</span>
+                <h2 class="school-name">Mirembe Royal School</h2>
+                <span class="motto">“Fear of God is the beginning of Wisdom”</span>
+                <p class="desc">Providing a royal standard of education with strong spiritual foundations.</p>
+                <div class="info-pill">📍 Namavundu - Bulamu</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0705005210" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256705005210" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+   <div class="school-card">
+            <div class="img-box"><img src="kash_top.jpg" alt="Kash Top"></div>
+            <div class="content-box">
+                <span class="tag tag-pink">Top Performance</span>
+                <h2 class="school-name">Kash Top School</h2>
+                <span class="motto">“Always at the top”</span>
+                <div class="info-pill">📍 Gayaza next to Gayaza High School</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0783121569" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256783121569" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="school-card">
+            <div class="img-box"><img src="deerfield.jpg" alt="Deerfield"></div>
+            <div class="content-box">
+                <span class="tag tag-yellow">Best Education</span>
+                <h2 class="school-name">Deerfield School</h2>
+                <span class="motto">“We light Each Other”</span>
+                <div class="info-pill">📍 Nangabo Kasangati</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0774681511" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256774681511" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="img-box"><img src="littlevalley.jpg" alt="Little Valley"></div>
+            <div class="content-box">
+                <span class="tag tag-pink">Creative Minds</span>
+                <h2 class="school-name">Little Valley School</h2>
+                <span class="motto">“Inspiring Creativity”</span>
+                <p class="desc">Integrated National & International Curriculum.</p>
+                <div class="info-pill">📍 Buwagga town, Nansana</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0773812197" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256773812197" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="img-box"><img src="greenwood.jpg" alt="Greenwood"></div>
+            <div class="content-box">
+                <span class="tag tag-blue">Leading Tomorrow</span>
+                <h2 class="school-name">Greenwood Nursery & Primary</h2>
+                <span class="motto">“Learning today, leading tomorrow”</span>
+                <div class="info-pill">📍 Manyangwa Gayaza road</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0781705250" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256781705250" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+       
+       <div class="school-card">
+            <div class="img-box"><img src="cradle.jpg" alt="Cradle Land"></div>
+            <div class="content-box">
+                <span class="tag tag-blue">Free Bedding</span>
+                <h2 class="school-name">Cradle Land School</h2>
+                <span class="motto">“Nurture to greater heights”</span>
+                <p class="desc">Free mattresses for boarding section and exercise books.</p>
+                <div class="info-pill">📍 Nangabo along Kasangati Rd</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0753500900" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256753500900" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="img-box"><img src="trinity.jpg" alt="Trinity"></div>
+            <div class="content-box">
+                <span class="tag tag-yellow">Future Ready</span>
+                <h2 class="school-name">Trinity Preparatory School</h2>
+                <span class="motto">“Sharpening for a bright future”</span>
+                <div class="info-pill">📍 Kasangati Mawule</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0783401879" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256783401879" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="img-box"><img src="holyfamily.jpg" alt="Holy Family"></div>
+            <div class="content-box">
+                <span class="tag tag-pink">Faith Based</span>
+                <h2 class="school-name">Holy Family Junior School</h2>
+                <span class="motto">“Timor dei principum sapientiae”</span>
+                <p class="desc">Emphasizing the fear of God and strong moral values.</p>
+                <div class="info-pill">📍 Nakasajja, Gayaza – Kalagi Road</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0394812505" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256774305717" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="img-box"><img src="mk.jpg" alt="MK Intl"></div>
+            <div class="content-box">
+                <span class="tag tag-blue">Talent & Band</span>
+                <h2 class="school-name">MK International Schools</h2>
+                <span class="motto">“We struggle for the future”</span>
+                <div class="info-pill">📍 Nateete – Busega near Samona</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0756142537" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256756142537" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="img-box"><img src="janeric.jpg" alt="Janeric"></div>
+            <div class="content-box">
+                <span class="tag tag-yellow">Reading Skills</span>
+                <h2 class="school-name">Janeric Glorious Schools</h2>
+                <span class="motto">“Be known by good works”</span>
+                <p class="desc">Quality education for beginners: Reading, Writing, Speaking.</p>
+                <div class="info-pill">📍 Masooli Gayaza road</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0780242852" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256780242852" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="img-box"><img src="harrytots.jpg" alt="Harry Tots"></div>
+            <div class="content-box">
+                <span class="tag tag-pink">Professional Staff</span>
+                <h2 class="school-name">Harry Tots Junior School</h2>
+                <span class="motto">“God in all Things”</span>
+                <p class="desc">Dual Curriculum with highly professional staff.</p>
+                <div class="info-pill">📍 Along Gayaza road Masooli village</div>
+                <div class="btn-row">
+                    <a href="#" class="btn btn-profile">👁️ Profile</a>
+                    <a href="tel:0751373815" class="btn btn-call">📞 Call</a>
+                    <a href="https://wa.me/256751373815" class="btn btn-wa">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <span class="footer-logo">Find A School Ug 🎈</span>
+            <p style="line-height: 1.7; color: #a0aec0;">
+                Empowering parents in Ksangati Town Council and beyond to make the best educational choices. We are the bridge between quality schools and the next generation of leaders.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Explorer</h4>
+            <ul class="footer-links">
+                <li><a href="school-hub.html">🏡 Return Home</a></li>
+                <li><a href="List-kindergarten.html">🧸 Nursery Directory</a></li>
+                <li><a href="list-primary.html">📚 Primary Section</a></li>
+                <li><a href="#">🏀 Extracurriculars</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Get in Touch</h4>
+            <div class="contact-item">📍 Gayaza Town,B&G ARcade 2nd Floor, Gayaza - Zirobwe Road</div>
+            <div class="contact-item">📞 +256 770 711 651</div>
+            <div class="contact-item">✉️ enjubayaksangati@gmail.com</div>
+            <div style="margin-top: 20px;">
+                <a href="https://wa.me/256770711651" style="color: #25d366; text-decoration: none; font-weight: 800;">💬 Chat with Us on WhatsApp</a>
             </div>
         </div>
     </div>
 
-    <div class="school-card">
-        <div class="img-box"><img src="deerfield.jpg" alt="Deerfield School"></div>
-        <div class="content-box">
-            <span class="tag tag-green">Holistic Care</span>
-            <h2 class="school-name">Deerfield School</h2>
-            <span class="motto">“We light Each Other”</span>
-            <p class="desc">Your kids deserve the best education in a supportive and bright environment.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Nangabo Kasangati</div>
-                <div>📧 <b>Email:</b> deerfieldschoo@gmail.com</div>
-                <div>📞 <b>Tel:</b> 0774 681 511 / 0758 866 966</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0774681511" class="btn btn-call">Inquire</a>
-                <a href="https://wa.me/256774681511" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
+    <div class="copyright">
+        &copy; 2026 Find A School Uganda. Carefully crafted for parents and pupils.
     </div>
+</footer>
+<a href="#" id="backToTop">↑</a>
 
-    <div class="school-card">
-        <div class="img-box"><img src="littlevalley.jpg" alt="Little Valley School"></div>
-        <div class="content-box">
-            <span class="tag tag-orange">Integrated Curriculum</span>
-            <h2 class="school-name">Little Valley Day Care & Nursery</h2>
-            <span class="motto">“Inspiring Creativity”</span>
-            <p class="desc">Merging National & International curricula in a highly conducive learning environment.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Buwagga town, Nansana Municipality</div>
-                <div>📞 <b>Tel:</b> 0773 812 197 / 0756 339 419</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0773812197" class="btn btn-call">Call School</a>
-                <a href="https://wa.me/256773812197" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
+<script>
+function filterSchools() {
+    let input = document.getElementById('schoolSearch').value.toLowerCase();
+    let location = document.getElementById('locationFilter').value.toLowerCase();
+    let cards = document.getElementsByClassName('school-card');
+    let counter = document.getElementById('schoolCounter');
+    let visibleCount = 0;
 
-    <div class="school-card">
-        <div class="img-box"><img src="greenwood.jpg" alt="Greenwood School"></div>
-        <div class="content-box">
-            <span class="tag tag-blue">Int. Standards</span>
-            <h2 class="school-name">Greenwood Nursery & Primary</h2>
-            <span class="motto">“Learning today, leading tomorrow”</span>
-            <p class="desc">Offering the National Curriculum of Uganda with international delivery standards.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Manyangwa Gayaza road</div>
-                <div>📧 <b>Email:</b> Greenwoodschools2025@gmail.com</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0781705250" class="btn btn-call">Call Admin</a>
-                <a href="https://wa.me/256781705250" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
+    for (let i = 0; i < cards.length; i++) {
+        let name = cards[i].querySelector('.school-name').innerText.toLowerCase();
+        let info = cards[i].querySelector('.info-pill').innerText.toLowerCase();
+        
+        if (name.includes(input) && info.includes(location)) {
+            cards[i].style.display = "";
+            visibleCount++;
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
 
-    <div class="school-card">
-        <div class="img-box"><img src="kindmothers.jpg" alt="Kind Mothers"></div>
-        <div class="content-box">
-            <span class="tag tag-green">Nurturing Care</span>
-            <h2 class="school-name">Kind Mothers Nursery & Day Care</h2>
-            <span class="motto">“Forward ever, backward never”</span>
-            <p class="desc">Bring your child to a place where they are nurtured like they are at home.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Kasangati along Kazinga – Kira road</div>
-                <div>📞 <b>Tel:</b> 0772 824 731 / 0740 419 166</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0772824731" class="btn btn-call">Call School</a>
-                <a href="https://wa.me/256772824731" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
+    // Update the counter text
+    if (visibleCount === 0) {
+        counter.innerHTML = "❌ No schools found matching your search";
+        counter.style.background = "#ffebee"; // Light red for no results
+    } else if (input === "" && location === "") {
+        counter.innerHTML = `Showing all ${visibleCount} schools`;
+        counter.style.background = "#e0f7fa";
+    } else {
+        counter.innerHTML = `Found ${visibleCount} school${visibleCount > 1 ? 's' : ''} for you`;
+        counter.style.background = "#e0f7fa";
+    }
+}
 
-    <div class="school-card">
-        <div class="img-box"><img src="janeric.jpg" alt="Janeric Glorious"></div>
-        <div class="content-box">
-            <span class="tag tag-blue">Foundational Skills</span>
-            <h2 class="school-name">Janeric Glorious Schools</h2>
-            <span class="motto">“Be known by good works”</span>
-            <p class="desc">A Christian founded school providing the best reading, writing, speaking and listening skills.</p>
-            <div class="contact-info">
-                <div>📧 <b>Email:</b> janericgloriousschs24@gmail.com</div>
-                <div>📞 <b>Tel:</b> 0780 242 852 / 0750 634 012</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0780242852" class="btn btn-call">Call Admin</a>
-                <a href="https://wa.me/256780242852" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
+// Run once on page load to set the initial count
+window.onload = filterSchools;
 
-    <div class="school-card">
-        <div class="img-box"><img src="harrytots.jpg" alt="Harry Tots"></div>
-        <div class="content-box">
-            <span class="tag tag-orange">Dual Curriculum</span>
-            <h2 class="school-name">Harry Tots Junior School</h2>
-            <span class="motto">“God in all Things”</span>
-            <p class="desc">Operating a dual curriculum with professional staff dedicated to early childhood growth.</p>
-            <div class="contact-info">
-                <div>📍 <b>Location:</b> Along Gayaza road Masooli village</div>
-                <div>📞 <b>Tel:</b> 0751 373 815 / 0782 306 063</div>
-            </div>
-            <div class="btn-row">
-                <a href="tel:0751373815" class="btn btn-call">Inquire Now</a>
-                <a href="https://wa.me/256751373815" class="btn btn-wa">WhatsApp</a>
-            </div>
-        </div>
-    </div>
-
-    </div>
-
+    // Back to Top Button Logic
+    window.onscroll = function() {
+        let btn = document.getElementById("backToTop");
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            btn.style.display = "flex";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+</script>
 </body>
 </html>
-
