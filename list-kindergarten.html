@@ -214,12 +214,62 @@ footer {
     font-size: 0.9rem;
 }
 
+/* --- MOBILE RESPONSIVE OVERHAUL --- */
 @media (max-width: 768px) {
-    footer { border-top-left-radius: 30px; border-top-right-radius: 30px; text-align: center; }
-    .footer-links a:hover { transform: none; color: #00d2ff; }
-    .contact-item { justify-content: center; }
-}
+    /* 1. Stack the card vertically */
+    .school-card {
+        flex-direction: column;
+        border-radius: 25px;
+        margin-bottom: 25px;
+    }
 
+    /* 2. Make image full width on top */
+    .img-box {
+        width: 100%;
+        height: 200px;
+    }
+
+    /* 3. Adjust content padding so it doesn't squish */
+    .content-box {
+        padding: 20px;
+        min-width: unset;
+    }
+
+    .school-name {
+        font-size: 1.3rem;
+    }
+
+    /* 4. Make buttons stack or wrap better */
+    .btn-row {
+        flex-direction: row; /* Keep them side-by-side but smaller text */
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 10px 2px;
+        font-size: 0.7rem;
+    }
+
+    /* 5. Fix Search Bar for Mobile */
+    .search-section {
+        border-radius: 20px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #schoolSearch, #locationFilter {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #eee;
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* 6. Header adjustment */
+    header {
+        padding: 10px 5%;
+    }
+}
 
 /* MODERN SEARCH & FILTER BAR - EXPANDED */
 .search-section {
@@ -749,4 +799,5 @@ window.onload = filterSchools;
 </script>
 </body>
 </html>
+
 
