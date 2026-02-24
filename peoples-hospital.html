@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Grand Opening: Peoples Medical Hospital | Quality Care in Gayaza</title>
+    <meta name="description" content="Experience world-class healthcare at the new Peoples Medical Hospital. Now open in Manyangwa, 10 miles along Gayaza Road. 24/7 Emergency & Specialized Care.">
+    <meta property="og:title" content="Peoples Medical Hospital: Now Open to Serve the Community">
+    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/hospital-poster.jpg">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --med-blue: #1e3a8a; --med-light: #eff6ff; --red: #d32f2f; --accent: #fbbf24;
+            --white: #ffffff; --text: #1f2937;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--white); color: var(--text); line-height: 1.6; }
+        
+        /* Navigation */
+        header { 
+            background: white; padding: 15px 5%; border-bottom: 1px solid #eee;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .logo { text-decoration: none; color: var(--med-blue); font-weight: 800; font-size: 1.2rem; }
+        .emergency-btn { background: var(--red); color: white; padding: 8px 18px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 0.85rem; }
+
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('hospital-exterior.jpg') center/cover;
+            color: white; padding: 100px 5%; text-align: center;
+        }
+        .hero h1 { font-size: 3rem; margin: 0; letter-spacing: -1px; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 20px auto; }
+        .hero-badge { background: var(--accent); color: var(--med-blue); padding: 5px 15px; border-radius: 5px; font-weight: 900; text-transform: uppercase; font-size: 0.8rem; }
+
+        /* Content Sections */
+        .container { max-width: 1100px; margin: 0 auto; padding: 60px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2rem; color: var(--med-blue); }
+        .section-title div { width: 60px; height: 4px; background: var(--accent); margin: 10px auto; }
+
+        /* Services Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .service-card { 
+            background: var(--med-light); padding: 30px; border-radius: 15px; 
+            border-bottom: 4px solid transparent; transition: 0.3s;
+        }
+        .service-card:hover { border-bottom-color: var(--med-blue); transform: translateY(-5px); background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-card h3 { color: var(--med-blue); margin-top: 0; }
+        .service-card p { font-size: 0.95rem; opacity: 0.8; }
+
+        /* Features List */
+        .features { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 40px 0; }
+        .feature-item { display: flex; align-items: center; gap: 10px; background: #f3f4f6; padding: 10px 20px; border-radius: 50px; font-weight: 600; font-size: 0.9rem; }
+
+        /* Contact & Map */
+        .contact-box { 
+            display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; 
+            background: var(--med-blue); color: white; border-radius: 20px; padding: 50px; overflow: hidden;
+        }
+        .info-pane h2 { font-size: 2rem; }
+        .map-pane iframe { width: 100%; height: 300px; border-radius: 10px; border: none; }
+
+        footer { background: #f9fafb; padding: 40px 5%; text-align: center; border-top: 1px solid #eee; }
+        .read-more-news { margin-top: 40px; border-top: 1px solid #eee; padding-top: 40px; text-align: left; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .contact-box { grid-template-columns: 1fr; padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">PEOPLES MEDICAL HOSPITAL</a>
+        <a href="tel:+256706536790" class="emergency-btn">EMERGENCY: +256706536790</a>
+    </header>
+
+    <section class="hero">
+        <span class="hero-badge">Now Open in Gayaza</span>
+        <h1>Compassionate Care, <br>Modern Medicine.</h1>
+        <p>Your new health destination along Gayaza Road. Providing high-quality medical services for families in Kasangati, Gayaza, and Manyangwa.</p>
+    </section>
+
+    <div class="container">
+        <div class="features">
+            <div class="feature-item">✅ 24/7 Admissions</div>
+            <div class="feature-item">✅ Fully Stocked Pharmacy</div>
+            <div class="feature-item">✅ Digital X-Ray & Scan</div>
+            <div class="feature-item">✅ Modern Operating Theater</div>
+        </div>
+
+        <div class="section-title">
+            <h2>Our Specialized Departments</h2>
+            <div></div>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Gynecology & Maternity</h3>
+                <p>Comprehensive care for women, from prenatal visits to safe deliveries and postnatal support.</p>
+            </div>
+            <div class="service-card">
+                <h3>Pediatrics Clinic</h3>
+                <p>Compassionate, specialized health care for children, including immunizations and nutrition.</p>
+            </div>
+            <div class="service-card">
+                <h3>Dental Care</h3>
+                <p>Full-scale oral health services, from routine cleaning to advanced restorative procedures.</p>
+            </div>
+            <div class="service-card">
+                <h3>Physiotherapy</h3>
+                <p>Professional rehabilitation services to help you restore movement and reduce pain.</p>
+            </div>
+            <div class="service-card">
+                <h3>Radiology & Lab</h3>
+                <p>Highly accurate digital X-rays, Ultrasounds, and a state-of-the-art diagnostic laboratory.</p>
+            </div>
+            <div class="service-card">
+                <h3>Orthopedics</h3>
+                <p>Diagnosis and treatment for musculoskeletal issues, bone health, and pain management.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-box">
+            <div class="info-pane">
+                <h2>Find Us Today</h2>
+                <p>We are located 10 miles along Gayaza Road, just as you enter Gayaza Town on your right.</p>
+                <p><strong>Open Hours:</strong> 24 Hours / 7 Days</p>
+                <p><strong>Phone:</strong> +256706536790</p>
+                <div style="margin-top:20px;">
+                    <a href="https://wa.me/2567065367902" style="color:var(--accent); text-decoration:none; font-weight:bold;">Message us on WhatsApp →</a>
+                </div>
+            </div>
+            <div class="map-pane">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.851608447475!2d32.610555!3d0.460833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMjcnMzkuMCJOIDMywrM2Nic0MC4wIkU!5e0!3m2!1sen!2sug!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="read-more-news">
+            <h3 style="color:var(--med-blue)">You May Also Be Interested In:</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 10px;"><a href="kaggo-cup.html" style="color: var(--red); text-decoration: none; font-weight: bold;">⚽ Excitement as Kaggo Cup Kicks Off in Busukuma</a></li>
+                <li style="margin-bottom: 10px;"><a href="uce-results.html" style="color: var(--red); text-decoration: none; font-weight: bold;">🎓 Gayaza C.U. Ranks 457th Nationally in UCE Results</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Peoples Medical Hospital</strong> - service above all.</p>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Peoples Medical Hospital | Published via Enjuba Ya Kasangati</p>
+    </footer>
+
+</body>
+</html>
