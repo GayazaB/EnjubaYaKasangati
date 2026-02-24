@@ -88,48 +88,50 @@
         .ward-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
         .ward-list span { background: var(--light-gray); padding: 8px; border-radius: 6px; text-align: center; font-size: 0.85rem; font-weight: 600; }
 
-        /* Enhanced Floating Bar */
-.floating-controls {
-    position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
-    display: flex; gap: 20px; align-items: center; z-index: 2000;
-    background: rgba(26, 26, 26, 0.85); /* Darker, more premium */
-    backdrop-filter: blur(15px);
-    padding: 12px 25px; border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
+        /* REFINED FLOATING BUTTON BAR */
+        .floating-controls {
+            position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 15px; align-items: center; z-index: 2000;
+            background: rgb(64, 64, 64); /* Strong Dark Glass */
+            backdrop-filter: blur(15px);
+            padding: 10px 20px; border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
 
-/* Base Button Style */
-.float-btn {
-    width: 48px; height: 48px; border-radius: 50%; border: none;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; color: white; font-size: 1.2rem;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+        .float-btn {
+            width: 48px; height: 48px; border-radius: 50%; border: none;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; color: white; font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+        }
 
-/* Better Audio Button with Pulse */
-.audio-btn { 
-    background: linear-gradient(135deg, #673ab7, #9c27b0);
-    position: relative;
-}
+        /* Audio Button + Pulse */
+        .audio-btn { background: linear-gradient(135deg, #673ab7, #9c27b0); position: relative; }
+        .audio-btn.playing::after {
+            content: ''; position: absolute; width: 100%; height: 100%;
+            border-radius: 50%; border: 2px solid #9c27b0; animation: pulse-ring 1.5s infinite;
+        }
 
-/* The Glowing Pulse Effect */
-.audio-btn.playing::after {
-    content: '';
-    position: absolute; width: 100%; height: 100%;
-    border-radius: 50%; border: 2px solid #9c27b0;
-    animation: pulse-ring 1.5s infinite;
-}
+        /* Back to Top (Modern Glowing) */
+        .top-btn { 
+            background:rgb(00, 22, 127); /* Distinct Grey against black bar */
+            border: 1px solid #666; 
+            font-weight: bold;
+        }
+        .top-btn:hover { background: var(--blue); box-shadow: 0 0 15px var(--blue); border-color: transparent; }
 
-@keyframes pulse-ring {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(1.6); opacity: 0; }
-}
+        /* WhatsApp Button */
+        .wa-btn { background: #25d366; }
+        .wa-btn:hover { box-shadow: 0 0 15px #25d366; }
 
-.top-btn { background: #333; border: 1px solid #444; }
-.wa-btn { background: #25d366; }
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
 
-.float-btn:hover { transform: scale(1.15) translateY(-5px); }
+        .float-btn:hover { transform: scale(1.15) translateY(-5px); }
 
         footer { background: var(--dark); color: white; padding: 60px 5%; text-align: center; }
 
@@ -172,8 +174,6 @@
         <h2 class="section-title">Top Stories on Ground</h2>
 
         <div class="news-grid">
-         
-
             <a href="kaggo-cup.html" class="card">
                 <div class="card-img-wrap">
                     <span class="card-badge" style="background:var(--red)">SPORTS</span>
@@ -197,7 +197,6 @@
                     <div class="card-footer"><span>By Sammy Serwadda</span><span>5 min read</span></div>
                 </div>
             </a>
-
 
             <a href="uce-results.html" class="card">
                 <div class="card-img-wrap">
@@ -244,45 +243,45 @@
         </div>
 
        <h2 class="section-title">Community Archive</h2>
-<p style="margin-top: -15px; margin-bottom: 25px; color: #666; font-size: 0.9rem;">Older stories and cultural highlights from Kasangati.</p>
+        <p style="margin-top: -15px; margin-bottom: 25px; color: #666; font-size: 0.9rem;">Older stories and cultural highlights from Kasangati.</p>
 
-<div class="archive-list">
-    <a href="child-nurturing-reunion.html" class="archive-item">
-        <img src="reunion.jpg" alt="Clan Reunion">
-        <div class="archive-content">
-            <span style="color:var(--red); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Culture</span>
-            <h4 style="margin: 3px 0;">Lessons from the Fumbe Clan Reunion</h4>
-            <small>📅 February 15, 2026</small>
-        </div>
-    </a>
+        <div class="archive-list">
+            <a href="child-nurturing-reunion.html" class="archive-item">
+                <img src="reunion.jpg" alt="Clan Reunion">
+                <div class="archive-content">
+                    <span style="color:var(--red); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Culture</span>
+                    <h4 style="margin: 3px 0;">Lessons from the Fumbe Clan Reunion</h4>
+                    <small>📅 February 15, 2026</small>
+                </div>
+            </a>
 
-    <a href="gayaza-fc.html" class="archive-item">
-        <img src="news2.jpg" alt="Gayaza FC">
-        <div class="archive-content">
-            <span style="color:var(--blue); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Sports</span>
-            <h4 style="margin: 3px 0;">Gayaza FC: Ready for the 4th Division?</h4>
-            <small>📅 February 10, 2026</small>
-        </div>
-    </a>
+            <a href="gayaza-fc.html" class="archive-item">
+                <img src="news2.jpg" alt="Gayaza FC">
+                <div class="archive-content">
+                    <span style="color:var(--blue); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Sports</span>
+                    <h4 style="margin: 3px 0;">Gayaza FC: Ready for the 4th Division?</h4>
+                    <small>📅 February 10, 2026</small>
+                </div>
+            </a>
 
-    <a href="community-clean-up.html" class="archive-item">
-        <img src="cleanup.jpg" alt="Bulungi Bwansi">
-        <div class="archive-content">
-            <span style="color:var(--green); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Civic Action</span>
-            <h4 style="margin: 3px 0;">Bulungi Bwansi: Kazinga Ward Clean-up</h4>
-            <small>📅 January 28, 2026</small>
-        </div>
-    </a>
+            <a href="community-clean-up.html" class="archive-item">
+                <img src="cleanup.jpg" alt="Bulungi Bwansi">
+                <div class="archive-content">
+                    <span style="color:var(--green); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Civic Action</span>
+                    <h4 style="margin: 3px 0;">Bulungi Bwansi: Kazinga Ward Clean-up</h4>
+                    <small>📅 January 28, 2026</small>
+                </div>
+            </a>
 
-    <a href="elections.html" class="archive-item">
-        <img src="kazibwe.jpg" alt="Hajji Kazibwe - New Mayor">
-        <div class="archive-content">
-            <span style="color:#f59e0b; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Politics</span>
-            <h4 style="margin: 3px 0;">Local government Elections: who were the annpunced winners?</h4>
-            <small>📅 January 15, 2026</small>
+            <a href="elections.html" class="archive-item">
+                <img src="kazibwe.jpg" alt="Hajji Kazibwe">
+                <div class="archive-content">
+                    <span style="color:#f59e0b; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Politics</span>
+                    <h4 style="margin: 3px 0;">Local government Elections: who were the winners?</h4>
+                    <small>📅 January 15, 2026</small>
+                </div>
+            </a>
         </div>
-    </a>
-</div>
 
         <section class="about-section" id="about">
             <h2>Our Community</h2>
@@ -313,29 +312,27 @@
         <h2 style="color:var(--red); margin:0;">Enjuba Ya Kasangati</h2>
         <p style="margin:10px 0;">"Tuli Mu Kitundu Ku Lwe Kitundu"</p>
         <div style="margin: 20px 0; color: #aaa; font-size: 0.9rem;">
-            Contact: 0702 97 20 20 | Gayaza Road, Kasangati
+            Contact: 0702 97 20 20 | Gayaza- Zirobwe Road, Kasangati Town Council.
         </div>
         <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 EyaKa Media Group</p>
     </footer>
 
     <script>
-     function toggleAudio() {
-    const audio = document.getElementById('bg-audio');
-    const icon = document.getElementById('audio-icon');
-    const btn = document.querySelector('.audio-btn');
+        function toggleAudio() {
+            const audio = document.getElementById('bg-audio');
+            const icon = document.getElementById('audio-icon');
+            const btn = document.querySelector('.audio-btn');
 
-    if (audio.paused) {
-        audio.play();
-        icon.innerText = "⏸️"; // Pause icon
-        btn.classList.add('playing'); // Starts the pulse animation
-    } else {
-        audio.pause();
-        icon.innerText = "▶️"; // Play icon
-        btn.classList.remove('playing'); // Stops the pulse animation
-    }
-}
+            if (audio.paused) {
+                audio.play();
+                icon.innerText = "⏸️"; 
+                btn.classList.add('playing');
+            } else {
+                audio.pause();
+                icon.innerText = "▶️"; 
+                btn.classList.remove('playing');
+            }
+        }
     </script>
 </body>
 </html>
-
-
