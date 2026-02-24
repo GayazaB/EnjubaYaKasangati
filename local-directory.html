@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kasangati Connect | The Ultimate Local Directory & Service Guide</title>
+<meta name="title" content="Kasangati Connect | The Ultimate Local Directory & Service Guide">
+<meta name="description" content="Find trusted schools, electricians, tailors, Shops and fresh food markets in Kasangati & neighborhood. The all-in-one community guide for residents.">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/local-directory.html">
+<meta property="og:title" content="📍 Everything Kasangati: Schools, Services & Shops">
+<meta property="og:description" content="Need a plumber? Looking for school fees info? Find all local service providers in Kasangati Town Council in one place.">
+<meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/directory.jpg">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://gayazab.github.io/EnjubaYaKasangati/local-directory.html">
+<meta property="twitter:title" content="Kasangati Local Directory 2026">
+<meta property="twitter:description" content="Connecting Kasangati residents with verified local artisans, schools, and markets.">
+<meta property="twitter:image" content="https://gayazab.github.io/EnjubaYaKasangati/directory.jpg">
+
+<style>
+:root { 
+    --cobalt: #1e3a8a; --gold: #fbbf24; --slate: #f1f5f9; 
+    --crimson: #991b1b; --forest: #065f46; --violet: #5b21b6;
+}
+
+* { box-sizing: border-box; }
+
+body { 
+    font-family: 'Segoe UI', system-ui, sans-serif; 
+    margin: 0; padding-bottom: 50px; color: #1e293b; 
+    background-color: var(--slate);
+}
+
+/* 1. HEADER */
+.header-mini { 
+    background: white; padding: 12px 5%; 
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
+    position: sticky; top: 0; z-index: 1000;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+/* 2. THE HERO (Simplified Layers) */
+.hero-title { 
+    text-align: center; 
+    padding: 60px 20px 100px; 
+    color: white;
+    position: relative;
+    background: linear-gradient(-45deg, #1e3a8a, #1e40af, #3b82f6);
+    background-size: 400% 400%;
+    animation: windFlow 12s ease infinite;
+    border-bottom: 5px solid var(--gold);
+}
+
+/* Subtle African Pattern Overlay - Now behind everything */
+.hero-title::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 20L0 0h40L20 20zM20 20l20 20H0l20-20z" fill="%23ffffff" fill-opacity="0.05"/></svg>');
+    z-index: 1;
+}
+
+.hero-title h1, .hero-title p { position: relative; z-index: 5; margin-bottom: 10px; }
+
+/* 3. CATEGORY PILLS (High Visibility) */
+.category-pills {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10; /* Ensures they are above the pattern */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pill {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pill:hover {
+    background: var(--gold);
+    color: var(--cobalt);
+    transform: translateY(-3px);
+    border-color: var(--gold);
+    box-shadow: 0 6px 12px rgba(251, 191, 36, 0.4);
+}
+
+/* 4. SEARCH BAR */
+.search-container { 
+    max-width: 600px; 
+    margin: -35px auto 0; 
+    padding: 0 20px; 
+    position: relative; 
+    z-index: 20; 
+}
+.search-bar {
+    width: 100%; padding: 20px 30px; border-radius: 50px; border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); font-size: 1.1rem; outline: none;
+}
+
+/* 5. CONTENT GRID */
+.directory-section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+.launchpad-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 25px; 
+}
+.hub-card {
+    background: white; border-radius: 16px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-decoration: none; color: inherit;
+    transition: 0.3s; overflow: hidden;
+    border-top: 6px solid #eee;
+}
+
+/* Enhanced Category Sub-titles */
+.section-label { 
+    display: block;
+    font-weight: 900; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    color: #475569; /* Darker slate for better contrast */
+    margin: 60px 0 25px; 
+    font-size: 0.9rem; 
+    border-left: 6px solid var(--cobalt); /* Thick cobalt bar */
+    padding: 10px 15px;
+    background: linear-gradient(to right, rgba(30, 58, 138, 0.05), transparent); /* Soft fade effect */
+    border-radius: 4px;
+}
+
+
+.hub-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+
+.education { border-top-color: var(--gold); }
+.home-pro { border-top-color: var(--cobalt); }
+.food { border-top-color: var(--crimson); }
+.health { border-top-color: var(--forest); }
+.tech { border-top-color: var(--violet); }
+
+.card-body { padding: 25px; }
+.card-body h3 { margin: 0 0 10px; font-size: 1.2rem; }
+.card-body p { color: #64748b; font-size: 0.95rem; margin: 0; }
+
+@keyframes windFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 600px) {
+    .hero-title { padding-bottom: 80px; }
+    .pill { font-size: 0.8rem; padding: 10px 15px; }
+}
+</style>
+
+</head>
+<body>
+
+<header class="header-mini">
+    <div class="header-left">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Directory</div>
+        <div style="font-weight: 900; color: var(--cobalt); font-size: 1.3rem;">EyaKa <span style="color:var(--gold)">Connect</span></div>
+    </div>
+    <a href="https://wa.me/256702972020" class="list-business-btn">+ List Service</a>
+</header>
+
+<div class="hero-title">
+    <h1>Find it in Kasangati.</h1>
+    <p>Trusted schools, experts, and services near you.</p>
+    
+    <div class="category-pills">
+        <a href="#edu" class="pill">🎓 Schools</a>
+        <a href="#work" class="pill">⚡ Artisans</a>
+        <a href="#food" class="pill">🥦 Markets</a>
+        <a href="#health" class="pill">🏥 Health</a>
+        <a href="#events" class="pill">🌳 Events</a>
+    </div>
+</div>
+
+<div class="search-container">
+    <input type="text" class="search-bar" placeholder="Search for 'Plumber', 'Market' or 'School'...">
+</div>
+
+<main class="directory-section">
+
+    <div class="section-label" id="edu">Education & Learning</div>
+    <div class="launchpad-grid">
+        <a href="school-hub.html" class="hub-card education">
+            <div class="card-body">
+                <h3>🏫 Schools & Colleges</h3>
+                <p>Nursery to Secondary. View rankings and requirements for Gayaza and Kasangati schools.</p>
+                <div class="action-link">EXPLORE LIST →</div>
+            </div>
+        </a>
+        <a href="#" class="hub-card education">
+            <div class="card-body">
+                <h3>🎓 Home Tutors & Coaches</h3>
+                <p>Private academic tutors and sports coaches for weekend and holiday sessions.</p>
+                <div class="action-link">FIND A TUTOR →</div>
+            </div>
+        </a>
+        <a href="#" class="hub-card education">
+            <div class="card-body">
+                <h3>🧸 Kids' Shops</h3>
+                <p>Stationery, uniforms, baby wear, and toys found within the Town Council.</p>
+                <div class="action-link">BROWSE SHOPS →</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="section-label" id="work">Home & Technical Experts</div>
+    <div class="launchpad-grid">
+        <a href="technicians.html" class="hub-card home-pro">
+            <div class="card-body">
+                <h3>⚡ Electricians & Plumbers</h3>
+                <p>Verified domestic technicians for installations and emergency repairs.</p>
+                <div class="action-link">CALL TECHNICIAN →</div>
+            </div>
+        </a>
+        <a href="category-list.html" class="hub-card home-pro">
+            <div class="card-body">
+                <h3>🧵 Tailors & Designers</h3>
+                <p>Fashion designers for gomesis, suits, and school uniform specialists.</p>
+                <div class="action-link">VIEW TAILORS →</div>
+            </div>
+        </a>
+        <a href="category-list.html" class="hub-card home-pro">
+            <div class="card-body">
+                <h3>🏡 Compound & Cleaning</h3>
+                <p>Landscapers, painters, and professional home cleaning service providers.</p>
+                <div class="action-link">GET QUOTE →</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="section-label" id="food">Food, Markets & Hospitality</div>
+    <div class="launchpad-grid">
+        <a href="markets.html" class="hub-card food">
+            <div class="card-body">
+                <h3>🥦 Local Markets</h3>
+                <p>Gayaza and Kasangati daily market stall guides and fresh food price updates.</p>
+                <div class="action-link">MARKET GUIDE →</div>
+            </div>
+        </a>
+        <a href="#" class="hub-card food">
+            <div class="card-body">
+                <h3>🥘 Restaurants & Hotels</h3>
+                <p>The best dining spots, lodges, and guest houses in Kasangati.</p>
+                <div class="action-link">SEE SPOTS →</div>
+            </div>
+        </a>
+        <a href="#" class="hub-card food">
+            <div class="card-body">
+                <h3>🔥 Gas & Energy</h3>
+                <p>Kitchen gas (LPG) refill points and charcoal delivery services.</p>
+                <div class="action-link">ORDER GAS →</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="section-label" id="health">Health & Essential Tech</div>
+    <div class="launchpad-grid">
+        <a href="health.html" class="hub-card health">
+            <div class="card-body">
+                <h3>🏥 Health Centres</h3>
+                <p>Emergency contacts for 24/7 clinics and pharmacies in the neighborhood.</p>
+                <div class="action-link">GET CONTACTS →</div>
+            </div>
+        </a>
+        <a href="category-list.html" class="hub-card tech">
+            <div class="card-body">
+                <h3>📱 Phone & Computer Repairs</h3>
+                <p>Gadget shops, accessory dealers, and expert repair technicians.</p>
+                <div class="action-link">GET TECH HELP →</div>
+            </div>
+        </a>
+        <a href="#" class="hub-card tech" id="events">
+            <div class="card-body">
+                <h3>🌳 Events Gardens</h3>
+                <p>Venues for weddings, introductions (Kwanjula), and community parties.</p>
+                <div class="action-link">BOOK GARDENS →</div>
+            </div>
+        </a>
+    </div>
+
+</main>
+
+<footer style="background: #0f172a; color: white; padding: 60px 5%; margin-top: 80px; text-align: center;">
+    <h3 style="color: var(--gold); margin: 0;">EyaKa Connect</h3>
+    <p style="opacity: 0.7; max-width: 500px; margin: 15px auto;">The ultimate local search for Kasangati - Busukuma - Kijabijjo - Kira -Matuga. <br>"Tuli mu Kitundu, Ku Lwe Kitundu".</p>
+    <a href="https://wa.me/256702972020" style="background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">WhatsApp Support</a>
+    <p style="font-size: 0.8rem; margin-top: 40px; opacity: 0.5;">&copy; 2026 EyaKa Media House.</p>
+</footer>
+
+</body>
+</html>

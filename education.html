@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Schools in Kasangati & Gayaza | Enjuba Connect</title>
+    <meta name="description" content="Complete directory of Nursery, Primary, and Secondary schools in Kasangati. View fees info and contact details.">
+
+    <style>
+        :root { --cobalt: #1e3a8a; --gold: #fbbf24; --slate: #f8fafc; --edu-purple: #6d28d9; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--slate); color: #1e293b; }
+
+        .sub-header { 
+            background: white; padding: 15px 5%; 
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 100;
+        }
+
+        .edu-hero {
+            background: var(--edu-purple); color: white;
+            padding: 45px 5%; border-bottom: 5px solid var(--gold);
+        }
+
+        .edu-container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+
+        /* School Card Styling */
+        .school-card {
+            background: white; border-radius: 16px; 
+            margin-bottom: 20px; border: 1px solid #e2e8f0;
+            overflow: hidden; transition: 0.3s;
+        }
+        .school-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        .school-header { padding: 20px; display: flex; justify-content: space-between; align-items: flex-start; }
+        .school-name h3 { margin: 0; color: var(--cobalt); font-size: 1.2rem; }
+        .school-type { font-size: 0.7rem; font-weight: bold; text-transform: uppercase; color: #6d28d9; background: #f5f3ff; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; }
+
+        .school-specs { 
+            display: grid; grid-template-columns: repeat(3, 1fr); 
+            background: #f8fafc; border-top: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9;
+        }
+        .spec-item { padding: 15px; text-align: center; border-right: 1px solid #f1f5f9; }
+        .spec-item:last-child { border-right: none; }
+        .spec-label { display: block; font-size: 0.65rem; color: #64748b; text-transform: uppercase; margin-bottom: 4px; }
+        .spec-value { font-size: 0.85rem; font-weight: bold; color: #1e293b; }
+
+        .school-footer { padding: 15px 20px; display: flex; gap: 10px; }
+        .btn-call { flex: 1; background: var(--cobalt); color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.85rem; }
+        .btn-info { flex: 1; background: white; color: var(--cobalt); text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; border: 1px solid var(--cobalt); font-weight: bold; font-size: 0.85rem; }
+
+        footer { background: #0f172a; color: white; padding: 40px 5%; text-align: center; margin-top: 60px; }
+
+        @media (max-width: 600px) {
+            .school-footer { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="sub-header">
+        <a href="local-directory.html" style="text-decoration: none; color: var(--cobalt); font-weight: bold;">← Home</a>
+        <div style="font-weight: 900; color: var(--cobalt);">Enjuba <span style="color:var(--gold)">Connect</span></div>
+    </header>
+
+    <section class="edu-hero">
+        <h1>🎓 Schools & Education</h1>
+        <p>Verified learning institutions in the heart of Kasangati.</p>
+    </section>
+
+    <main class="edu-container">
+        
+        <div class="school-card">
+            <div class="school-header">
+                <div class="school-name">
+                    <h3>Gayaza High School</h3>
+                    <span class="school-type">Secondary • Girls • Boarding</span>
+                </div>
+                <div style="color: var(--gold); font-size: 1.2rem;">★</div>
+            </div>
+            <div class="school-specs">
+                <div class="spec-item">
+                    <span class="spec-label">Level</span>
+                    <span class="spec-value">O & A Level</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Location</span>
+                    <span class="spec-value">Gayaza Town</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Religious</span>
+                    <span class="spec-value">Anglican</span>
+                </div>
+            </div>
+            <div class="school-footer">
+                <a href="tel:+256700000000" class="btn-call">📞 Call Office</a>
+                <a href="#" class="btn-info">View Requirements</a>
+            </div>
+        </div>
+
+        <div class="school-card">
+            <div class="school-header">
+                <div class="school-name">
+                    <h3>Kasangati Muslim P/S</h3>
+                    <span class="school-type">Primary • Mixed • Day</span>
+                </div>
+            </div>
+            <div class="school-specs">
+                <div class="spec-item">
+                    <span class="spec-label">Level</span>
+                    <span class="spec-value">P1 - P7</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Location</span>
+                    <span class="spec-value">Wampewo</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Religious</span>
+                    <span class="spec-value">Islamic</span>
+                </div>
+            </div>
+            <div class="school-footer">
+                <a href="tel:+256700000000" class="btn-call">📞 Call Office</a>
+                <a href="#" class="btn-info">Fees Structure</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Register your school on Enjuba Connect</p>
+        <a href="https://wa.me/256702972020" style="background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">Chat via WhatsApp</a>
+    </footer>
+
+</body>
+</html>

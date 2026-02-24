@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts & Health Centres | Kasangati Connect</title>
+    <meta name="description" content="Emergency phone numbers for Kasangati Police, Ambulances, and 24/7 Clinics in Gayaza and Nangabo.">
+
+    <style>
+        :root { --cobalt: #1e3a8a; --gold: #fbbf24; --crimson: #b91c1c; --slate: #f8fafc; --medical-blue: #0ea5e9; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--slate); color: #1e293b; }
+
+        .sub-header { 
+            background: white; padding: 12px 5%; 
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 100;
+        }
+
+        /* Emergency Red Zone */
+        .emergency-hero {
+            background: var(--crimson); color: white;
+            padding: 30px 5%; border-bottom: 5px solid #7f1d1d;
+        }
+        .emergency-hero h1 { margin: 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px; margin-top: 20px;
+        }
+
+        .emergency-btn {
+            background: white; color: var(--crimson);
+            padding: 15px; border-radius: 12px; text-align: center;
+            text-decoration: none; font-weight: 900; font-size: 0.9rem;
+            box-shadow: 0 4px 0px #991b1b; transition: 0.2s;
+        }
+        .emergency-btn:active { transform: translateY(4px); box-shadow: none; }
+        .emergency-btn small { display: block; font-size: 0.65rem; color: #64748b; margin-top: 4px; }
+
+        /* General Health List */
+        .health-container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        
+        .health-section-title {
+            font-size: 1rem; font-weight: 800; color: var(--cobalt);
+            margin: 30px 0 15px; border-left: 4px solid var(--medical-blue); padding-left: 10px;
+        }
+
+        .health-card {
+            background: white; border-radius: 12px; padding: 18px;
+            margin-bottom: 12px; display: flex; justify-content: space-between;
+            align-items: center; border: 1px solid #e2e8f0;
+        }
+
+        .h-info h3 { margin: 0 0 5px; font-size: 1rem; color: #0f172a; }
+        .h-info p { margin: 0; font-size: 0.8rem; color: #64748b; }
+        .status-open { color: #16a34a; font-weight: bold; font-size: 0.75rem; background: #f0fdf4; padding: 2px 8px; border-radius: 10px; }
+
+        .call-btn {
+            background: var(--medical-blue); color: white;
+            padding: 10px 18px; border-radius: 8px; text-decoration: none;
+            font-weight: bold; font-size: 0.85rem;
+        }
+
+        footer { background: #0f172a; color: white; padding: 40px 5%; text-align: center; margin-top: 60px; }
+
+        @media (max-width: 600px) {
+            .health-card { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .call-btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="sub-header">
+        <a href="local-directory.html" style="text-decoration: none; color: var(--cobalt); font-weight: bold;">← Back</a>
+        <div style="font-weight: 900; color: var(--cobalt);">Enjuba <span style="color:var(--gold)">Connect</span></div>
+    </header>
+
+    <section class="emergency-hero">
+        <h1>🚨 Emergency Hotlines</h1>
+        <div class="emergency-grid">
+            <a href="tel:999" class="emergency-btn">POLICE <small>National / 999</small></a>
+            <a href="tel:+256700000000" class="emergency-btn">K'GATI POLICE <small>Local Station</small></a>
+            <a href="tel:+256700000000" class="emergency-btn">AMBULANCE <small>24/7 Rapid Response</small></a>
+        </div>
+    </section>
+
+    <main class="health-container">
+        
+        <div class="health-section-title">Hospitals & 24/7 Clinics</div>
+        
+        <div class="health-card">
+            <div class="h-info">
+                <h3>Peoples Medical Hospital <span class="status-open">24 HRS</span></h3>
+                <p>📍 Kasangati, Gayaza Road</p>
+                <p style="margin-top:5px; font-style: italic;">General treatment, Maternity, Lab.</p>
+            </div>
+            <a href="tel:+256700000000" class="call-btn">Call Now</a>
+        </div>
+
+        <div class="health-card">
+            <div class="h-info">
+                <h3>Kasangati Health Centre IV</h3>
+                <p>📍 Near Town Council Offices</p>
+                <p style="margin-top:5px; font-style: italic;">Public Health Services & Immunization.</p>
+            </div>
+            <a href="tel:+256700000000" class="call-btn">Call Now</a>
+        </div>
+
+        <div class="health-section-title">Pharmacies (Drug Shops)</div>
+
+        <div class="health-card">
+            <div class="h-info">
+                <h3>First Care Pharmacy</h3>
+                <p>📍 Gayaza Roundabout</p>
+                <p style="margin-top:3px; font-size: 0.75rem;">Open until 11:00 PM</p>
+            </div>
+            <a href="tel:+256700000000" class="call-btn">Call</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Is your medical facility missing?</p>
+        <a href="https://wa.me/256702972020" style="background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">Register Health Facility</a>
+        <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.5;">&copy; 2026 Enjuba Ya Kasangati</p>
+    </footer>
+
+</body>
+</html>

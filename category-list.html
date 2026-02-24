@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Technicians in Kasangati | Enjuba Connect</title>
+    <meta name="description" content="Find reliable electricians, plumbers, and mechanics in Kasangati Town Council. Verified contact details and locations.">
+
+    <style>
+        :root { --cobalt: #1e3a8a; --gold: #fbbf24; --slate: #f8fafc; --success: #059669; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--slate); color: #1e293b; }
+
+        /* Sub-Page Header */
+        .sub-header { 
+            background: white; padding: 15px 5%; 
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 100;
+        }
+        .back-link { text-decoration: none; color: var(--cobalt); font-weight: bold; font-size: 0.9rem; }
+
+        /* Category Hero */
+        .category-hero {
+            background: var(--cobalt); color: white;
+            padding: 40px 5%; text-align: left;
+            border-bottom: 5px solid var(--gold);
+        }
+        .category-hero h1 { margin: 0; font-size: 1.8rem; }
+        .category-hero p { opacity: 0.8; margin: 10px 0 0; }
+
+        /* List Layout */
+        .list-container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+        
+        .listing-card {
+            background: white; border-radius: 12px; padding: 20px;
+            margin-bottom: 15px; display: flex; justify-content: space-between;
+            align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .biz-info h3 { margin: 0 0 5px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+        .verified-badge { color: var(--gold); font-size: 0.9rem; }
+        .biz-info p { margin: 0; font-size: 0.85rem; color: #64748b; }
+        .tags { margin-top: 8px; }
+        .tag { font-size: 0.7rem; background: #eff6ff; color: var(--cobalt); padding: 3px 8px; border-radius: 4px; font-weight: bold; margin-right: 5px; }
+
+        .biz-actions a {
+            display: inline-block; background: var(--success); color: white;
+            padding: 10px 15px; border-radius: 8px; text-decoration: none;
+            font-weight: bold; font-size: 0.85rem; transition: 0.3s;
+        }
+        .biz-actions a:hover { transform: scale(1.05); background: #047857; }
+
+        /* Floating Back to Top */
+        #backToTop {
+            position: fixed; bottom: 30px; right: 20px;
+            background: var(--cobalt); color: white;
+            width: 45px; height: 45px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            opacity: 0; transition: 0.3s; pointer-events: none;
+        }
+        #backToTop.show { opacity: 1; pointer-events: auto; }
+
+        /* Footer */
+        footer { background: #0f172a; color: white; padding: 40px 5%; text-align: center; margin-top: 60px; }
+
+        @media (max-width: 600px) {
+            .listing-card { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .biz-actions { width: 100%; }
+            .biz-actions a { display: block; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="sub-header">
+        <a href="local-directory.html" class="back-link">← Back to Directory</a>
+        <div style="font-weight: 900; color: var(--cobalt);">Enjuba <span style="color:var(--gold)">Connect</span></div>
+    </header>
+
+    <section class="category-hero">
+        <h1>⚡ Technicians & Artisans</h1>
+        <p>Verified experts in Kasangati, Gayaza, and Nangabo.</p>
+    </section>
+
+    <main class="list-container">
+        
+        <div class="listing-card">
+            <div class="biz-info">
+                <h3>Ssenoga Electronics <span class="verified-badge">✔ Verified</span></h3>
+                <p>📍 Kasangati Town, Near Shell</p>
+                <div class="tags">
+                    <span class="tag">TV Repair</span>
+                    <span class="tag">Wiring</span>
+                </div>
+            </div>
+            <div class="biz-actions">
+                <a href="tel:+256700000000">📞 Call Expert</a>
+            </div>
+        </div>
+
+        <div class="listing-card">
+            <div class="biz-info">
+                <h3>Musa's Plumbing Services</h3>
+                <p>📍 Gayaza High Road</p>
+                <div class="tags">
+                    <span class="tag">Pipe Fix</span>
+                    <span class="tag">Water Tanks</span>
+                </div>
+            </div>
+            <div class="biz-actions">
+                <a href="tel:+256700000000">📞 Call Expert</a>
+            </div>
+        </div>
+
+        <div class="listing-card">
+            <div class="biz-info">
+                <h3>The Fashion Hub (Sarah) <span class="verified-badge">✔ Verified</span></h3>
+                <p>📍 Nangabo Road</p>
+                <div class="tags">
+                    <span class="tag">Gomesi</span>
+                    <span class="tag">Uniforms</span>
+                </div>
+            </div>
+            <div class="biz-actions">
+                <a href="tel:+256700000000">📞 Call Tailor</a>
+            </div>
+        </div>
+
+    </main>
+
+    <a href="#" id="backToTop">↑</a>
+
+    <footer>
+        <p>Don't see your business here?</p>
+        <a href="https://wa.me/256702972020" style="background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">Add Your Business via WhatsApp</a>
+        <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.5;">&copy; 2026 Enjuba Ya Kasangati</p>
+    </footer>
+
+    <script>
+        // Back to top scroll logic
+        const btt = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btt.classList.add("show");
+            } else {
+                btt.classList.remove("show");
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasangati & Gayaza Market Prices | Enjuba Connect</title>
+    <meta name="description" content="Daily fresh food prices for Matooke, Meat, and Charcoal in Kasangati and Gayaza markets.">
+
+    <style>
+        :root { --cobalt: #1e3a8a; --gold: #fbbf24; --slate: #f1f5f9; --crimson: #991b1b; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--slate); color: #1e293b; }
+
+        .sub-header { 
+            background: white; padding: 15px 5%; 
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 100;
+        }
+
+        .market-hero {
+            background: var(--crimson); color: white;
+            padding: 40px 5%; border-bottom: 5px solid var(--gold);
+        }
+
+        .price-container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+
+        /* Price Table Styling */
+        .price-card {
+            background: white; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px;
+        }
+
+        .price-header {
+            background: #f8fafc; padding: 15px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .update-tag { font-size: 0.75rem; background: #fee2e2; color: var(--crimson); padding: 4px 10px; border-radius: 20px; font-weight: bold; }
+
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; background: #fff; padding: 15px 20px; color: #64748b; font-size: 0.8rem; text-transform: uppercase; }
+        td { padding: 15px 20px; border-top: 1px solid #f1f5f9; font-size: 0.95rem; }
+        
+        .item-name { font-weight: bold; color: var(--cobalt); }
+        .price-value { font-weight: 900; color: #1e293b; text-align: right; }
+        .unit { font-size: 0.75rem; color: #94a3b8; font-weight: normal; margin-left: 5px; }
+
+        .trend-up { color: #dc2626; font-size: 0.8rem; }
+        .trend-down { color: #16a34a; font-size: 0.8rem; }
+
+        /* Market Vendor Cards */
+        .vendor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .vendor-card { background: white; padding: 20px; border-radius: 12px; border-left: 5px solid var(--gold); }
+
+        footer { background: #0f172a; color: white; padding: 40px 5%; text-align: center; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <header class="sub-header">
+        <a href="local-directory.html" style="text-decoration: none; color: var(--cobalt); font-weight: bold;">← Back</a>
+        <div style="font-weight: 900; color: var(--cobalt);">Enjuba <span style="color:var(--gold)">Connect</span></div>
+    </header>
+
+    <section class="market-hero">
+        <h1>🥦 Market Price Guide</h1>
+        <p>Current retail prices in Kasangati Town Council markets.</p>
+    </section>
+
+    <main class="price-container">
+        
+        <div class="price-card">
+            <div class="price-header">
+                <h2 style="margin:0; font-size: 1.2rem;">Fresh Produce</h2>
+                <span class="update-tag">Updated: Today, 8:00 AM</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th style="text-align: right;">Current Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="item-name">Matooke</span><span class="unit">(Big Bunch)</span></td>
+                        <td class="price-value">35,000 UGX <span class="trend-up">▲</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="item-name">Beef</span><span class="unit">(per Kg)</span></td>
+                        <td class="price-value">16,000 UGX <span class="trend-down">▼</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="item-name">Charcoal</span><span class="unit">(Large Sack)</span></td>
+                        <td class="price-value">95,000 UGX <span>-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="item-name">Dry Maize</span><span class="unit">(per Kg)</span></td>
+                        <td class="price-value">2,200 UGX <span class="trend-up">▲</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="border-left: 4px solid var(--gold); padding-left: 10px;">Trusted Vendors & Delivery</h3>
+        <div class="vendor-grid">
+            <div class="vendor-card">
+                <h4 style="margin:0 0 5px 0;">Mama Kevina's Stall</h4>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">📍 Gayaza Market, Stall #42. Specializes in fresh G-nuts and Matooke.</p>
+                <a href="tel:+256700000000" style="color: var(--cobalt); font-weight: bold; text-decoration: none; font-size: 0.85rem;">📞 Call for Delivery</a>
+            </div>
+            <div class="vendor-card">
+                <h4 style="margin:0 0 5px 0;">Kasangati Meat Butchery</h4>
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">📍 Near the Roundabout. Quality Beef and Goat meat available.</p>
+                <a href="tel:+256700000000" style="color: var(--cobalt); font-weight: bold; text-decoration: none; font-size: 0.85rem;">📞 Call to Order</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Own a stall? Want to update these prices?</p>
+        <a href="https://wa.me/256702972020" style="background: #25d366; color: white; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">Update Market Info</a>
+        <p style="font-size: 0.8rem; margin-top: 30px; opacity: 0.5;">&copy; 2026 Enjuba Ya Kasangati</p>
+    </footer>
+
+</body>
+</html>
