@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enjuba Ya Kasangati | We are on ground</title>
+    <title>Enjuba Ya Kasangati | Amawulire ge Kitundu</title>
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
-    <meta property="og:title" content="Enjuba Ya Kasangati | Latest News from Busukuma, Gayaza & Kiteezi">
-    <meta property="og:description" content="Catch the latest on the Kaggo Cup 2026, Top UCE 2025 results at Gayaza C.U., and Ramadan community updates.">
-    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/kaggo-cup.JPG">
-    <meta name="description" content="Enjuba Ya Kasangati: Your home for community news, sports, education updates, and cultural documentaries in Kasangati Town Council.">
+    <meta property="og:title" content="Enjuba Ya Kasangati | Katikkiro Commissions People's Medical Hospital">
+    <meta property="og:description" content="Latest from Kasangati: Owek. Charles Peter Mayiga hails Dr. Frank Ndugga, Kyadondo FC unveils new leadership, and Gayaza mourns Mzee Ssebutere.">
+    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/katikkiro-launch.jpg"> 
+    <meta name="description" content="Enjuba Ya Kasangati: Your trusted source for community news, healthcare updates, and cultural highlights in Kyadondo County.">
 
     <style>
         :root {
-            --red: #d32f2f; --blue: #1976d2; --green: #388e3c;
+            --red: #d32f2f; --blue: #1976d2; --green: #388e3c; --gold: #fbbf24;
             --white: #ffffff; --dark: #1a1a1a; --light-gray: #f4f4f4; --text: #333;
-            --glow: 0 0 15px rgba(25, 118, 210, 0.6);
-        }
-        [data-theme="dark"] {
-            --light-gray: #121212; --white: #1e1e1e; --text: #e0e0e0;
         }
 
         * { box-sizing: border-box; transition: 0.3s ease; scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: var(--light-gray); color: var(--text); line-height: 1.6; padding-bottom: 100px; }
 
-        /* Modern Fixed Header (No Nav Bar) */
+        /* Fixed Header */
         header {
             position: fixed; top: 0; width: 100%; height: 75px;
             background: var(--white); display: flex; align-items: center;
@@ -47,98 +43,44 @@
 
         main { margin-top: 140px; padding: 0 5%; max-width: 1200px; margin-left: auto; margin-right: auto; }
 
-        /* Section Titles */
         .section-title { font-size: 1.5rem; color: var(--text); border-left: 5px solid var(--red); padding-left: 15px; margin: 40px 0 20px; }
 
-        /* Ads */
-        .hospital-ad { width: 100%; margin: 20px 0; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .hospital-ad img { width: 100%; display: block; height: auto; }
-
-        /* News Grid (The Big Four) */
+        /* News Grid */
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 20px 0; }
         .card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-8px); }
+        .card:hover { transform: translateY(-8px); border-bottom: 4px solid var(--red); }
         .card-img-wrap { width: 100%; height: 210px; overflow: hidden; position: relative; }
         .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
         .card-badge { position: absolute; top: 15px; left: 15px; color: white; padding: 4px 12px; font-size: 0.7rem; border-radius: 4px; font-weight: bold; text-transform: uppercase; }
         .card-body { padding: 20px; flex-grow: 1; }
-        .card-body h3 { margin: 0 0 10px; font-size: 1.2rem; line-height: 1.3; color: var(--red); }
+        .card-body h3 { margin: 0 0 10px; font-size: 1.2rem; line-height: 1.3; color: var(--dark); }
+        .card-body p { font-size: 0.9rem; color: #555; height: 60px; overflow: hidden; }
         .card-footer { padding: 15px 20px; border-top: 1px solid #eee; font-size: 0.8rem; color: #888; display: flex; justify-content: space-between; }
 
-        /* Promo Card */
+        /* Directory Promo */
         .promo-card {
-            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
             color: white; padding: 30px; border-radius: 20px; display: flex;
             align-items: center; justify-content: space-between;
-            box-shadow: 0 15px 35px rgba(27, 67, 50, 0.2);
-            border-bottom: 6px solid #ffed4a; text-decoration: none; margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(30, 58, 138, 0.2);
+            border-bottom: 6px solid var(--gold); text-decoration: none; margin: 40px 0;
         }
 
-        /* Documentary Section */
-        .doc-feature { margin: 40px 0; background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; }
-        .doc-img { flex: 1; min-width: 300px; height: 350px; background: url('Mayor.jpg') center/cover; }
-        .doc-text { flex: 1.2; padding: 40px; min-width: 300px; }
-
-        /* Archive & Wards */
-        .archive-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-bottom: 50px; }
-        .archive-item { display: flex; gap: 15px; background: var(--white); padding: 12px; border-radius: 12px; text-decoration: none; color: inherit; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .archive-item img { width: 80px; height: 80px; border-radius: 8px; object-fit: cover; }
-
-        .about-section { background: var(--white); padding: 35px; border-radius: 15px; margin: 40px 0; border-left: 6px solid var(--green); }
-        .ward-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
-        .ward-list span { background: var(--light-gray); padding: 8px; border-radius: 6px; text-align: center; font-size: 0.85rem; font-weight: 600; }
-
-        /* REFINED FLOATING BUTTON BAR */
         .floating-controls {
             position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);
             display: flex; gap: 15px; align-items: center; z-index: 2000;
-            background: rgb(64, 64, 64); /* Strong Dark Glass */
-            backdrop-filter: blur(15px);
-            padding: 10px 20px; border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(40, 40, 40, 0.9); backdrop-filter: blur(15px);
+            padding: 10px 20px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
-
-        .float-btn {
-            width: 48px; height: 48px; border-radius: 50%; border: none;
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer; color: white; font-size: 1.1rem;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-decoration: none;
-        }
-
-        /* Audio Button + Pulse */
-        .audio-btn { background: linear-gradient(135deg, #673ab7, #9c27b0); position: relative; }
-        .audio-btn.playing::after {
-            content: ''; position: absolute; width: 100%; height: 100%;
-            border-radius: 50%; border: 2px solid #9c27b0; animation: pulse-ring 1.5s infinite;
-        }
-
-        /* Back to Top (Modern Glowing) */
-        .top-btn { 
-            background:rgb(00, 22, 127); /* Distinct Grey against black bar */
-            border: 1px solid #666; 
-            font-weight: bold;
-        }
-        .top-btn:hover { background: var(--blue); box-shadow: 0 0 15px var(--blue); border-color: transparent; }
-
-        /* WhatsApp Button */
+        .float-btn { width: 48px; height: 48px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; color: white; transition: 0.3s; text-decoration: none; }
         .wa-btn { background: #25d366; }
-        .wa-btn:hover { box-shadow: 0 0 15px #25d366; }
-
-        @keyframes pulse-ring {
-            0% { transform: scale(1); opacity: 0.8; }
-            100% { transform: scale(1.6); opacity: 0; }
-        }
-
-        .float-btn:hover { transform: scale(1.15) translateY(-5px); }
+        .top-btn { background: var(--blue); }
 
         footer { background: var(--dark); color: white; padding: 60px 5%; text-align: center; }
 
         @media (max-width: 768px) {
-            .ward-list { grid-template-columns: 1fr 1fr; }
             .promo-card { flex-direction: column; text-align: center; gap: 20px; }
-            .doc-text { padding: 25px; }
         }
     </style>
 </head>
@@ -155,185 +97,136 @@
     </header>
 
     <div class="ticker-wrapper">
-        <div class="ticker-label">BREAKING</div>
+        <div class="ticker-label">LATEST</div>
         <div class="ticker-text-move">
-            <span>⚽ Kaggo Cup 2026 kicks off in Busukuma with a thrilling opening match...</span>
-            <span>🎓 Academic Excellence: Gayaza C.U. ranks among top schools in 2025 UCE results...</span>
-            <span>🏥 Peoples Medical Hospital Grand Opening: Quality healthcare comes to Manyangwa...</span>
-            <span>🌙 Community prepares for a spiritually enriching Ramadan season...</span>
+            <span>🏛️ Owek. Charles Peter Mayiga officially commissions People's Medical Hospital in Gayaza...</span>
+            <span>⚽ Kyadondo FC unveils new executive committee for 2026 Masaza Cup campaign...</span>
+            <span>🕊️ Community honors the legacy of the late Mzee Samuel Ssebutere of Kyetume...</span>
+            <span>🏥 Dr. Frank Ndugga pledges continued medical excellence for Kasangati residents...</span>
         </div>
     </div>
 
     <main>
-        <div class="hospital-ad">
-            <a href="peoples-hospital.html">
-                <img src="hospital-poster.jpg" alt="Grand Opening: Peoples Medical Hospital">
-            </a>
-        </div>
-
         <h2 class="section-title">Top Stories on Ground</h2>
 
         <div class="news-grid">
-            <a href="kaggo-cup.html" class="card">
+            
+            <a href="katikkiro-visit.html" class="card">
+                <div class="card-img-wrap">
+                    <span class="card-badge" style="background:var(--blue)">HEALTH & ROYALTY</span>
+                    <img src="katikkiro-launch.jpg" alt="Katikkiro at People's Medical Hospital">
+                </div>
+                <div class="card-body">
+                    <h3>Katikkiro Hails Dr. Frank Ndugga’s Healthcare Vision</h3>
+                    <p>Owek. Charles Peter Mayiga commissioned People’s Medical Hospital, praising its up-to-date technology and quality patient care...</p>
+                    <div class="card-footer"><span>By Sammy Serwadda</span><span>Feb 26, 2026</span></div>
+                </div>
+            </a>
+
+            <a href="kyadondo-fc.html" class="card">
                 <div class="card-img-wrap">
                     <span class="card-badge" style="background:var(--red)">SPORTS</span>
-                    <img src="kaggo.JPG" alt="Kaggo Cup Action">
+                    <img src="kyadondo-team.jpg" alt="Kyadondo FC Leadership">
                 </div>
                 <div class="card-body">
-                    <h3>Excitement as Kaggo Cup Kicks Off in Busukuma</h3>
-                    <p>Kaggo Ssalongo Ahmed Magandazi scouts for Kyadondo stars as the tournament launches...</p>
-                    <div class="card-footer"><span>Sports Desk</span><span>3 min read</span></div>
-                </div>
-            </a>
-             
-           <a href="school-challenges.html" class="card">
-                <div class="card-img-wrap">
-                    <span class="card-badge" style="background:var(--blue)">COMMUNITY</span>
-                    <img src="school-hurdle.jpg" alt="Back to school struggle">
-                </div>
-                <div class="card-body">
-                    <h3>The Back-to-School Hurdle: Why Some Classrooms Remain Empty</h3>
-                    <p>Journalist Sammy Serwadda explores the financial challenges facing parents...</p>
-                    <div class="card-footer"><span>By Sammy Serwadda</span><span>5 min read</span></div>
+                    <h3>Kaggo Unveils Formidable Team for 2026 Masaza Cup</h3>
+                    <p>Hajji Ahmed Magandazi Matovu has inaugurated a new committee to steer Kyadondo FC toward tournament glory...</p>
+                    <div class="card-footer"><span>Sports Desk</span><span>Feb 27, 2026</span></div>
                 </div>
             </a>
 
-            <a href="uce-results.html" class="card">
+            <a href="obituary-ssebutere.html" class="card">
                 <div class="card-img-wrap">
-                    <span class="card-badge" style="background:var(--green)">EDUCATION</span>
-                    <img src="uce-gayaza.jpg" alt="Gayaza Students">
+                    <span class="card-badge" style="background:var(--dark)">OBITUARY</span>
+                    <img src="ssebutere-tribute.jpg" alt="Mzee Ssebutere Tribute">
                 </div>
                 <div class="card-body">
-                    <h3>UCE Triumph: 100% Division 1 at Gayaza C.U.</h3>
-                    <p>The 2025 candidates celebrate stellar results and ranking 457th nationwide...</p>
-                    <div class="card-footer"><span>Education</span><span>4 min read</span></div>
+                    <h3>Gayaza Mourns Mzee Ssebutere; Lay Reader Wajja Delivers Tribute</h3>
+                    <p>The community bids farewell to an elder known for his devotion to family and quality fresh milk production in Kyetume...</p>
+                    <div class="card-footer"><span>By Admin</span><span>Feb 28, 2026</span></div>
                 </div>
             </a>
 
-            <a href="ramadan-guide.html" class="card">
-                <div class="card-img-wrap">
-                    <span class="card-badge" style="background:#065f46">FAITH</span>
-                    <img src="ramadan-prep.jpg" alt="Ramadan Prep">
-                </div>
-                <div class="card-body">
-                    <h3>The Road to Renewal: A Guide to a Fruitful Ramadan</h3>
-                    <p>Gayaza Market leader Mukiibi Shafiq shares a message of faith and time management...</p>
-                    <div class="card-footer"><span>Community</span><span>5 min read</span></div>
-                </div>
-            </a>
         </div>
 
         <a href="local-directory.html" class="promo-card">
             <div style="flex: 2;">
-                <span style="background: #ffed4a; color: #1b4332; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 900; text-transform: uppercase;">Local Directory</span>
-                <h2 style="margin: 15px 0 8px 0; font-size: 1.8rem;">Search in Kasangati 📍</h2>
-                <p style="margin: 0; opacity: 0.9;">Easily find and contact schools, health centers, and essential services.</p>
+                <span style="background: var(--gold); color: #1e3a8a; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 900; text-transform: uppercase;">Essential Services</span>
+                <h2 style="margin: 15px 0 8px 0; font-size: 1.8rem;">Kasangati Service Directory 📍</h2>
+                <p style="margin: 0; opacity: 0.9;">Find verified schools, technicians, and health centers in your ward.</p>
             </div>
-            <div style="background:white; color:#1b4332; padding:12px 24px; border-radius:50px; font-weight:800;">FIND SERVICES →</div>
+            <div style="background:white; color:#1e3a8a; padding:12px 24px; border-radius:50px; font-weight:800;">BROWSE NOW →</div>
         </a>
 
-        <div class="doc-feature">
-            <div class="doc-img"></div>
-            <div class="doc-text">
-                <span style="color:var(--red); font-weight:bold; text-transform:uppercase; font-size:0.8rem;">Exclusive Feature</span>
-                <h2 style="margin:10px 0; font-size:1.8rem;">Mayor Muwonge Tom: The 2026/31 Vision</h2>
-                <p>An exclusive documentary looking into education bursaries and waste management solutions for the residents of Kasangati.</p>
-                <a href="mayor-documentary.html" style="color: var(--blue); font-weight: bold; text-decoration: none; display:inline-block; margin-top:10px;">WATCH NOW →</a>
-            </div>
+
+<h2 class="section-title">You May Have Missed</h2>
+<p style="margin-top: -15px; margin-bottom: 25px; color: #666; font-size: 0.9rem;">Previous highlights and community milestones from across the wards.</p>
+
+<div class="archive-list">
+    <a href="kaggo-cup-kickoff.html" class="archive-item">
+        <img src="kaggo-cup.JPG" alt="Kaggo Cup Action">
+        <div class="archive-content">
+            <span style="color:var(--red); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">SPORTS ARCHIVE</span>
+            <h4 style="margin: 3px 0; line-height: 1.2;">Excitement as Kaggo Cup Kicks Off in Busukuma</h4>
+            <small>📅 February 21, 2026</small>
         </div>
+    </a>
 
-       <h2 class="section-title">Community Archive</h2>
-        <p style="margin-top: -15px; margin-bottom: 25px; color: #666; font-size: 0.9rem;">Older stories and cultural highlights from Kasangati.</p>
-
-        <div class="archive-list">
-            <a href="child-nurturing-reunion.html" class="archive-item">
-                <img src="reunion.jpg" alt="Clan Reunion">
-                <div class="archive-content">
-                    <span style="color:var(--red); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Culture</span>
-                    <h4 style="margin: 3px 0;">Lessons from the Fumbe Clan Reunion</h4>
-                    <small>📅 February 15, 2026</small>
-                </div>
-            </a>
-
-            <a href="gayaza-fc.html" class="archive-item">
-                <img src="news2.jpg" alt="Gayaza FC">
-                <div class="archive-content">
-                    <span style="color:var(--blue); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Sports</span>
-                    <h4 style="margin: 3px 0;">Gayaza FC: Ready for the 4th Division?</h4>
-                    <small>📅 February 10, 2026</small>
-                </div>
-            </a>
-
-            <a href="community-clean-up.html" class="archive-item">
-                <img src="cleanup.jpg" alt="Bulungi Bwansi">
-                <div class="archive-content">
-                    <span style="color:var(--green); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Civic Action</span>
-                    <h4 style="margin: 3px 0;">Bulungi Bwansi: Kazinga Ward Clean-up</h4>
-                    <small>📅 January 28, 2026</small>
-                </div>
-            </a>
-
-            <a href="elections.html" class="archive-item">
-                <img src="kazibwe.jpg" alt="Hajji Kazibwe">
-                <div class="archive-content">
-                    <span style="color:#f59e0b; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Politics</span>
-                    <h4 style="margin: 3px 0;">Local government Elections: who were the winners?</h4>
-                    <small>📅 January 15, 2026</small>
-                </div>
-            </a>
+    <a href="uce-results.html" class="archive-item">
+        <img src="uce-gayaza.jpg" alt="Gayaza Students">
+        <div class="archive-content">
+            <span style="color:var(--green); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">EDUCATION</span>
+            <h4 style="margin: 3px 0; line-height: 1.2;">UCE Triumph: 100% Division 1 at Gayaza C.U.</h4>
+            <small>📅 February 18, 2026</small>
         </div>
+    </a>
 
-        <section class="about-section" id="about">
-            <h2>Our Community</h2>
-            <p><strong>Enjuba ya Kasangati</strong> brings light to the nine wards of Kasangati Town Council. We are your eyes on the ground.</p>
-            <div class="ward-list">
-                <span>📍 Gayaza</span><span>📍 Bulamu</span><span>📍 Kabubbu</span>
-                <span>📍 Kiteezi</span><span>📍 Wattuba</span><span>📍 Nangabo</span>
-                <span>📍 Katadde</span><span>📍 Wampewo</span><span>📍 Masooli</span>
-            </div>
-        </section>
+    <a href="ramadan-guide.html" class="archive-item">
+        <img src="ramadan-prep.jpg" alt="Ramadan Prep">
+        <div class="archive-content">
+            <span style="color:#065f46; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">FAITH</span>
+            <h4 style="margin: 3px 0; line-height: 1.2;">The Road to Renewal: A Guide to a Fruitful Ramadan</h4>
+            <small>📅 February 12, 2026</small>
+        </div>
+    </a>
+
+    <a href="school-challenges.html" class="archive-item">
+        <img src="school-hurdle.jpg" alt="Back to school struggle">
+        <div class="archive-content">
+            <span style="color:var(--blue); font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">COMMUNITY</span>
+            <h4 style="margin: 3px 0; line-height: 1.2;">The Back-to-School Hurdle: Classroom Financial Realities</h4>
+            <small>📅 February 05, 2026</small>
+        </div>
+    </a>
+</div>
+
+<section class="about-section" id="about">
+    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+        <img src="logo.png" height="50" alt="Enjuba Logo">
+        <h2 style="margin: 0;">Our Community</h2>
+    </div>
+    <p><strong>Enjuba ya Kasangati</strong> brings light to the nine wards of Kasangati Town Council. We are your eyes on the ground, documenting the growth of the Gayaza-Zirobwe corridor.</p>
+    
+    <div class="ward-list">
+        <span>📍 Gayaza</span><span>📍 Bulamu</span><span>📍 Kabubbu</span>
+        <span>📍 Kiteezi</span><span>📍 Wattuba</span><span>📍 Nangabo</span>
+        <span>📍 Katadde</span><span>📍 Wampewo</span><span>📍 Masooli</span>
+    </div>
+</section>
     </main>
 
     <div class="floating-controls">
-        <button class="float-btn audio-btn" onclick="toggleAudio()" title="Play Audio Message">
-            <span id="audio-icon">▶️</span>
-        </button>
-        <button class="float-btn top-btn" onclick="window.scrollTo(0,0)" title="Back to Top">↑</button>
-        <a href="https://wa.me/256702972020?text=Hello%20Enjuba%20News%20Desk" target="_blank" class="float-btn wa-btn">
+        <button class="float-btn top-btn" onclick="window.scrollTo(0,0)">↑</button>
+        <a href="https://wa.me/256702972020" target="_blank" class="float-btn wa-btn">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28" alt="WA">
         </a>
     </div>
 
-    <audio id="bg-audio" loop>
-        <source src="your-audio-file.mp3" type="audio/mpeg">
-    </audio>
-
     <footer>
         <h2 style="color:var(--red); margin:0;">Enjuba Ya Kasangati</h2>
         <p style="margin:10px 0;">"Tuli Mu Kitundu Ku Lwe Kitundu"</p>
-        <div style="margin: 20px 0; color: #aaa; font-size: 0.9rem;">
-            Contact: 0702 97 20 20 | Gayaza- Zirobwe Road, Kasangati Town Council.
-        </div>
-        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 EyaKa Media Group</p>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 EyaKa Media Group | Kasangati, Uganda</p>
     </footer>
 
-    <script>
-        function toggleAudio() {
-            const audio = document.getElementById('bg-audio');
-            const icon = document.getElementById('audio-icon');
-            const btn = document.querySelector('.audio-btn');
-
-            if (audio.paused) {
-                audio.play();
-                icon.innerText = "⏸️"; 
-                btn.classList.add('playing');
-            } else {
-                audio.pause();
-                icon.innerText = "▶️"; 
-                btn.classList.remove('playing');
-            }
-        }
-    </script>
 </body>
 </html>
-
