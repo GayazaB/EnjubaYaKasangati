@@ -10,7 +10,7 @@
         :root { --red: #d32f2f; --blue: #1976d2; --dark: #1a1a1a; --text: #333; --light: #f4f4f4; --gold: #fbbf24; }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: var(--text); line-height: 1.6; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: var(--light); color: var(--text); line-height: 1.6; }
         
         /* Modal Background for Expanding Images */
         #imgModal {
@@ -24,7 +24,7 @@
         header { 
             background: white; padding: 15px 5%; border-bottom: 3px solid var(--red); 
             display: flex; justify-content: space-between; align-items: center; 
-            position: sticky; top: 0; z-index: 1000; 
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .logo-small { text-decoration: none; display: flex; align-items: center; gap: 10px; }
         .logo-small h1 { font-size: 1.1rem; color: var(--red); margin: 0; }
@@ -46,18 +46,27 @@
             padding: 20px; margin: 30px 0; font-style: italic; font-size: 1.1rem;
         }
 
-        /* Genesis Box */
-        .genesis-story { 
-            background: var(--dark); color: white; padding: 25px; border-radius: 12px; margin-top: 40px; 
-        }
-        .genesis-story h3 { color: var(--gold); margin-top: 0; }
-
         /* Stakeholder Grid */
         .stakeholders { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
         .guest-tag { background: #eee; padding: 10px; border-radius: 5px; font-size: 0.9rem; border-left: 3px solid var(--blue); }
 
+        /* Genesis Box - Revised for Photo and Text */
+        .genesis-story { 
+            background: var(--dark); color: white; padding: 25px; border-radius: 12px; 
+            margin-top: 40px; display: flex; gap: 20px; align-items: flex-start;
+        }
+        .genesis-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); cursor: zoom-in; flex-shrink: 0; }
+        .genesis-content h3 { color: var(--gold); margin-top: 0; }
+        .genesis-content p { margin: 10px 0; }
+
+        /* Gallery */
         .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 30px; }
         .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; cursor: zoom-in; }
+
+        @media (max-width: 768px) { 
+            .genesis-story { flex-direction: column; align-items: center; text-align: center; }
+            .genesis-img { width: 100px; height: 100px; }
+        }
 
         @media (max-width: 600px) { 
             .gallery { grid-template-columns: 1fr 1fr; } 
@@ -84,27 +93,50 @@
     </header>
 
     <main class="article-container">
-        <span style="background: var(--gold); color: black; padding: 3px 10px; font-weight: bold; font-size: 0.75rem; border-radius: 3px;">ROYAL COMMISSIONING</span>
+        <span style="background: var(--gold); color: black; padding: 3px 10px; font-weight: bold; font-size: 0.75rem; border-radius: 3px; font-family: sans-serif; text-transform: uppercase;">Royal Commissioning</span>
         <h1>KATIKKIRO CHARLES PETER MAYIGA HAILS DR. FRANK NDUGGA FOR HEALTHCARE EXCELLENCE</h1>
         
         <span class="byline">By Sammy Serwadda | Feb 26, 2026</span>
 
         <img src="gah07.jpg" alt="Katikkiro planting tree" class="main-img" onclick="expandImg(this)">
-        <p class="caption">Owek. Charles Peter Mayiga inspects Peoples Medical Hospital. (Tap to enlarge)</p>
+        <p class="caption">Owek. Charles Peter Mayiga (black coat) plants a commemorative tree at the launch. (Tap photo to enlarge)</p>
 
-        <p><strong>GAYAZA</strong> — People’s Medical Hospital was officially opened by <strong>Owek. Charles Peter Mayiga</strong>, the Katikkiro of Buganda, in a grand celebration.</p>
+        <p><strong>GAYAZA</strong> — People’s Medical Hospital was officially opened by <strong>Owek. Charles Peter Mayiga</strong>, the Katikkiro of Buganda, in a grand celebration attended by hundreds of residents, politicians, cultural leaders, and medical fraternity members.</p>
+
+        <p>The Katikkiro and his delegation began the event by inspecting the various wards, labs, and modern equipment. He expressed his thrill at seeing "up-to-date technology and a touch of class" in patient handling, a standard he noted is sometimes lacking in rural medical centers.</p>
+
+        <p>To commemorate the day, the Katikkiro planted a tree in the hospital compound, symbolizing Buganda's commitment to growth, health, and a healthy environment for the Kabaka's people.</p>
 
         <div class="royal-quote">
-            "I didn't come here simply because of launching the hospital. I came because Dr. Frank Ndugga has always been obediently responding to the Kabaka's call..."
+            "I didn't come here simply because of launching the hospital. I came because Dr. Frank Ndugga has always been obediently responding to the Kabaka's call of providing quality medical services to his people... As Buganda Kingdom, our theme is to improve the quality of service. I am seeing this happening here."
             <br><small><strong>— Owek. Charles Peter Mayiga</strong></small>
         </div>
 
-        <div class="genesis-story">
-            <h3>THE GENESIS: Escape from Traffic</h3>
-            <p><strong>Dr. Frank Ndugga</strong> shared how escaping traffic on Gayaza road led him to discover the location for this landmark hospital.</p>
+        <h3>A United Community Effort</h3>
+        <p>The event was a powerful gathering of local and national leadership. Stakeholders applauded Dr. Frank for his patience in growing the hospital from a small clinic into a major health center. The support shown by the community confirmed that this facility is a welcome and vital addition to Kyadondo.</p>
+        
+        <div class="stakeholders">
+            <div class="guest-tag">Members of Parliament (Kyadondo County)</div>
+            <div class="guest-tag">Kasangati Town Council Mayor & Councillors</div>
+            <div class="guest-tag">The Kaggo of Kyadondo & LC1 Chairpersons</div>
+            <div class="guest-tag">Rotary Club of Gayaza Corridor</div>
+            <div class="guest-tag">Gayaza High School Representatives</div>
+            <div class="guest-tag">Community Elders & Students</div>
         </div>
 
-        <h3>PHOTO GALLERY</h3>
+        <div class="genesis-story">
+            <img src="katikkiro-planting-tree.jpg" alt="Dr. Frank Ndugga" class="genesis-img" onclick="expandImg(this)">
+            <div class="genesis-content">
+                <h3>THE GENESIS: Escape from Traffic</h3>
+                <p>During his emotional speech, <strong>Dr. Frank Ndugga</strong>, the visionary founder, shared the inspiring story of how the hospital actually started.</p>
+                <p>"While working at Mulago Hospital, my wife and I planned to start elsewhere. But I often faced heavy traffic jam on the Gayaza road. One day, I chose to 'branch off' through Bulamu to escape the jam—and that is where I found the space that would become the clinic," Dr. Frank narrated.</p>
+                <p>He expressed deep gratitude to his family, the patient staff, and the Buganda Kingdom for their partnership, adding, "We chose to stay near home to serve our people."</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 30px;">People’s Medical Hospital now stands as the very first hospital of its standard in the Gayaza corridor, setting a new history for healthcare in Kasangati Town Council.</p>
+
+        <h3>PHOTO GALLERY: THE GRAND OPENING</h3>
         <div class="gallery">
             <img src="katikkiro-inspecting.jpg" alt="Inspection" onclick="expandImg(this)">
             <img src="ooos.jpg" alt="Technology" onclick="expandImg(this)">
@@ -115,11 +147,12 @@
         </div>
     </main>
 
-    <footer style="background: var(--dark); color: white; padding: 30px 5%; text-align: center;">
-        <p>&copy; 2026 Enjuba Ya Kasangati</p>
+    <footer style="background: var(--dark); color: white; padding: 40px 5%; text-align: center;">
+        <p>&copy; 2026 Enjuba Ya Kasangati | Amawulire ge Kitundu, Nsonga za Batuuze</p>
     </footer>
 
     <script>
+        // FUNCTION FOR TAP-TO-EXPAND IMAGES
         function expandImg(imgElement) {
             var modal = document.getElementById("imgModal");
             var modalImg = document.getElementById("modalContent");
