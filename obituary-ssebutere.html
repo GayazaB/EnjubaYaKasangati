@@ -13,19 +13,43 @@
 
     <style>
         :root { --dark-green: #1b4332; --gold: #fbbf24; --text: #333; --light: #fdfdfd; --gray: #666; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
         body { font-family: 'Georgia', serif; margin: 0; background: var(--light); color: var(--text); line-height: 1.8; }
         
-        header { background: white; padding: 15px 5%; border-bottom: 2px solid var(--dark-green); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .logo-small { text-decoration: none; display: flex; align-items: center; gap: 10px; font-family: sans-serif; }
-        .logo-small h1 { font-size: 1rem; color: var(--dark-green); margin: 0; }
+        /* Modal for Expanding Images */
+        #imgModal {
+            display: none; position: fixed; z-index: 2000; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.95);
+            justify-content: center; align-items: center; cursor: zoom-out;
+        }
+        #imgModal img { max-width: 95%; max-height: 85%; border-radius: 4px; }
+        #imgModal span { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
 
-        .memorial-container { max-width: 750px; margin: 30px auto; background: white; padding: 40px; border-radius: 4px; box-shadow: 0 0 20px rgba(0,0,0,0.03); border-top: 8px solid var(--dark-green); }
+        header { 
+            background: white; padding: 15px 5%; border-bottom: 2px solid var(--dark-green); 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .logo-small { text-decoration: none; display: flex; align-items: center; gap: 10px; font-family: sans-serif; }
+        .logo-small h1 { font-size: 1rem; color: var(--dark-green); margin: 0; font-weight: 800; }
+
+        .memorial-container { 
+            max-width: 750px; margin: 30px auto; background: white; 
+            padding: 40px; border-radius: 4px; box-shadow: 0 0 20px rgba(0,0,0,0.03); 
+            border-top: 8px solid var(--dark-green); 
+        }
         
         .tribute-header { text-align: center; margin-bottom: 40px; }
         h1 { font-size: 2.2rem; color: #1a1a1a; margin: 10px 0; line-height: 1.2; }
         .dates { font-size: 1.2rem; color: var(--gray); font-style: italic; letter-spacing: 1px; }
 
-        .main-portrait { width: 100%; max-height: 500px; object-fit: cover; border-radius: 4px; filter: grayscale(20%); margin-bottom: 20px; }
+        .main-img { 
+            width: 100%; border-radius: 4px; margin-bottom: 20px; 
+            cursor: zoom-in; transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .main-img:active { transform: scale(0.98); }
         
         /* Sermon Box */
         .sermon-call { 
@@ -43,32 +67,50 @@
 
         .family-legacy { border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px; }
         
-        .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 30px; }
-        .gallery-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; }
+        /* Fixed Gallery for Landscape View */
+        .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; }
+        .gallery-grid img { 
+            width: 100%; height: 220px; object-fit: cover; border-radius: 4px; 
+            cursor: zoom-in; border: 1px solid #eee; transition: opacity 0.3s;
+        }
+        .gallery-grid img:hover { opacity: 0.9; }
 
         footer { background: #1a1a1a; color: #999; padding: 40px 5%; text-align: center; font-family: sans-serif; font-size: 0.8rem; }
 
-        @media (max-width: 600px) { .memorial-container { padding: 20px; margin: 10px; } h1 { font-size: 1.7rem; } }
+        /* MOBILE ADJUSTMENTS */
+        @media (max-width: 600px) { 
+            .memorial-container { padding: 20px; margin: 0; width: 100%; border-radius: 0; } 
+            h1 { font-size: 1.8rem; } 
+            .gallery-grid { grid-template-columns: 1fr; } /* Force Landscape one-by-one on phone */
+            .gallery-grid img { height: auto; aspect-ratio: 3/2; } /* Keeps the landscape shape */
+            header { padding: 10px 15px; }
+            .logo-small h1 { font-size: 0.85rem; }
+        }
     </style>
 </head>
 <body>
+
+    <div id="imgModal" onclick="this.style.display='none'">
+        <span>&times;</span>
+        <img id="modalContent">
+    </div>
 
     <header>
         <a href="index.html" class="logo-small">
             <img src="logo.png" alt="Logo" height="35">
             <h1>ENJUBA YA KASANGATI</h1>
         </a>
-        <a href="index.html" style="text-decoration:none; font-weight:bold; color:var(--dark-green); font-family:sans-serif;">← HOME</a>
+        <a href="index.html" style="text-decoration:none; font-weight:bold; color:var(--dark-green); font-family:sans-serif; font-size: 0.8rem;">← HOME</a>
     </header>
 
     <main class="memorial-container">
         <div class="tribute-header">
-            <span style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; color: var(--gray);">In Loving Memory</span>
+            <span style="text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; color: var(--gray); font-family: sans-serif;">In Loving Memory</span>
             <h1>Mzee Samuel Ssebutere</h1>
             <div class="dates">1956 — 2026</div>
         </div>
 
-        <img src="ssebutere-tribute.jpg" alt="Mzee Samuel Ssebutere" class="main-img" style="width:100%; border-radius: 4px;">
+        <img src="ssebutere-tribute.jpg" alt="Mzee Samuel Ssebutere Tribute" class="main-img" onclick="expandImg(this)">
 
         <p><strong>GAYAZA</strong> — The community of Gayaza and Kyetume has received the heartbreaking news of the passing of <strong>Mzee Samuel Ssebutere</strong>, a respected elder and a pillar of the local dairy industry.</p>
 
@@ -89,15 +131,17 @@
 
         <div class="family-legacy">
             <h3>A Devoted Family Man</h3>
-            <p>According to his wife, Mzee Ssebutere passed away following a complications arising from high blood pressure. She described her late husband as a "committed husband who gave his all to supporting their children's education."</p>
+            <p>According to his wife, Mzee Ssebutere passed away following complications arising from high blood pressure. She described her late husband as a "committed husband who gave his all to supporting their children's education."</p>
         </div>
 
-        <h3 style="margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px;">SCENES FROM THE FAREWELL</h3>
+        <h3 style="margin-top: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px; font-family: sans-serif; font-size: 1rem; color: var(--dark-green);">SCENES FROM THE FAREWELL</h3>
+        <p style="font-size: 0.8rem; color: var(--gray); font-style: italic; margin-top: -5px;">Tap images to view full landscape</p>
+        
         <div class="gallery-grid">
-            <img src="seb01.jpg" alt="Vigil in Kijjabijo">
-            <img src="seb3.jpg" alt="Mayor Muwonge at the vigil">
-            <img src="seb2.jpg" alt="Lay Reader Wajja preaching">
-            <img src="seb4.jpg" alt="Community gathering">
+            <img src="seb01.jpg" alt="Vigil in Kijjabijo" onclick="expandImg(this)">
+            <img src="seb3.jpg" alt="Mayor Muwonge at the vigil" onclick="expandImg(this)">
+            <img src="seb2.jpg" alt="Lay Reader Wajja preaching" onclick="expandImg(this)">
+            <img src="seb4.jpg" alt="Community gathering" onclick="expandImg(this)">
         </div>
     </main>
 
@@ -106,8 +150,14 @@
         <p>&copy; 2026 EyaKa Media Group. Serving the Gayaza Corridor.</p>
     </footer>
 
+    <script>
+        function expandImg(imgElement) {
+            var modal = document.getElementById("imgModal");
+            var modalImg = document.getElementById("modalContent");
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+        }
+    </script>
+
 </body>
-
 </html>
-
-
