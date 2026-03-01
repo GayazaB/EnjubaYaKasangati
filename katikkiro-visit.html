@@ -5,26 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Katikkiro Mayiga Launches People's Medical Hospital Gayaza | Enjuba Ya Kasangati</title>
-    <meta name="description" content="Owek. Charles Peter Mayiga commissions Dr. Frank Ndugga’s People's Medical Hospital. A landmark for healthcare in Kyadondo County.">
-    <meta property="og:title" content="👑 Katikkiro Mayiga Commissions People's Medical Hospital">
-    <meta property="og:description" content="'Dr. Frank Ndugga has responded to the Kabaka’s call.' See the highlights of the grand opening in Gayaza.">
-    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/gah01.jpg">
-    <meta property="og:type" content="article">
-
+    
     <style>
         :root { --red: #d32f2f; --blue: #1976d2; --dark: #1a1a1a; --text: #333; --light: #f4f4f4; --gold: #fbbf24; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: var(--text); line-height: 1.6; }
         
-        header { background: white; padding: 15px 5%; border-bottom: 3px solid var(--red); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        /* Modal Background for Expanding Images */
+        #imgModal {
+            display: none; position: fixed; z-index: 2000; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.9);
+            justify-content: center; align-items: center; cursor: zoom-out;
+        }
+        #imgModal img { max-width: 95%; max-height: 85%; border-radius: 8px; box-shadow: 0 0 20px rgba(255,255,255,0.2); }
+        #imgModal span { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
+
+        header { 
+            background: white; padding: 15px 5%; border-bottom: 3px solid var(--red); 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; 
+        }
         .logo-small { text-decoration: none; display: flex; align-items: center; gap: 10px; }
         .logo-small h1 { font-size: 1.1rem; color: var(--red); margin: 0; }
 
-        .article-container { max-width: 850px; margin: 20px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .article-container { 
+            max-width: 850px; margin: 20px auto; background: white; 
+            padding: 30px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
+        }
         
         h1 { font-size: 2rem; line-height: 1.2; color: var(--dark); margin-top: 10px; border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
         .byline { font-weight: bold; color: var(--blue); margin-bottom: 20px; display: block; }
 
-        .main-img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
+        .main-img { width: 100%; border-radius: 8px; margin-bottom: 10px; cursor: zoom-in; }
         .caption { font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin-bottom: 25px; }
 
         /* Quote Box */
@@ -44,73 +57,76 @@
         .guest-tag { background: #eee; padding: 10px; border-radius: 5px; font-size: 0.9rem; border-left: 3px solid var(--blue); }
 
         .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 30px; }
-        .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; }
+        .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 5px; cursor: zoom-in; }
 
-        @media (max-width: 600px) { .gallery { grid-template-columns: 1fr 1fr; } h1 { font-size: 1.6rem; } }
+        @media (max-width: 600px) { 
+            .gallery { grid-template-columns: 1fr 1fr; } 
+            h1 { font-size: 1.5rem; } 
+            .article-container { margin: 0; border-radius: 0; padding: 15px; }
+            header { padding: 10px 15px; }
+            .logo-small h1 { font-size: 0.9rem; }
+        }
     </style>
 </head>
 <body>
 
+    <div id="imgModal" onclick="this.style.display='none'">
+        <span>&times;</span>
+        <img id="modalContent">
+    </div>
+
     <header>
         <a href="index.html" class="logo-small">
-            <img src="logo.png" alt="Logo" height="40">
+            <img src="logo.png" alt="Logo" height="35">
             <h1>ENJUBA YA KASANGATI</h1>
         </a>
-        <a href="index.html" style="text-decoration:none; font-weight:bold; color:var(--blue);">← HOME</a>
+        <a href="index.html" style="text-decoration:none; font-weight:bold; color:var(--blue); font-size: 0.8rem;">← HOME</a>
     </header>
 
     <main class="article-container">
         <span style="background: var(--gold); color: black; padding: 3px 10px; font-weight: bold; font-size: 0.75rem; border-radius: 3px;">ROYAL COMMISSIONING</span>
         <h1>KATIKKIRO CHARLES PETER MAYIGA HAILS DR. FRANK NDUGGA FOR HEALTHCARE EXCELLENCE</h1>
         
-        <span class="byline">By Sammy Serwadda | Thursday 26 February, 2026</span>
+        <span class="byline">By Sammy Serwadda | Feb 26, 2026</span>
 
-        <img src="gah07.jpg" alt="Katikkiro planting tree" class="main-img">
-        <p class="caption">Owek. Charles Peter Mayiga (black coat) inspects Peoples Medical Hospital.</p>
+        <img src="gah07.jpg" alt="Katikkiro planting tree" class="main-img" onclick="expandImg(this)">
+        <p class="caption">Owek. Charles Peter Mayiga inspects Peoples Medical Hospital. (Tap to enlarge)</p>
 
-        <p><strong>GAYAZA</strong> — People’s Medical Hospital was officially opened by <strong>Owek. Charles Peter Mayiga</strong>, the Katikkiro of Buganda, in a grand celebration attended by hundreds of residents and dignitaries.</p>
-
-        <p>The Katikkiro and his delegation began the event by inspecting the facilities. He expressed his thrill at seeing "up-to-date technology and a touch of class" in patient handling. To commemorate the day, the Katikkiro planted a tree in the hospital compound, symbolizing growth and life.</p>
+        <p><strong>GAYAZA</strong> — People’s Medical Hospital was officially opened by <strong>Owek. Charles Peter Mayiga</strong>, the Katikkiro of Buganda, in a grand celebration.</p>
 
         <div class="royal-quote">
-            "I didn't come here simply because of launching the hospital. I came because Dr. Frank Ndugga has always been obediently responding to the Kabaka's call of providing quality medical services to his people... As Buganda Kingdom, our theme is to improve the quality of service. I am seeing this happening here."
+            "I didn't come here simply because of launching the hospital. I came because Dr. Frank Ndugga has always been obediently responding to the Kabaka's call..."
             <br><small><strong>— Owek. Charles Peter Mayiga</strong></small>
         </div>
 
-        <h3>A United Community Effort</h3>
-        <p>The event was a gathering of power and local leadership. Stakeholders applauded Dr. Frank for his patience in growing the hospital from a small clinic into a major health center.</p>
-        
-        <div class="stakeholders">
-            <div class="guest-tag">Members of Parliament</div>
-            <div class="guest-tag">The Mayor & Councillors</div>
-            <div class="guest-tag">LC1 Chairpersons</div>
-            <div class="guest-tag">Rotary Club of Gayaza Corridor</div>
-            <div class="guest-tag">Community Elders & Students</div>
-        </div>
-
         <div class="genesis-story">
-            <h3>THE GENESIS: "A Branch off Through Bulamu"</h3>
-            <p>During his speech, <strong>Dr. Frank Ndugga</strong> shared the inspiring story of how the hospital started. While working at Mulago Hospital, he often faced heavy traffic jam on the Gayaza-Kampala road. One day, he branched off through Bulamu to escape the traffic—and that is where he saw the space that would become the clinic.</p>
-            <p>"My wife and I planned to start elsewhere, but when we found this place, we chose to stay near home," Dr. Frank narrated. He expressed deep gratitude to his mother, the staff, and the Buganda Kingdom for their continued partnership.</p>
+            <h3>THE GENESIS: Escape from Traffic</h3>
+            <p><strong>Dr. Frank Ndugga</strong> shared how escaping traffic on Gayaza road led him to discover the location for this landmark hospital.</p>
         </div>
 
-        <p style="margin-top: 30px;">People’s Medical Hospital now stands as the very first hospital of its standard in the Gayaza corridor, setting a new history for healthcare in Kasangati Town Council.</p>
-
-        <h3>PHOTO GALLERY: THE GRAND OPENING</h3>
+        <h3>PHOTO GALLERY</h3>
         <div class="gallery">
-            <img src="katikkiro-inspecting.jpg" alt="Inspection">
-            <img src="ooos.jpg" alt="Technology">
-            <img src="dr-frank-speech.jpg" alt="Dr Frank Speech">
-            <img src="mayor-present.jpg" alt="Mayor Muwonge">
-            <img src="community-crowd.jpg" alt="Crowd">
-            <img src="rotary-members.jpg" alt="Rotary Club">
+            <img src="katikkiro-inspecting.jpg" alt="Inspection" onclick="expandImg(this)">
+            <img src="ooos.jpg" alt="Technology" onclick="expandImg(this)">
+            <img src="dr-frank-speech.jpg" alt="Dr Frank Speech" onclick="expandImg(this)">
+            <img src="mayor-present.jpg" alt="Mayor Muwonge" onclick="expandImg(this)">
+            <img src="community-crowd.jpg" alt="Crowd" onclick="expandImg(this)">
+            <img src="rotary-members.jpg" alt="Rotary Club" onclick="expandImg(this)">
         </div>
     </main>
 
-    <footer style="background: var(--dark); color: white; padding: 40px 5%; text-align: center;">
-        <p>&copy; 2026 Enjuba Ya Kasangati | "Amawulire ge Kitundu, Nsonga za Batuuze"</p>
+    <footer style="background: var(--dark); color: white; padding: 30px 5%; text-align: center;">
+        <p>&copy; 2026 Enjuba Ya Kasangati</p>
     </footer>
 
-</body>
+    <script>
+        function expandImg(imgElement) {
+            var modal = document.getElementById("imgModal");
+            var modalImg = document.getElementById("modalContent");
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+        }
+    </script>
 
+</body>
 </html>
