@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mengo Hospital Leadership Visits People's Medical | Enjuba Ya Kasangati</title>
+    
+    <style>
+        :root { --red: #d32f2f; --blue: #1976d2; --dark: #1a1a1a; --text: #333; --light: #fdfdfd; --gold: #fbbf24; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f0f2f5; color: var(--text); line-height: 1.6; }
+        
+        /* Image Modal */
+        #imgModal {
+            display: none; position: fixed; z-index: 2000; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.9);
+            justify-content: center; align-items: center; cursor: zoom-out;
+        }
+        #imgModal img { max-width: 95%; max-height: 85%; border-radius: 8px; }
+
+        header { 
+            background: white; padding: 15px 5%; border-bottom: 3px solid var(--red); 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-small { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo-small h1 { font-size: 1.1rem; color: var(--red); margin: 0; font-weight: 800; }
+
+        .article-container { 
+            max-width: 800px; margin: 20px auto; background: white; 
+            padding: 30px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); 
+        }
+        
+        .kicker { color: var(--red); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        h1 { font-size: 2.2rem; line-height: 1.2; color: var(--dark); margin: 10px 0; }
+        .byline { font-weight: bold; color: var(--blue); margin-bottom: 20px; display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+        .featured-img { width: 100%; border-radius: 8px; margin-bottom: 10px; cursor: zoom-in; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .caption { font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin-bottom: 25px; display: block; }
+
+        .expert-quote { 
+            background: #eef2ff; border-left: 5px solid var(--blue); 
+            padding: 20px; margin: 30px 0; font-style: italic; font-size: 1.1rem; color: #2c3e50;
+        }
+
+        .facility-list { 
+            background: var(--dark); color: white; padding: 20px; border-radius: 12px; margin: 30px 0;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+        }
+        .facility-item { font-size: 0.9rem; display: flex; align-items: center; gap: 8px; }
+        .facility-item::before { content: "✓"; color: var(--gold); font-weight: bold; }
+
+        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 30px; }
+        .gallery img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 6px; cursor: zoom-in; border: 1px solid #ddd; }
+
+        /* RECOMMENDED CARDS SECTION */
+        .rec-section { max-width: 800px; margin: 40px auto; padding: 0 10px; }
+        .rec-title { font-size: 1.2rem; border-left: 4px solid var(--red); padding-left: 10px; margin-bottom: 20px; }
+        .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .rec-card { background: white; border-radius: 8px; overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .rec-card img { width: 100%; height: 120px; object-fit: cover; }
+        .rec-card-body { padding: 12px; }
+        .rec-card-body h4 { margin: 0; font-size: 0.95rem; line-height: 1.3; color: var(--dark); }
+
+        /* FOOTER (Mirrored from Main Page) */
+        footer { background: var(--dark); color: white; padding: 60px 5%; text-align: center; margin-top: 50px; }
+
+        @media (max-width: 600px) { 
+            .article-container { padding: 20px 15px; margin: 0; border-radius: 0; }
+            h1 { font-size: 1.7rem; }
+            .facility-list { grid-template-columns: 1fr; }
+            .rec-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="imgModal" onclick="this.style.display='none'">
+        <img id="modalContent">
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-small">
+            <img src="logo.png" alt="Logo" height="35">
+            <h1>ENJUBA YA KASANGATI</h1>
+        </a>
+        <a href="index.html" style="text-decoration:none; font-weight:bold; color:var(--blue); font-size: 0.8rem;">← HOME</a>
+    </header>
+
+    <main class="article-container">
+        <span class="kicker">Healthcare Milestone</span>
+        <h1>VISITORS POUR IN: Mengo Hospital Leadership Applauds People’s Medical Hospital</h1>
+        
+        <span class="byline">By Sammy Serwadda | Tuesday, March 3, 2026</span>
+
+        <img src="mengo-visit1.jpg" alt="Dr. Ndugga showing doctors around" class="featured-img" onclick="expandImg(this)">
+        <span class="caption">Dr. Frank Ndugga (left) guides the delegation from Mengo Hospital through the new facility.</span>
+
+        <p><strong>GAYAZA</strong> — Following the high-profile commissioning by the Katikkiro of Buganda last week, <strong>People’s Medical Hospital</strong> has continued to attract key stakeholders in the medical fraternity.</p>
+
+        <p>Today, the Executive Director of <strong>Mengo Hospital</strong> led a high-level team of medical staff to Gayaza to congratulate Dr. Frank Ndugga and his team on the successful launch of the facility.</p>
+
+        <img src="eye-chart-visit.jpg" alt="Eye care demonstration" class="featured-img" onclick="expandImg(this)">
+        <span class="caption">Dr. Ndugga shows the hospital's new eye-care diagnostic tools to the visiting team.</span>
+
+        <p>The visiting delegation expressed their admiration for the hospital's rapid transformation. <strong>Dr. Nsingo Simon Peter</strong> noted that the level of equipment and professionalism is a significant win for Kasangati Town Council.</p>
+
+        <div class="expert-quote">
+            “At Mengo Hospital, we are happy to see individuals with the burden to bring good health care to people. We congratulate Dr. Frank Ndugga and his staff on this milestone.”
+            <br><small><strong>— Dr. Nsingo Simon Peter, Mengo Hospital</strong></small>
+        </div>
+
+        <h3>Advanced Medical Services in Gayaza</h3>
+        <div class="facility-list">
+            <div class="facility-item">Aerobics Room for Expectant Mothers</div>
+            <div class="facility-item">Modern Children’s Ward</div>
+            <div class="facility-item">Equipped Diagnostic Laboratories</div>
+            <div class="facility-item">Advanced Surgical Theatres</div>
+            <div class="facility-item">Executive Inpatient Suites</div>
+            <div class="facility-item">24/7 Casualty & Emergency Wing</div>
+            <div class="facility-item">Specialized Eye Clinic</div>
+        </div>
+
+        <img src="dr-frank-patient.jpg" alt="Dr. Ndugga with patient" class="featured-img" onclick="expandImg(this)">
+        <span class="caption">Visionary Director: Dr. Frank Ndugga attending to a patient.</span>
+
+        <p>This surge of visitors follows the official commissioning by <strong>Owek. Charles Peter Mayiga</strong>, which established the hospital as a landmark for residents in Busukuma, Manyangwa, and Kasangati.</p>
+
+        <h3>PHOTO GALLERY</h3>
+        <div class="gallery">
+            <img src="visit-gal1.jpg" onclick="expandImg(this)">
+            <img src="visit-gal2.jpg" onclick="expandImg(this)">
+            <img src="visit-gal3.jpg" onclick="expandImg(this)">
+            <img src="visit-gal4.jpg" onclick="expandImg(this)">
+        </div>
+    </main>
+
+    <section class="rec-section">
+        <h3 class="rec-title">Recommended Stories</h3>
+        <div class="rec-grid">
+            <a href="katikkiro-visit.html" class="rec-card">
+                <img src="gah01.jpg" alt="Katikkiro visit">
+                <div class="rec-card-body">
+                    <h4>Katikkiro Hails Dr. Frank Ndugga’s Healthcare Vision</h4>
+                </div>
+            </a>
+            <a href="kyadondo-fc.html" class="rec-card">
+                <img src="kyadondo-team.jpg" alt="Kyadondo FC">
+                <div class="rec-card-body">
+                    <h4>Kaggo Unveils Formidable Team for 2026 Masaza Cup</h4>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h2 style="color:var(--red); margin:0;">Enjuba Ya Kasangati</h2>
+        <p style="margin:10px 0;">"Tuli Mu Kitundu Ku Lwe Kitundu"</p>
+        <div style="margin: 20px 0; color: #aaa; font-size: 0.9rem;">
+            Contact: 0702 97 20 20 | Gayaza- Zirobwe Road, Kasangati Town Council.
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 EyaKa Media Group</p>
+    </footer>
+
+    <script>
+        function expandImg(imgElement) {
+            var modal = document.getElementById("imgModal");
+            var modalImg = document.getElementById("modalContent");
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+        }
+    </script>
+
+</body>
+</html>
