@@ -13,8 +13,8 @@
     <meta property="og:type" content="article">
 
     <style>
-        :root { --green: #2e7d32; --blue: #1565c0; --purple: #6a1b9a; --dark: #212121; --light: #f9fbe7; }
-        * { box-sizing: border-box; }
+        :root { --green: #2e7d32; --blue: #1565c0; --purple: #6a1b9a; --dark: #212121; --light: #f9fbe7; --red: #d32f2f; }
+        * { box-sizing: border-box; transition: 0.3s ease; }
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: #f4f7f6; color: #333; line-height: 1.6; }
         
         header { 
@@ -32,18 +32,36 @@
         
         .kicker { color: var(--purple); font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px; }
         h1 { font-size: 2.1rem; line-height: 1.2; color: var(--dark); margin: 10px 0; }
-        .byline { font-weight: bold; color: var(--blue); margin-bottom: 25px; display: block; }
+        .byline { font-weight: bold; color: var(--blue); display: block; margin-bottom: 10px; }
 
-        .featured-img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
+        /* Share Button */
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #25D366; color: white; text-decoration: none;
+            padding: 8px 16px; border-radius: 50px; font-weight: bold;
+            font-size: 0.85rem; margin-bottom: 25px;
+        }
+        .share-btn:hover { background: #128C7E; transform: scale(1.05); }
+
+        /* Zoomable Images */
+        .zoom-img { cursor: zoom-in; width: 100%; border-radius: 10px; margin-bottom: 10px; }
+        .zoom-img:active { transform: scale(1.02); }
+
+        /* Lightbox Overlay */
+        #lightbox {
+            position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center;
+        }
+        #lightbox img { max-width: 90%; max-height: 80%; border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+
         .caption { font-size: 0.85rem; color: #555; font-style: italic; text-align: center; margin-bottom: 30px; display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; }
 
-        /* Simple Slideshow Placeholder Style */
         .slideshow-box { 
             background: #eee; height: 350px; border-radius: 10px; 
             display: flex; align-items: center; justify-content: center; 
-            margin: 25px 0; border: 2px solid var(--green); position: relative;
+            margin: 25px 0; border: 2px solid var(--green); position: relative; overflow: hidden;
         }
-        .slideshow-label { position: absolute; bottom: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+        .slideshow-label { position: absolute; bottom: 10px; background: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; z-index: 5; }
 
         .testimonial { 
             background: var(--light); border-left: 5px solid var(--green); 
@@ -51,19 +69,31 @@
         }
 
         .profile-section { display: flex; align-items: center; gap: 20px; margin: 20px 0; padding: 15px; background: #fff; border: 1px solid #eee; border-radius: 10px; }
-        .profile-section img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--purple); }
+        .profile-section img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--purple); cursor: zoom-in; }
         .profile-text h4 { margin: 0; color: var(--purple); }
         .profile-text p { margin: 5px 0 0; font-size: 0.9rem; line-height: 1.4; }
 
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 30px; }
-        .gallery-grid img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; transition: transform 0.2s; cursor: pointer; }
-        .gallery-grid img:hover { transform: scale(1.05); }
+        .gallery-grid img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; cursor: zoom-in; }
+
+        /* You May Also Like Section */
+        .related-section { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .related-title { font-size: 1.2rem; font-weight: 800; border-left: 4px solid var(--purple); padding-left: 10px; margin-bottom: 20px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .related-card { background: white; border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .related-card img { width: 100%; height: 120px; object-fit: cover; }
+        .related-card h4 { padding: 10px; margin: 0; font-size: 0.9rem; line-height: 1.3; }
 
         footer { background: var(--dark); color: white; padding: 40px 5%; text-align: center; margin-top: 50px; }
         @media (max-width: 600px) { h1 { font-size: 1.6rem; } .profile-section { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="" alt="Zoomed view">
+        <p style="color:white; position:absolute; bottom:20px; font-size:0.8rem;">Tap anywhere to close</p>
+    </div>
 
     <header>
         <a href="index.html" class="logo-small">
@@ -78,16 +108,20 @@
         <h1>SERVICE ABOVE SELF: Trust High School Girls Transform Kijjabijo for Women’s Day</h1>
         
         <span class="byline">By Sammy Serwadda | March 8, 2026</span>
+        
+        <a href="whatsapp://send?text=Check out this inspiring story from Enjuba Ya Kasangati: https://gayazab.github.io/EnjubaYaKasangati/trust-high-service.html" class="share-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="18"> Share on WhatsApp
+        </a>
 
-        <img src="sweep8.jpg" alt="Trust High School Girls doing community service" class="featured-img">
-        <span class="caption">Armed with enthusiasm: Trust High School students cleaning the streets of Kijjabijo.</span>
+        <img src="sweep8.jpg" alt="Trust High School Girls doing community service" class="zoom-img" onclick="zoomImage(this)">
+        <span class="caption">Armed with enthusiasm: Trust High School students cleaning the streets of Kijjabijo. (Tap image to zoom)</span>
 
         <p><strong>KABUBBU</strong> — In a heartwarming display of community spirit, the girls of <strong>Trust High School Kabubbu</strong> took their International Women’s Day celebrations far beyond the classroom, hitting the streets of Kijjabijo trading center to lead a massive cleanup exercise.</p>
 
         <p>Armed with brooms, collection bags, and infectious energy, a dedicated team of approximately 100 students spent the morning sweeping the trading center, collecting rubbish, and spreading joy among the local business community.</p>
 
         <div class="slideshow-box">
-            <img src="sweep5.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" alt="Students sweeping">
+            <img src="sweep5.jpg" class="zoom-img" style="width:100%; height:100%; object-fit:cover; border-radius:8px;" alt="Students sweeping" onclick="zoomImage(this)">
             <div class="slideshow-label">📷 Action Shots: Sweeping Kijjabijo C Trading Center</div>
         </div>
 
@@ -99,13 +133,13 @@
             <br><small><strong>— Hajji Mohammed Muyimbwa, Chairman Kijjabijo C</strong></small>
         </div>
 
-        <img src="elderly2.JPG" alt="Girls with 100 year old woman" class="featured-img">
+        <img src="elderly2.JPG" alt="Girls with 100 year old woman" class="zoom-img" onclick="zoomImage(this)">
         <span class="caption">A moment of wisdom: Students seated with a 100-year-old resident of Kijjabijo during their gift-giving tour.</span>
 
         <h3>Leadership in Action</h3>
         
         <div class="profile-section">
-            <img src="ms-nanfuka.jpg" alt="Ms. Nanfuka Annet">
+            <img src="ms-nanfuka.jpg" alt="Ms. Nanfuka Annet" onclick="zoomImage(this)">
             <div class="profile-text">
                 <h4>Ms. Nanfuka Annet</h4>
                 <p><strong>Team Leader / Senior Woman:</strong> "We chose this activity to teach our girls that cleanliness isn't just for the home—it’s a habit that must follow you to your place of work and throughout society."</p>
@@ -113,7 +147,7 @@
         </div>
 
         <div class="profile-section">
-            <img src="mutesi-hope.jpg" alt="Mutesi Hope">
+            <img src="mutesi-hope.jpg" alt="Mutesi Hope" onclick="zoomImage(this)">
             <div class="profile-text">
                 <h4>Mutesi Hope</h4>
                 <p><strong>Sanitary Prefect:</strong> "I was so happy to come out and demonstrate to fellow women the importance of environmental hygiene. We lead by example."</p>
@@ -121,7 +155,7 @@
         </div>
 
         <div class="profile-section">
-            <img src="nabukenya-lydia.jpg" alt="Nabukenya Lydia Irene">
+            <img src="nabukenya-lydia.jpg" alt="Nabukenya Lydia Irene" onclick="zoomImage(this)">
             <div class="profile-text">
                 <h4>Nabukenya Lydia Irene</h4>
                 <p><strong>Assistant Head Girl:</strong> "Moving out of school to show love to our parent figures in the community has been a beautiful experience. We wanted to show them they are loved."</p>
@@ -130,18 +164,36 @@
 
         <h3>PHOTO GALLERY</h3>
         <div class="gallery-grid">
-            <img src="cman kijabijjo.jpg" alt="Cleaning action">
-            <img src="elderly1.JPG" alt="Elderly visit">
-            <img src="sweep2.JPG" alt="Group photo with Hajji">
-            <img src="elderly2.JPG" alt="Trash collection">
-            <img src="sweep02.jpg" alt="Students walking">
-            <img src="sweep5.JPG" alt="Gift handover">
-	    <img src="sweep1.JPG" alt="Trash collection">
-            <img src="sweep8.jpg" alt="Students walking">
-            <img src="sweep3.JPG" alt="Gift handover">
+            <img src="cman kijabijjo.jpg" alt="Cleaning action" onclick="zoomImage(this)">
+            <img src="elderly1.JPG" alt="Elderly visit" onclick="zoomImage(this)">
+            <img src="sweep2.JPG" alt="Group photo with Hajji" onclick="zoomImage(this)">
+            <img src="elderly2.JPG" alt="Trash collection" onclick="zoomImage(this)">
+            <img src="sweep02.jpg" alt="Students walking" onclick="zoomImage(this)">
+            <img src="sweep5.JPG" alt="Gift handover" onclick="zoomImage(this)">
+            <img src="sweep1.JPG" alt="Trash collection" onclick="zoomImage(this)">
+            <img src="sweep8.jpg" alt="Students walking" onclick="zoomImage(this)">
+            <img src="sweep3.JPG" alt="Gift handover" onclick="zoomImage(this)">
         </div>
 
     </main>
+
+    <section class="related-section">
+        <h3 class="related-title">You May Also Like</h3>
+        <div class="related-grid">
+            <a href="gayaza-cu-tribute.html" class="related-card">
+                <img src="wamusai-tribute.jpg" alt="Tribute">
+                <h4>Men Speak Out: A Tribute to Women at Gayaza C.U. SS</h4>
+            </a>
+            <a href="women-medical-camp.html" class="related-card">
+                <img src="dr-frank-women.jpg" alt="Health">
+                <h4>'Give to Gain': Painless Labour News Sparks Joy</h4>
+            </a>
+            <a href="kyadondo-fc.html" class="related-card">
+                <img src="kyadondo-team.jpg" alt="Sports">
+                <h4>Kaggo Unveils Team for 2026 Masaza Cup</h4>
+            </a>
+        </div>
+    </section>
 
    <footer>
         <h2 style="color:var(--red); margin:0;">Enjuba Ya Kasangati</h2>
@@ -152,6 +204,13 @@
         <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 EyaKa Media Group</p>
     </footer>
 
+    <script>
+        function zoomImage(img) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        }
+    </script>
 </body>
-
 </html>
