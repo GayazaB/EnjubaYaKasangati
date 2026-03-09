@@ -13,8 +13,8 @@
     <meta property="og:type" content="article">
 
     <style>
-        :root { --pink: #e91e63; --blue: #1976d2; --dark: #1a1a1a; --text: #333; --light: #fff5f8; --gold: #fbbf24; }
-        * { box-sizing: border-box; }
+        :root { --pink: #e91e63; --blue: #1976d2; --dark: #1a1a1a; --text: #333; --light: #fff5f8; --gold: #fbbf24; --red: #d32f2f; }
+        * { box-sizing: border-box; transition: 0.3s ease; }
         body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fdf2f5; color: var(--text); line-height: 1.6; }
         
         header { 
@@ -32,9 +32,27 @@
         
         .kicker { color: var(--pink); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
         h1 { font-size: 2.2rem; line-height: 1.2; color: var(--dark); margin: 10px 0; }
-        .byline { font-weight: bold; color: var(--blue); margin-bottom: 20px; display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .byline { font-weight: bold; color: var(--blue); display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
 
-        .featured-img { width: 100%; border-radius: 8px; margin-bottom: 10px; cursor: pointer; }
+        /* Share Button */
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #25D366; color: white; text-decoration: none;
+            padding: 8px 16px; border-radius: 50px; font-weight: bold;
+            font-size: 0.85rem; margin-bottom: 25px;
+        }
+        .share-btn:hover { background: #128C7E; transform: scale(1.05); }
+
+        /* Zoomable Images */
+        .zoom-img { cursor: zoom-in; width: 100%; border-radius: 8px; margin-bottom: 10px; }
+        
+        /* Lightbox Overlay */
+        #lightbox {
+            position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center;
+        }
+        #lightbox img { max-width: 90%; max-height: 80%; border-radius: 5px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+
         .caption { font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin-bottom: 25px; display: block; }
 
         .highlight-box { 
@@ -50,11 +68,24 @@
         .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
         .benefit-item { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; font-size: 0.9rem; }
 
+        /* You May Also Like Section */
+        .related-section { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .related-title { font-size: 1.2rem; font-weight: 800; border-left: 4px solid var(--pink); padding-left: 10px; margin-bottom: 20px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .related-card { background: white; border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .related-card img { width: 100%; height: 120px; object-fit: cover; }
+        .related-card h4 { padding: 10px; margin: 0; font-size: 0.9rem; line-height: 1.3; }
+
         footer { background: var(--dark); color: white; padding: 40px 5%; text-align: center; margin-top: 50px; }
         @media (max-width: 600px) { h1 { font-size: 1.7rem; } .benefit-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="" alt="Zoomed view">
+        <p style="color:white; position:absolute; bottom:20px; font-size:0.8rem;">Tap anywhere to close</p>
+    </div>
 
     <header>
         <a href="index.html" class="logo-small">
@@ -70,53 +101,69 @@
         
         <span class="byline">By Sammy Serwadda | March 8, 2026</span>
 
-        <img src="dr-frank-women.jpg" alt="Dr. Frank with Women at the camp" class="featured-img">
-        <span class="caption">Dr. Frank Ndugga (in medical coat) engaging with women during the International Women’s Day health outreach.</span>
+        <a href="whatsapp://send?text=Check out this health breakthrough from People's Medical: https://gayazab.github.io/EnjubaYaKasangati/women-medical-camp.html" class="share-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="18"> Share on WhatsApp
+        </a>
+
+        <img src="dr-frank-women.jpg" alt="Dr. Frank with Women" class="zoom-img" onclick="zoomImage(this)">
+        <span class="caption">Dr. Frank Ndugga engaging with women during the International Women’s Day outreach. (Tap to zoom)</span>
 
         <p><strong>GAYAZA</strong> — In a powerful celebration of International Women’s Day, <strong>People’s Medical Hospital Gayaza</strong> transformed from a standard healthcare center into a beacon of hope for hundreds of women in Kasangati Town Council.</p>
 
-        <p>The event, themed <strong>"Give to Gain,"</strong> saw Dr. Frank Ndugga lead a team of dedicated medical experts and specialists to provide a suite of life-saving services, including cervical cancer screening, family planning guidance, and HIV testing.</p>
+        <p>The event, themed <strong>"Give to Gain,"</strong> saw Dr. Frank Ndugga lead a team of medical experts to provide services including cervical cancer screening, family planning, and HIV testing.</p>
 
         <div class="highlight-box">
             <h3 style="margin-top:0; color:var(--pink);">⭐ The Big Reveal: Painless Labour</h3>
-            <p>The highlight of the day was the announcement of the hospital's new <strong>Painless Labour service</strong>. Dr. Frank Ndugga informed <em>Enjuba Ya Kasangati</em> that this innovation is designed to fulfill a dream every expectant mother shares: a delivery experience free from the traditional agony of childbirth.</p>
+            <p>The highlight of the day was the announcement of the hospital's new <strong>Painless Labour service</strong>. This innovation is designed to fulfill a dream every expectant mother shares: a delivery experience free from the traditional agony of childbirth.</p>
         </div>
 
         <h3>Debunking Myths: "It's Not Witchcraft"</h3>
-        <img src="dr-sarah-talk.jpg" alt="Dr. Sarah talking to women" class="featured-img">
+        <img src="dr-sarah-talk.jpg" alt="Dr. Sarah talking to women" class="zoom-img" onclick="zoomImage(this)">
         <span class="caption">Dr. Sarah Mwesigwa addressing women on reproductive health myths and facts.</span>
 
-        <p>During a detailed mentorship workshop, <strong>Dr. Sarah Mwesigwa</strong> addressed the cultural stigmas that often hinder women's health. She noted with concern that many reproductive complications are often misdiagnosed by communities as "witchcraft," leading families to waste resources on ineffective treatments while serious issues like fallopian tube damage go unaddressed.</p>
+        <p><strong>Dr. Sarah Mwesigwa</strong> addressed cultural stigmas, noting that many reproductive complications are often misdiagnosed as "witchcraft," leading families to waste resources on ineffective treatments.</p>
         
         <p>"Seek proper medical help before it is too late," Dr. Mwesigwa urged. "Understanding your body is the first step toward healing."</p>
 
         <div class="quote-card">
-            “We appreciate the tireless contributions of women to society. Many suffer complications during childbearing due to a lack of proper care and knowledge. We have embarked on sharing how things <em>should</em> be done to avoid the risks of pregnancy.”
+            “Many suffer complications during childbearing due to a lack of proper care. We have embarked on sharing how things should be done to avoid the risks of pregnancy.”
             <br><small><strong>— Dr. Frank Ndugga, Host & Lead Physician</strong></small>
         </div>
 
         <h3>The Golden Rules for Expectant Mothers</h3>
-        <p>Dr. Frank highlighted that high maternal mortality is often linked to blood loss and sepsis (infections) during birth—issues that can be prevented with professional care. He outlined critical steps for every woman:</p>
-
         <div class="benefit-grid">
-            <div class="benefit-item"><strong>Early Visitation:</strong> Mothers should visit the hospital at least 8 times during pregnancy to detect challenges early.</div>
-            <div class="benefit-item"><strong>Cancer Prevention:</strong> Girls aged 9–14 should be encouraged to receive the cervical cancer vaccine.</div>
-            <div class="benefit-item"><strong>Pre-Marital Planning:</strong> Couples preparing for marriage should seek family planning guidance before starting a family.</div>
-            <div class="benefit-item"><strong>Community Support:</strong> A call to fellow Rotarians and caregivers to continue supporting the unique burdens women face.</div>
+            <div class="benefit-item"><strong>Early Visitation:</strong> Mothers should visit the hospital at least 8 times during pregnancy.</div>
+            <div class="benefit-item"><strong>Cancer Prevention:</strong> Girls aged 9–14 should receive the cervical cancer vaccine.</div>
+            <div class="benefit-item"><strong>Pre-Marital Planning:</strong> Seek guidance before starting a family.</div>
+            <div class="benefit-item"><strong>Community Support:</strong> A call to Rotarians to continue supporting women's health.</div>
         </div>
 
-        <img src="dr-frank-patient-camp.jpg" alt="Dr. Ndugga attending to a patient" class="featured-img">
-        <span class="caption">Dr. Frank Ndugga attending to a child patient (File Photo).</span>
+        <img src="dr-frank-patient-camp.jpg" alt="Dr. Ndugga attending to a patient" class="zoom-img" onclick="zoomImage(this)">
+        <span class="caption">Dr. Frank Ndugga attending to a patient (File Photo).</span>
 
-        <p>The impact of the camp was immediate. One beneficiary, her face lit with relief, shared her gratitude with our reporters:</p>
-        
         <blockquote style="font-size: 1.2rem; border-left: 4px solid var(--pink); padding-left: 15px; margin: 20px 0;">
-            "I didn't know many of these things, especially about the screenings. But I am most thrilled about the <strong>painless labour service</strong>—it's a total game-changer for us women!"
+            "I am most thrilled about the <strong>painless labour service</strong>—it's a total game-changer for us women!"
         </blockquote>
 
-        <p>As the "Give to Gain" camp concluded, the message was clear: at People's Medical Hospital, International Women's Day isn't just about a date on the calendar—it's about a permanent commitment to safer, happier motherhood.</p>
-
     </main>
+
+    <section class="related-section">
+        <h3 class="related-title">You May Also Like</h3>
+        <div class="related-grid">
+            <a href="trust-high-service.html" class="related-card">
+                <img src="trust-girls-main.jpg" alt="Cleanup">
+                <h4>Trust High Girls Lead Kijjabijo Cleanup</h4>
+            </a>
+            <a href="gayaza-cu-tribute.html" class="related-card">
+                <img src="wamusai-tribute.jpg" alt="Tribute">
+                <h4>Men Speak Out: A Tribute to Women at Gayaza C.U. SS</h4>
+            </a>
+            <a href="kyadondo-fc.html" class="related-card">
+                <img src="kyadondo-team.jpg" alt="Sports">
+                <h4>Kaggo Unveils Team for 2026 Masaza Cup</h4>
+            </a>
+        </div>
+    </section>
 
     <footer>
         <h2 style="color:var(--red); margin:0;">Enjuba Ya Kasangati</h2>
@@ -127,5 +174,13 @@
         <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 EyaKa Media Group</p>
     </footer>
 
+    <script>
+        function zoomImage(img) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
+        }
+    </script>
 </body>
 </html>
