@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
 <meta property="og:title" content="🌞 Enjuba Ya Kasangati: Amawulire ge Kitundu">
 <meta property="og:description" content="From healthcare innovations at People's Medical to local sports and education—stay connected with the pulse of Gayaza.">
-<meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/sweep01.jpg">
+<meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/lions-boys-soap2.jpg">
 
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
@@ -121,6 +121,84 @@
             .news-grid { grid-template-columns: 1fr; }
             .promo-card { flex-direction: column; text-align: center; gap: 20px; padding: 25px; }
         }
+
+/* Layout Organization */
+.main-layout-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px; }
+
+/* Feature Story Hero */
+.feature-hero { display: flex; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 40px; }
+.feature-img { flex: 1.2; position: relative; }
+.feature-img img { width: 100%; height: 100%; object-fit: cover; }
+.feature-content { flex: 1; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.feature-content h1 { font-size: 2.2rem; margin: 0 0 15px 0; color: var(--dark); line-height: 1.1; }
+.feature-badge { position: absolute; top: 20px; left: 20px; background: var(--red); color: white; padding: 5px 15px; border-radius: 5px; font-weight: 800; }
+.read-more-btn { color: var(--blue); font-weight: 800; margin-top: 15px; }
+
+/* Sidebar/Community Voices */
+.community-voices-box { background: #fffdf0; padding: 25px; border-radius: 15px; border: 1px solid #eee; }
+.sidebar-title { border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin-top: 0; }
+.voice-item p { font-style: italic; font-size: 0.95rem; margin-bottom: 5px; }
+.voice-item a { font-size: 0.8rem; color: var(--blue); text-decoration: none; font-weight: bold; }
+
+/* Mobile Adjustment */
+@media (max-width: 900px) {
+    .main-layout-grid, .feature-hero { grid-template-columns: 1fr; flex-direction: column; }
+    .feature-content { padding: 20px; }
+}
+
+/* Sidebar Cards */
+.directory-premium-card {
+    background: linear-gradient(135deg, var(--blue), #0d47a1);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+}
+.premium-tag {
+    background: var(--gold);
+    color: var(--dark);
+    display: inline-block;
+    padding: 2px 10px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.directory-list { list-style: none; padding: 0; margin: 15px 0; font-size: 0.9rem; }
+.directory-list li { padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.directory-main-btn {
+    display: block;
+    text-align: center;
+    background: white;
+    color: var(--blue);
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.archive-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    margin-top: 25px;
+}
+.archive-links { display: flex; flex-direction: column; gap: 10px; margin: 15px 0; }
+.archive-links a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+.archive-links a:hover { background: var(--light-blue); color: var(--blue); }
+.disabled-link { opacity: 0.5; cursor: not-allowed; }
+.view-all-link { font-size: 0.85rem; color: var(--blue); font-weight: bold; text-decoration: none; }
+
     </style>
 </head>
 <body>
@@ -147,119 +225,113 @@
         </div>
     </div>
 
-    <main>
-        <div class="freshness-bar">
-            <div class="pulse-dot"></div>
-            Last Updated: Monday, March 9, 2026
-        </div>
-
-        <h2 class="section-title">Fresh This Week</h2>
-
-        <div class="news-grid">
-            
-            <a href="trust-high-service.html" class="card">
-                <div class="card-img-wrap">
-                    <span class="card-badge" style="background:var(--purple)">COMMUNITY</span>
-                    <img src="sweep01.jpg" alt="Trust High School Girls">
-                </div>
-                <div class="card-body">
-                    <h3>Trust High School Girls Lead Kijjabijo Cleanup</h3>
-                    <p>Over 100 girls from Kabubbu traded pens for brooms to clean the community and visit elders for Women's Day...</p>
-                    <div class="card-footer"><span>Mar 8, 2026</span><span class="read-time">⏱ 3 min read</span></div>
-                </div>
-            </a>
-    		
-
-           <a href="women-medical-camp.html" class="card">
-                <div class="card-img-wrap">
-                    <span class="card-badge" style="background:var(--pink)">HEALTH</span>
-                    <img src="dr-frank-women.jpg" alt="Women Medical Camp">
-                </div>
-                <div class="card-body">
-                    <h3>'Give to Gain': Painless Labour News Sparks Joy in Gayaza</h3>
-                    <p>International Women’s Day at People's Medical brought groundbreaking news for expectant mothers and free health screenings...</p>
-                    <div class="card-footer"><span>Mar 8, 2026</span><span class="read-time">⏱ 4 min read</span></div>
-                </div>
-            </a>
-<a href="lions-masooli-service.html" class="card">
-    <div class="card-img-wrap">
-        <span class="card-badge" style="background:var(--lion-blue); color:var(--lion-gold);">🦁 LIONS CLUB</span>
-        <img src="lions-masooli-main.jpg" alt="Lions Club Masooli Service">
+<main>
+    <div class="freshness-bar">
+        <div class="pulse-dot"></div>
+        Live Updates: Tuesday, March 10, 2026 | Kasangati, UG
     </div>
-    <div class="card-body">
-        <h3>Roots of Hope: Lions Empower 600 Learners in Masooli</h3>
-        <p>From planting fruit trees to distributing sanitary towels, the Lions of Kasangati Greater transformed St. John's C.U. for Women's Day...</p>
-        <div class="card-footer">
-            <span>Mar 8, 2026</span>
-            <span class="read-time">⏱ 4 min read</span>
-        </div>
-    </div>
-</a>
-            
-            <a href="gayaza-cu-tribute.html" class="card">
-                <div class="card-img-wrap">
-                    <span class="card-badge" style="background:var(--blue)">WATCH: INTERVIEW</span>
-                    <img src="wamusai-tribute.jpg" alt="Mr. Wamusai Interview">
-                </div>
-                <div class="card-body">
-                    <h3>"Women Lead the Way": Mr. Wamusai's Moving Tribute</h3>
-                    <p>Head Teacher of Gayaza C.U. SS reveals that 80% of student follow-ups are done by mothers. Watch the full interview here...</p>
-                    <div class="card-footer"><span>Mar 8, 2026</span><span class="read-time">⏱ 5 min read</span></div>
-                </div>
-            </a>
 
-        
-
-            <a href="kyadondo-fc.html" class="card">
-                <div class="card-img-wrap">
-                    <span class="card-badge" style="background:var(--red)">SPORTS</span>
-                    <img src="kyadondo-team.jpg" alt="Kyadondo FC Leadership">
+    <section class="feature-section">
+        <a href="lions-masooli-service.html" class="feature-link" style="text-decoration:none;">
+            <div class="feature-hero">
+                <div class="feature-img">
+                    <img src="lions-masooli-main.jpg" alt="Lions Club Feature">
+                    <span class="feature-badge">FEATURE STORY</span>
                 </div>
-                <div class="card-body">
-                    <h3>Kaggo Unveils Formidable Team for 2026 Masaza Cup</h3>
-                    <p>Hajji Ahmed Magandazi Matovu has inaugurated a new committee to drive Kyadondo FC toward victory...</p>
-                    <div class="card-footer"><span>Feb 27, 2026</span><span class="read-time">⏱ 3 min read</span></div>
+                <div class="feature-content">
+                    <h1>ROOTS OF HOPE: How Lions are Growing the Future in Masooli</h1>
+                    <p>In a landmark visit to St. John's C.U., the Lions Club of Kasangati Greater combined environmental care with vital health education for 600 learners...</p>
+                    <span class="read-more-btn">Read Full Report →</span>
                 </div>
-            </a>
-        </div>
-
-        <a href="local-directory.html" class="promo-card">
-            <div style="flex: 2;">
-                <span style="background: var(--gold); color: #1e3a8a; padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 900; text-transform: uppercase;">Essential Services</span>
-                <h2 style="margin: 15px 0 8px 0; font-size: 1.8rem;">Kasangati Service Directory 📍</h2>
-                <p style="margin: 0; opacity: 0.9;">Verified local experts, health centers, and schools at your fingertips.</p>
             </div>
-            <div class="promo-btn">BROWSE NOW →</div>
         </a>
+    </section>
 
-        <h2 class="section-title">Deep Archive</h2>
-        <div class="archive-list">
-             <a href="katikkiro-visit.html" class="archive-item">
-                <img src="gah01.jpg" alt="Katikkiro visit">
-                <div class="archive-content">
-                    <h4>Katikkiro Hails Dr. Frank Ndugga’s Healthcare Vision</h4>
-                    <div class="archive-meta">📅 Feb 26, 2026 | <span class="read-time">⏱ 4 min read</span></div>
-                </div>
-            </a>
+    <div class="main-layout-grid">
+        <div class="content-column">
+            
+            <h2 class="section-title">Latest Community News</h2>
+            <div class="news-grid">
+                <a href="trust-high-service.html" class="card">
+                    <div class="card-img-wrap">
+                        <span class="card-badge" style="background:var(--purple)">COMMUNITY</span>
+                        <img src="sweep2.jpg" alt="Trust High">
+                    </div>
+                    <div class="card-body">
+                        <h3>Trust High Girls Lead Kijjabijo Cleanup</h3>
+                        <div class="card-footer"><span>Mar 8, 2026</span></div>
+                    </div>
+                </a>
 
-            <a href="obituary-ssebutere.html" class="archive-item">
-                <img src="seb2.jpg" alt="Mzee Ssebutere">
-                <div class="archive-content">
-                    <h4>Gayaza Mourns Mzee Ssebutere; Tribute at Kyetume</h4>
-                    <div class="archive-meta">📅 Feb 28, 2026 | <span class="read-time">⏱ 4 min read</span></div>
-                </div>
-            </a>
+                <a href="women-medical-camp.html" class="card">
+                    <div class="card-img-wrap">
+                        <span class="card-badge" style="background:var(--pink)">HEALTH</span>
+                        <img src="dr-frank-women.jpg" alt="Medical Camp">
+                    </div>
+                    <div class="card-body">
+                        <h3>Painless Labour: Innovation at People's Medical</h3>
+                        <div class="card-footer"><span>Mar 8, 2026</span></div>
+                    </div>
+                </a>
+            </div>
 
-            <a href="kaggo-cup.html" class="archive-item">
-                <img src="kaggo-cup.JPG" alt="Kaggo Cup">
-                <div class="archive-content">
-                    <h4>Excitement as Kaggo Cup Kicks Off in Busukuma</h4>
-                    <div class="archive-meta">📅 Feb 21, 2026 | <span class="read-time">⏱ 3 min read</span></div>
-                </div>
-            </a>
+            <h2 class="section-title">Sports Arena ⚽</h2>
+            <div class="sports-grid">
+                <a href="kyadondo-fc.html" class="card">
+                    <div class="card-img-wrap">
+                        <img src="kyadondo-team.jpg" alt="Kyadondo FC">
+                    </div>
+                    <div class="card-body">
+                        <h3>Kaggo Unveils 2026 Masaza Cup Committee</h3>
+                        <div class="card-footer"><span>Mar 5, 2026</span></div>
+                    </div>
+                </a>
+            </div>
         </div>
 
-    </main>
+        <aside class="sidebar-column">
+            
+            <div class="directory-premium-card">
+                <div class="premium-tag">SPONSORED</div>
+                <h3>KASANGATI BUSINESS DIRECTORY 📍</h3>
+                <p>Find & Support Verified Local Schools, Hospitals, and Businesses.</p>
+                <ul class="directory-list">
+                    <li>🏥 People's Medical Hospital</li>
+                    <li>🏫 Trust High School Kabubbu</li>
+                    <li>☕ Local Cafés & More</li>
+                </ul>
+                <a href="local-directory.html" class="directory-main-btn">EXPLORE THE DIRECTORY</a>
+            </div>
+
+            <div class="community-voices-box">
+                <h3 class="sidebar-title">Community Voices ✍️</h3>
+                <div class="voice-item">
+                    <p>"We are happy that you have chosen to stand with us..."</p>
+                    <strong>— Mr. Muwanga Steven, LC1</strong>
+                    <a href="lions-masooli-service.html">View More</a>
+                </div>
+                <hr>
+                <div class="voice-item">
+                    <p>"Instead of waiting for gifts, these girls chose to give back."</p>
+                    <strong>— Hajji Mohammed Muyimbwa</strong>
+                    <a href="trust-high-service.html">Read Story</a>
+                </div>
+            </div>
+
+            <div class="archive-box">
+                <h3 class="sidebar-title">The Archives 📁</h3>
+                <p>Missed a story? Browse our past news coverage by month.</p>
+                <div class="archive-links">
+                    <a href="archive-march-2026.html">March 2026</a>
+                    <a href="archive-february-2026.html" class="disabled-link">February 2026</a>
+                    <a href="archive-january-2026.html" class="disabled-link">January 2026</a>
+                </div>
+                <a href="full-archive.html" class="view-all-link">See Full History →</a>
+            </div>
+
+        </aside>
+    </div>
+</main>
 
     <div class="floating-controls">
         <button id="musicBtn" class="float-btn music-btn" data-icon="🎵" onclick="toggleAudio()" title="Play Sound"></button>
@@ -286,4 +358,3 @@
     </script>
 </body>
 </html>
-
