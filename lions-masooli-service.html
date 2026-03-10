@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Lions Club Empowers 600 Students in Masooli | Enjuba Ya Kasangati</title>
+    <meta name="description" content="Lions Club of Kasangati Greater visits St. John's C.U. Masooli for tree planting, menstrual health education, and hygiene support for girls and boys.">
+    <meta property="og:title" content="🦁 Lions in Action: Empowering the Next Generation in Masooli">
+    <meta property="og:description" content="From planting fruit trees to distributing sanitary pads, see how the Lions celebrated Women's Day with 600 learners.">
+    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/lions-masooli-main.jpg">
+    <meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/lions-masooli-service.html">
+    <meta property="og:type" content="article">
+
+    <style>
+        :root { --lion-gold: #fbc02d; --lion-blue: #003366; --green: #2e7d32; --dark: #1a1a1a; --light-blue: #e3f2fd; --red: #d32f2f; }
+        * { box-sizing: border-box; transition: 0.3s ease; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fdfcf0; color: #333; line-height: 1.6; }
+        
+        header { 
+            background: white; padding: 15px 5%; border-bottom: 3px solid var(--lion-gold); 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-small { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo-small h1 { font-size: 1.1rem; color: var(--lion-blue); margin: 0; font-weight: 800; }
+
+        .article-container { 
+            max-width: 800px; margin: 20px auto; background: white; 
+            padding: 30px; border-radius: 12px; border-top: 5px solid var(--lion-blue);
+        }
+        
+        .kicker { color: var(--lion-blue); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        h1 { font-size: 2.2rem; line-height: 1.2; color: var(--dark); margin: 10px 0; }
+        .byline { font-weight: bold; color: var(--green); display: block; margin-bottom: 10px; }
+
+        /* Share Button */
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #25D366; color: white; text-decoration: none;
+            padding: 8px 16px; border-radius: 50px; font-weight: bold;
+            font-size: 0.85rem; margin-bottom: 25px;
+        }
+
+        /* Zoomable Images */
+        .zoom-img { cursor: zoom-in; width: 100%; border-radius: 10px; margin-bottom: 10px; }
+        
+        #lightbox {
+            position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center;
+        }
+        #lightbox img { max-width: 90%; max-height: 80%; border-radius: 5px; }
+
+        .caption { font-size: 0.85rem; color: #666; font-style: italic; text-align: center; margin-bottom: 25px; display: block; }
+
+        .service-impact-box { 
+            background: var(--light-blue); border-left: 5px solid var(--lion-blue); 
+            padding: 20px; border-radius: 0 12px 12px 0; margin: 25px 0;
+        }
+
+        .tree-section { 
+            background: #e8f5e9; border: 1px solid var(--green); 
+            padding: 20px; border-radius: 12px; margin: 25px 0;
+        }
+
+        .quote-card { 
+            background: #fff9c4; border-left: 5px solid var(--lion-gold); 
+            padding: 25px; margin: 30px 0; font-style: italic; font-size: 1.1rem;
+        }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 30px; }
+        .gallery-grid img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; cursor: zoom-in; }
+
+  /* Chairman Section */
+        .leader-box {
+            display: flex; gap: 20px; background: #f9f9f9; padding: 20px; 
+            border-radius: 12px; align-items: center; margin: 30px 0;
+            border: 1px solid #eee;
+        }
+        .leader-box img { width: 120px; height: 120px; border-radius: 10px; object-fit: cover; cursor: zoom-in; flex-shrink: 0; }
+        .leader-text h4 { margin: 0 0 5px 0; color: var(--lion-blue); }
+
+        .quote-card { 
+            background: #fff9c4; border-left: 5px solid var(--lion-gold); 
+            padding: 25px; margin: 30px 0; font-style: italic; font-size: 1.1rem;
+        }
+
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 30px; }
+        .gallery-grid img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; cursor: zoom-in; }
+
+
+        /* Related Section */
+        .related-section { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .related-title { font-size: 1.2rem; font-weight: 800; border-bottom: 2px solid var(--lion-gold); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .related-card { background: white; border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .related-card img { width: 100%; height: 120px; object-fit: cover; }
+        .related-card h4 { padding: 10px; margin: 0; font-size: 0.9rem; }
+
+        footer { background: var(--dark); color: white; padding: 40px 5%; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-small">
+            <img src="logo.png" alt="Logo" height="35">
+            <h1>ENJUBA YA KASANGATI</h1>
+        </a>
+        <a href="index.html" style="text-decoration:none; font-weight:bold; color:var(--lion-blue); font-size: 0.8rem;">← HOME</a>
+    </header>
+
+    <main class="article-container">
+        <span class="kicker">Lions Club of Kasangati Greater</span>
+        <h1>ROOTS OF HOPE: Lions and Leos Empower 600 Learners in Masooli</h1>
+        
+        <span class="byline">March 8, 2026</span>
+
+        <a href="whatsapp://send?text=Check out how the Lions Club transformed Masooli C.U. Primary: https://gayazab.github.io/EnjubaYaKasangati/lions-masooli-service.html" class="share-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="18"> Share on WhatsApp
+        </a>
+
+        <img src="lions-masooli-main.jpg" alt="Lions and children at Masooli" class="zoom-img" onclick="zoomImage(this)">
+        <span class="caption">Lions of Kasangati Greater and Leos with the happy learners of St. John's C.U. Masooli. (Tap to zoom)</span>
+
+        <p><strong>MASOOLI</strong> — Leading up to International Women's Day, the <strong>Lions Club of Kasangati Greater</strong> together with the Leos descended upon <strong>St. John's Church of Uganda Primary School, Masooli</strong>, for a comprehensive service activity that touched the lives of over 600 children.</p>
+
+        <div class="service-impact-box">
+            <h3 style="margin-top:0; color:var(--lion-blue);">✨ Impact at a Glance</h3>
+            <ul>
+                <li><strong>300 Girls:</strong> Received menstrual health education and sanitary towels.</li>
+                <li><strong>300 Boys:</strong> Received hygiene talks and washing soap.</li>
+                <li><strong>Environment:</strong> Fruit trees planted across the school campus.</li>
+            </ul>
+        </div>
+
+        <h3>Environmental Mentorship</h3>
+        <div class="tree-section">
+            <p>Led by <strong>Lion Adrian Kamuhanda</strong>, the team planted various fruit trees around the school. To ensure sustainability, two learners from each class were selected as "Tree Guardians" to look after their class-allocated tree.</p>
+            <p><em>"We want the children to understand that trees provide food, shelter, and support a good climate,"</em> Adrian noted, promising that the club would return to track the trees' progress.</p>
+        </div>
+
+        <h3>Menstrual Health and Hygiene</h3>
+        <p>In a specialized health talk, <strong>Lion Stella Anyango</strong> (Medical Personnel) empowered the girls to embrace their body changes with confidence. The "New Voices" team demonstrated the proper use of both disposable and reusable sanitary towels.</p>
+        
+        <p>Simultaneously, <strong>Lion Trinity</strong> and the male Lions mentored the boys on hygiene, discipline, and the importance of respecting teachers, fellow students, and the community.</p>
+
+        <div class="quote-card">
+            "We saw that the next generation of women in Kasangati needed to be empowered. We shared the need to stay safe, abstain, and finish school before thinking about childbearing. They are the future citizens we are looking forward to."
+            <br><small><strong>— Lion Adrian Kamuhanda, Activity Coordinator</strong></small>
+        </div>
+
+        <h3>Chairman’s Gratitude</h3>
+         <div class="leader-box">
+            <img src="lions-boys-soap3.jpg" alt="Chairman Muwanga Steven Kigere addressing the Lions" onclick="zoomImage(this)">
+            <div class="leader-text">
+                <h4>Mr. Muwanga Steven Kigere</h4>
+                <p><strong>L.C. 1 Chairman, Masooli:</strong> "We are happy that you have chosen to stand with us. UPE schools usually have a lot of need, and this gesture means everything to our learners."</p>
+         </div>
+       </div>
+
+        <div class="gallery-grid">
+            <img src="lions-trees.jpg" alt="Tree planting" onclick="zoomImage(this)">
+            <img src="lions-girls-talk.jpg" alt="Menstrual health talk" onclick="zoomImage(this)">
+            <img src="lions-boys-soap.jpg" alt="Boys receiving soap" onclick="zoomImage(this)">
+            <img src="lions-group-photo.jpg" alt="Group photoshoot" onclick="zoomImage(this)">
+  <img src="lions-trees2.jpg" alt="Tree planting" onclick="zoomImage(this)">
+            <img src="lions-girls-talk2.jpg" alt="Menstrual health talk" onclick="zoomImage(this)">
+            <img src="lions-boys-soap2.jpg" alt="Boys receiving soap" onclick="zoomImage(this)">
+            <img src="lions-group-photo2.jpg" alt="Group photoshoot" onclick="zoomImage(this)">
+  <img src="lions-trees3.jpg" alt="Tree planting" onclick="zoomImage(this)">
+            <img src="lions-girls-talk3.jpg" alt="Menstrual health talk" onclick="zoomImage(this)">
+            <img src="lions-boys-soap3.jpg" alt="Boys receiving soap" onclick="zoomImage(this)">
+            <img src="lions-group-photo3.jpg" alt="Group photoshoot" onclick="zoomImage(this)">
+        </div>
+    </main>
+
+    <section class="related-section">
+        <h3 class="related-title">You May Also Like</h3>
+        <div class="related-grid">
+            <a href="trust-high-service.html" class="related-card">
+                <img src="sweep02.jpg" alt="Cleanup">
+                <h4>Trust High Girls Lead Kijjabijo Cleanup</h4>
+            </a>
+            <a href="gayaza-cu-tribute.html" class="related-card">
+                <img src="wamusai-tribute.jpg" alt="Tribute">
+                <h4>Men Speak Out: A Tribute to Women at Gayaza C.U. SS</h4>
+            </a>
+            <a href="women-medical-camp.html" class="related-card">
+                <img src="dr-frank-women.jpg" alt="Health">
+                <h4>'Give to Gain': Painless Labour News Sparks Joy</h4>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h2 style="color:var(--lion-gold); margin:0;">Enjuba Ya Kasangati</h2>
+        <p>&copy; 2026 EyaKa Media Group | "Serving Our Community"</p>
+    </footer>
+
+    <script>
+        function zoomImage(img) {
+            var lb = document.getElementById('lightbox');
+            var lbImg = document.getElementById('lightbox-img');
+            lb.style.display = 'flex';
+            lbImg.src = img.src;
+        }
+    </script>
+</body>
+</html>
