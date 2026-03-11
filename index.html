@@ -102,7 +102,54 @@
         .floating-controls { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 20px; align-items: center; z-index: 2000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 12px 25px; border-radius: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
         .float-btn { width: 50px; height: 50px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; color: white; text-decoration: none; position: relative; }
         .wa-btn { background: #25d366; transform: scale(1.15); }
-        .music-btn { background: #1a1a1a; }
+       /* Floating Controls Base */
+.floating-controls {
+    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 20px; align-items: center; z-index: 2000;
+    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+    padding: 12px 25px; border-radius: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); 
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.float-btn { 
+    width: 50px; height: 50px; border-radius: 50%; border: none; 
+    display: flex; align-items: center; justify-content: center; 
+    cursor: pointer; color: white; text-decoration: none; 
+    position: relative; overflow: hidden; 
+}
+
+/* THE RESTORED LIGHT-AROUND-BUTTON EFFECT */
+.music-btn { background: #1a1a1a; }
+
+.music-btn.playing::before {
+    content: ''; 
+    position: absolute; 
+    width: 150%; height: 150%;
+    background: conic-gradient(transparent, var(--pink), var(--gold), var(--blue), transparent);
+    animation: rotateLights 2s linear infinite;
+    z-index: 1;
+}
+
+.music-btn::after { 
+    content: attr(data-icon); 
+    position: absolute; 
+    inset: 3px; 
+    background: #222; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 2; 
+    font-size: 1.2rem;
+}
+
+@keyframes rotateLights { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+.wa-btn { background: #25d366; transform: scale(1.15); z-index: 2; }
+.top-btn { background: var(--red); font-weight: 900; z-index: 2; }
         .top-btn { background: var(--red); font-weight: 900; }
 
         footer { background: var(--dark); color: white; padding: 60px 5%; text-align: center; }
@@ -167,7 +214,7 @@
                 <a href="trust-high-service.html" class="card">
                     <div class="card-img-wrap">
                         <span class="card-badge" style="background:var(--purple)">COMMUNITY</span>
-                        <img src="sweep2.jpg" alt="Trust High School Kabubbu">
+                        <img src="sweep2.JPG" alt="Trust High School Kabubbu">
                     </div>
                     <div class="card-body">
                         <h3>Trust High School Kabubbu Girls Lead Kijjabijo Cleanup</h3>
@@ -284,5 +331,6 @@
     </script>
 </body>
 </html>
+
 
 
