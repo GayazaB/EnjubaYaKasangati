@@ -5,23 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enjuba Ya Kasangati | Your Home Post For Kasangati TC Community News</title>
 
-<meta name="title" content="Enjuba Ya Kasangati | Your #1 Source for Gayaza & Kasangati News">
-<meta name="description" content="Get the latest on People's Medical Hospital, Trust High School, Kyadondo FC, and community updates. Breaking news from the heart of Kasangati Town Council.">
+    <meta name="title" content="Enjuba Ya Kasangati | Your #1 Source for Gayaza & Kasangati News">
+    <meta name="description" content="Get the latest on Atlas High School success, Community stories, and Kyadondo FC. Breaking news from the heart of Kasangati Town Council.">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
-<meta property="og:title" content="🌞 Enjuba Ya Kasangati: Amawulire ge Kitundu">
-<meta property="og:description" content="From healthcare innovations at People's Medical to local sports and education—stay connected with the pulse of Gayaza.">
-<meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/lions-boys-soap2.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
+    <meta property="og:title" content="🌞 Enjuba Ya Kasangati: Amawulire ge Kitundu">
+    <meta property="og:description" content="From Atlas High academic excellence to healthcare innovations—stay connected with the pulse of Gayaza.">
+    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/atlas-high-main.jpg">
 
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
-<meta property="twitter:title" content="Enjuba Ya Kasangati | Gayaza News">
-<meta property="twitter:description" content="Breaking news and community stories from Kasangati Town Council.">
-<meta property="twitter:image" content="https://gayazab.github.io/EnjubaYaKasangati/sweep01.jpg">
-
-  
-   
     <style>
         :root {
             --red: #d32f2f; --blue: #1976d2; --green: #388e3c; --gold: #fbbf24;
@@ -79,7 +71,7 @@
         .feature-content h1 { font-size: 2.2rem; margin: 0 0 15px 0; color: var(--dark); line-height: 1.1; }
         .read-more-btn { color: var(--blue); font-weight: 800; margin-top: 15px; }
 
-        /* Lively Community Voices */
+        /* Sidebar Voices */
         .community-voices-box { background: white; padding: 20px; border-radius: 15px; border: 1px solid #eee; margin-bottom: 25px; }
         .sidebar-title { border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin: 0 0 15px 0; }
         .voice-card { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 10px; margin-bottom: 12px; border: 1px solid rgba(0,0,0,0.05); }
@@ -98,59 +90,37 @@
         .archive-links a { display: block; padding: 10px; margin-bottom: 5px; background: #f8f9fa; border-radius: 6px; font-size: 0.85rem; color: var(--dark); text-decoration: none; border-left: 3px solid var(--gold); }
         .archive-links a:hover { background: var(--blue); color: white; transform: translateX(5px); }
 
-        /* Floating Controls */
-        .floating-controls { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 20px; align-items: center; z-index: 2000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 12px 25px; border-radius: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
-        .float-btn { width: 50px; height: 50px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; cursor: pointer; color: white; text-decoration: none; position: relative; }
-        .wa-btn { background: #25d366; transform: scale(1.15); }
-       /* Floating Controls Base */
-.floating-controls {
-    position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
-    display: flex; gap: 20px; align-items: center; z-index: 2000;
-    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
-    padding: 12px 25px; border-radius: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); 
-    border: 1px solid rgba(0,0,0,0.05);
-}
+        /* Floating Controls Base */
+        .floating-controls {
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 20px; align-items: center; z-index: 2000;
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            padding: 12px 25px; border-radius: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
 
-.float-btn { 
-    width: 50px; height: 50px; border-radius: 50%; border: none; 
-    display: flex; align-items: center; justify-content: center; 
-    cursor: pointer; color: white; text-decoration: none; 
-    position: relative; overflow: hidden; 
-}
+        .float-btn { 
+            width: 50px; height: 50px; border-radius: 50%; border: none; 
+            display: flex; align-items: center; justify-content: center; 
+            cursor: pointer; color: white; text-decoration: none; 
+            position: relative; overflow: hidden; 
+        }
 
-/* THE RESTORED LIGHT-AROUND-BUTTON EFFECT */
-.music-btn { background: #1a1a1a; }
+        .music-btn { background: #1a1a1a; }
+        .music-btn.playing::before {
+            content: ''; position: absolute; width: 150%; height: 150%;
+            background: conic-gradient(transparent, var(--pink), var(--gold), var(--blue), transparent);
+            animation: rotateLights 2s linear infinite; z-index: 1;
+        }
+        .music-btn::after { 
+            content: attr(data-icon); position: absolute; inset: 3px; 
+            background: #222; border-radius: 50%; display: flex; 
+            align-items: center; justify-content: center; z-index: 2; font-size: 1.2rem;
+        }
 
-.music-btn.playing::before {
-    content: ''; 
-    position: absolute; 
-    width: 150%; height: 150%;
-    background: conic-gradient(transparent, var(--pink), var(--gold), var(--blue), transparent);
-    animation: rotateLights 2s linear infinite;
-    z-index: 1;
-}
-
-.music-btn::after { 
-    content: attr(data-icon); 
-    position: absolute; 
-    inset: 3px; 
-    background: #222; 
-    border-radius: 50%; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    z-index: 2; 
-    font-size: 1.2rem;
-}
-
-@keyframes rotateLights { 
-    0% { transform: rotate(0deg); } 
-    100% { transform: rotate(360deg); } 
-}
-
-.wa-btn { background: #25d366; transform: scale(1.15); z-index: 2; }
-.top-btn { background: var(--red); font-weight: 900; z-index: 2; }
-        .top-btn { background: var(--red); font-weight: 900; }
+        @keyframes rotateLights { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .wa-btn { background: #25d366; transform: scale(1.15); z-index: 2; }
+        .top-btn { background: var(--red); font-weight: 900; z-index: 2; }
 
         footer { background: var(--dark); color: white; padding: 60px 5%; text-align: center; }
 
@@ -177,10 +147,10 @@
     <div class="ticker-wrapper">
         <div class="ticker-label">LATEST UPDATES</div>
         <div class="ticker-text-move">
+            <span>🎓 Atlas High School excels in 2025 UCE/UACE results: Sciences & Economics on the rise...</span>
             <span>🦁 Lions Club of Kasangati Greater empowers 600 learners at Masooli...</span>
             <span>🌸 Women's Day: Painless Labour innovation unveiled at People's Medical...</span>
             <span>🧹 Trust High School Kabubbu girls lead massive cleanup in Kijjabijo...</span>
-            <span>⚽ Kyadondo FC Kaggo unveils committee for 2026 Masaza Cup campaign...</span>
         </div>
     </div>
 
@@ -191,16 +161,17 @@
     </div>
 
     <section class="feature-section">
-        <a href="lions-masooli-service.html" class="feature-link" style="text-decoration:none;">
+        <a href="atlas-high-excellence.html" class="feature-link" style="text-decoration:none;">
             <div class="feature-hero">
                 <div class="feature-img">
-                    <img src="lions-masooli-main.jpg" alt="Lions Club Feature">
-                    <span class="card-badge" style="background:var(--red); top:20px; left:20px;">FEATURE STORY</span>
+                    <img src="atlas-high-main.jpg" alt="Atlas High Excellence">
+                    <span class="card-badge" style="background:var(--red); top:20px; left:20px;">NEW FEATURE</span>
                 </div>
                 <div class="feature-content">
-                    <h1>ROOTS OF HOPE: How Lions are Growing the Future in Masooli</h1>
-                    <p>In a landmark visit to St. John's C.U., the Lions Club of Kasangati Greater combined environmental care with vital health education for 600 learners...</p>
-                    <span class="read-more-btn">Read Full Report →</span>
+                    <small style="color:var(--blue); font-weight:bold; text-transform:uppercase;">Education Spotlight</small>
+                    <h1>BEYOND THE GRADES: The Secret to Atlas High's 2025 Success</h1>
+                    <p>From booming science performance to a revolution in agribusiness,School Head Teacher Wasswa Ronald reveals how "passion-driven" teaching is producing stellar results...</p>
+                    <span class="read-more-btn">Read Full Story →</span>
                 </div>
             </div>
         </a>
@@ -211,6 +182,17 @@
             
             <h2 class="section-title">Latest Community News</h2>
             <div class="news-grid">
+                <a href="lions-masooli-service.html" class="card">
+                    <div class="card-img-wrap">
+                        <span class="card-badge" style="background:var(--green)">IMPACT</span>
+                        <img src="lions-masooli-main.jpg" alt="Lions Club Masooli">
+                    </div>
+                    <div class="card-body">
+                        <h3>Lions Club Grows "Roots of Hope" for 600 Learners in Masooli</h3>
+                        <div class="card-footer"><span>Mar 11, 2026</span></div>
+                    </div>
+                </a>
+
                 <a href="trust-high-service.html" class="card">
                     <div class="card-img-wrap">
                         <span class="card-badge" style="background:var(--purple)">COMMUNITY</span>
@@ -218,17 +200,6 @@
                     </div>
                     <div class="card-body">
                         <h3>Trust High School Kabubbu Girls Lead Kijjabijo Cleanup</h3>
-                        <div class="card-footer"><span>Mar 8, 2026</span></div>
-                    </div>
-                </a>
-
-                <a href="gayaza-cu-tribute.html" class="card">
-                    <div class="card-img-wrap">
-                        <span class="card-badge" style="background:var(--blue)">TRIBUTE</span>
-                        <img src="wamusai-tribute.jpg" alt="Gayaza CU Men">
-                    </div>
-                    <div class="card-body">
-                        <h3>Men Speak Out: A Tribute to Women at Gayaza C.U. SS</h3>
                         <div class="card-footer"><span>Mar 8, 2026</span></div>
                     </div>
                 </a>
@@ -264,11 +235,11 @@
             <div class="directory-premium-card">
                 <div class="premium-tag">SPONSORED</div>
                 <h3>KASANGATI COMMUNITY BUSINESS DIRECTORY 📍</h3>
-                <p>Find & Support Verified Local Service Providers, Schools, Shops and Much more.</p>
+                <p>Find & Support Verified Local Service Providers.</p>
                 <ul class="directory-list" style="list-style:none; padding:0; font-size:0.85rem;">
                     <li>🏥 People's Medical Hospital</li>
-                    <li>🏫 Bereans EYF School -Manyangwa</li>
-                    <li>☕ Local Restaurants, Shops & More</li>
+                    <li>🏫 Atlas High School - Gayaza Road</li>
+                    <li>🏫 Bereans EYF School - Manyangwa</li>
                 </ul>
                 <a href="local-directory.html" class="directory-main-btn">EXPLORE DIRECTORY</a>
             </div>
@@ -276,6 +247,14 @@
             <div class="community-voices-box">
                 <h3 class="sidebar-title">Community Voices ✍️</h3>
                 
+                <div class="voice-card" style="background:#fff9c4; border-left: 4px solid var(--gold);">
+                    <img src="wasswa-ronald.jpg" alt="Wasswa Ronald">
+                    <div class="voice-text">
+                        <p>"Our teachers didn't choose this as a last resort; they do it with passion."</p>
+                        <strong>— Mr. Wasswa Ronald, HeadTeacher</strong>
+                    </div>
+                </div>
+
                 <div class="voice-card" style="background:#e3f2fd;">
                     <img src="lions-boys-soap3.jpg" alt="Chairman Muwanga">
                     <div class="voice-text">
@@ -283,20 +262,12 @@
                         <strong>— Mr. Muwanga Steven, LC1</strong>
                     </div>
                 </div>
-
-                <div class="voice-card" style="background:#fce4ec;">
-                    <img src="ms-nanfuka.jpg" alt="Ms Nanfuka">
-                    <div class="voice-text">
-                        <p>"Instead of waiting for gifts, these girls chose to give back."</p>
-                        <strong>— Hajji Mohammed Muyimbwa</strong>
-                    </div>
-                </div>
             </div>
 
             <div class="archive-box">
                 <h3 class="sidebar-title">February 2026 📁</h3>
                 <div class="archive-links">
-                    <a href="mzee-sebutere.html">👴 Life of Mzee Sebutere</a>
+                    <a href="obituary-ssebutere.html">👴 Life of Mzee Sebutere</a>
                     <a href="kyadondo-fc.html">⚽ Kaggo Cup Preparations</a>
                     <a href="katikkiro-visit.html">👑 Katikkiro's Visit to Kasangati</a>
                 </div>
@@ -306,6 +277,7 @@
         </aside>
     </div>
 </main>
+
     <div class="floating-controls">
         <button id="musicBtn" class="float-btn music-btn" data-icon="🎵" onclick="toggleAudio()" title="Play Sound"></button>
         <a href="https://wa.me/256702972020" target="_blank" class="float-btn wa-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28"></a>
@@ -331,6 +303,3 @@
     </script>
 </body>
 </html>
-
-
-
