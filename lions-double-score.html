@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>A Symphony of Service: The Double Score for Kasangati Greater Lions | Enjuba Ya Kasangati</title>
+    <meta name="description" content="Lions Club of Kasangati Greater celebrates a historic double induction and a visit to Benjamin’s House. Full report by Serwadda Sammy.">
+    <meta property="og:title" content="🦁 A Symphony of Service: The Double Score for Kasangati Greater Lions">
+    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/lions-gala-main.jpg">
+    <meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/lions-double-score.html">
+    <meta property="og:type" content="article">
+
+    <style>
+        :root { --lion-gold: #fbc02d; --lion-blue: #003366; --green: #2e7d32; --dark: #1a1a1a; --light-blue: #e3f2fd; }
+        * { box-sizing: border-box; transition: 0.3s ease; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fdfcf0; color: #333; line-height: 1.6; }
+        
+        header { 
+            background: white; padding: 15px 5%; border-bottom: 3px solid var(--lion-gold); 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-small { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo-small h1 { font-size: 1.1rem; color: var(--lion-blue); margin: 0; font-weight: 800; }
+
+        .article-container { 
+            max-width: 800px; margin: 20px auto; background: white; 
+            padding: 30px; border-radius: 12px; border-top: 5px solid var(--lion-blue);
+        }
+        
+        .kicker { color: var(--lion-blue); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        h1 { font-size: 2.2rem; line-height: 1.2; color: var(--dark); margin: 10px 0; }
+        .byline { font-weight: bold; color: var(--green); display: block; margin-bottom: 20px; }
+
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #25D366; color: white; text-decoration: none;
+            padding: 8px 16px; border-radius: 50px; font-weight: bold;
+            font-size: 0.85rem; margin-bottom: 25px;
+        }
+
+        .zoom-img { cursor: zoom-in; width: 100%; border-radius: 15px; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        /* Unified Leader/Speech Boxes */
+        .leader-box {
+            display: flex; gap: 20px; background: #f9f9f9; padding: 25px; 
+            border-radius: 12px; align-items: center; margin: 35px 0;
+            border: 1px solid #eee;
+        }
+        .leader-box img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0; cursor: zoom-in; }
+        .leader-text q { font-style: italic; font-size: 1.1rem; color: var(--lion-blue); display: block; margin-bottom: 10px; }
+        .leader-text cite { font-style: normal; font-weight: bold; font-size: 0.9rem; color: #555; }
+
+        .impact-box { 
+            background: linear-gradient(135deg, var(--lion-blue), #001f3f); 
+            color: white; padding: 35px; border-radius: 15px; margin: 40px 0; text-align: center;
+        }
+
+        /* Dark Gallery Section */
+        .gallery-section { background: #111; padding: 60px 20px; margin-top: 60px; }
+        .gallery-container { max-width: 1000px; margin: 0 auto; text-align: center; }
+        .gallery-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 15px; margin-top: 30px;
+        }
+        .gallery-item { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer; border: 2px solid transparent; }
+        .gallery-item:hover { border: 2px solid var(--lion-gold); transform: scale(1.02); }
+
+        #lightbox {
+            position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center;
+        }
+        #lightbox img { max-width: 95%; max-height: 90%; border-radius: 5px; }
+
+        .related-section { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .related-title { font-size: 1.2rem; font-weight: 800; border-bottom: 2px solid var(--lion-gold); display: inline-block; padding-bottom: 5px; margin-bottom: 20px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .related-card { background: white; border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .related-card img { width: 100%; height: 120px; object-fit: cover; }
+        .related-card h4 { padding: 10px; margin: 0; font-size: 0.9rem; }
+
+        footer { background: var(--dark); color: white; padding: 40px 5%; text-align: center; }
+
+        @media (max-width: 600px) { .leader-box { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-small">
+            <img src="logo.png" alt="Logo" height="35">
+            <h1>ENJUBA YA KASANGATI</h1>
+        </a>
+        <a href="index.html" style="text-decoration:none; font-weight:bold; color:var(--lion-blue); font-size: 0.8rem;">← HOME</a>
+    </header>
+
+    <main class="article-container">
+        <span class="kicker">Impact Report</span>
+        <h1>A Symphony of Service: The Double Score for Kasangati Greater Lions</h1>
+        
+        <span class="byline">By Serwadda Sammy | MAWULE, KATADDE | April 29, 2026</span>
+
+        <a href="whatsapp://send?text=A Symphony of Service: The Double Score for Kasangati Lions. Read more: https://gayazab.github.io/EnjubaYaKasangati/lions-double-score.html" class="share-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="18"> Share on WhatsApp
+        </a>
+
+        <img src="lions-gala-main.jpg" alt="Kasangati Lions Gala" class="zoom-img" onclick="zoomImage(this)">
+
+        <p><strong>MAWULE —</strong> On the sun-drenched weekend of Saturday, April 25th, the air in Kasangati carried more than just the scent of rain and earth; it carried the spirit of a legacy reborn. In a historic display of growth and commitment, the Lions Club of Kasangati Greater celebrated a "Double Score," presenting two new vibrant clubs to the international family of service.</p>
+
+        <p>The induction of the Lions Club of Nangabo and the Kasangati Greater II Leo Club stands as a towering achievement in this 2025/2026 Lionistic year. With over 20 charter members in each fold, the pride has not just grown—it has roared.</p>
+
+        <h3>The Dawn of Service: Solidarity at Benjamin’s House</h3>
+        <p>Before the evening’s gold and blue pageantry, the heart of Lionism was put into motion. Led by President Lion Patrick Muganga, a delegation journeyed to the quiet hills of Mawule to visit <strong>The Benjamin’s House, Uganda.</strong></p>
+
+        <p>Benjamin's House operates through a dedicated and life-changing framework known as the "Four Rs": Rescue, Rehabilitation, Restoration, and Resettlement. <strong>Bishop Basalirwa Cosmas Ricky</strong> noted that the home uses nutrition, sports, and spiritual mentorship to "sweat out" the influence of drugs, returning young men to society as skilled citizens.</p>
+
+        <div class="leader-box">
+            <img src="carlos-kimbowa-speech.jpg" alt="Leo Carlos Kimbowa Speech" onclick="zoomImage(this)">
+            <div class="leader-text">
+                <q>We are here to create an inspirational start. We aren't just joining a club; we are finding our purpose.</q>
+                <cite>— Charter Leo President Carlos Kimbowa</cite>
+            </div>
+        </div>
+
+        <h3>The Grand Gala: A Night of White, Gold, and Blue</h3>
+        <p>As evening fell, the Kasangati Resort Centre was transformed into a cathedral of fellowship. The hall buzzed as Chief Guest, District Governor <strong>Lion Alen Tush Naturinda</strong>, took the podium.</p>
+
+        <!-- New DG Alen Tush Naturinda Leader Box -->
+        <div class="leader-box">
+            <img src="dg-tush.jpg" alt="DG Lion Alen Tush Naturinda" onclick="zoomImage(this)">
+            <div class="leader-text">
+                <q>"Kasangati Greater does not settle for less. To see a mega-objective scored so early in the year is a milestone of excellence."</q>
+                <cite>— District Governor 411B, Ln Tush Naturinda</cite>
+            </div>
+        </div>
+
+        <p>DG Alen commended Guiding Lions Rodgers Kamuhanda and Dan Aleen for their tireless mentorship.</p>
+
+        <div class="leader-box">
+            <img src="colonel-barbra.jpg" alt="Ln Colonel Barbra" onclick="zoomImage(this)">
+            <div class="leader-text">
+                <q>True leadership is service that transforms lives. Seeing these young Leos and Lions step up gives us great hope for the future of lionism.</q>
+                <cite>— Guest of Honor,Dr. Colonel Ln Barbra ALangat</cite>
+            </div>
+        </div>
+
+        <h3>Looking Forward: A Legacy in Motion</h3>
+
+        <div class="leader-box">
+            <img src="joseph-nyende-speech.jpg" alt="Lion Joseph Nyende Speech" onclick="zoomImage(this)">
+            <div class="leader-text">
+                <q>Our mission is defined by discipline and action. We target a legacy of clean water and primary education for Mawule.</q>
+                <cite>— Charter President Lion Joseph Nyende</cite>
+            </div>
+        </div>
+
+        <p>Nyende announced an ambitious first-year target: a 43-million-shilling project to bring clean water and scholastic supplies to a primary school in Mawule. The room responded with typical Lionistic spirit, raising over 5 million shillings in pledges on the spot.</p>
+
+        <section class="impact-box">
+            <h2 style="color:var(--lion-gold); margin:0;">The Mawule Mission Goal</h2>
+            <div style="font-size: 2rem; font-weight: bold; margin: 10px 0;">UGX 43,000,000</div>
+            <p style="font-size: 0.9rem; opacity: 0.9;">Clean water & Scholastic supplies.</p>
+        </section>
+
+        <p>As the music faded and the stars rose over Kasangati, two new clubs stood ready. One mission, many hands, and a double score for humanity.</p>
+    </main>
+
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <h2 style="color: var(--lion-gold);">📸 Event Photo Gallery</h2>
+            <p style="color: #bbb; font-size: 0.9rem;">Touch an image to expand</p>
+              <div class="gallery-grid">
+                <img src="lions-gala-1.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-2.jpg" class="gallery-item" onclick="zoom(this)">
+		<img src="lions-trees.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-3.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-4.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-5.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-6.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="benjamin-visit.jpg" class="gallery-item" onclick="zoom(this)">
+		<img src="lions-gala-7.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-8.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-9.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-10.jpg" class="gallery-item" onclick="zoom(this)">
+		<img src="lions-gala-11.png" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-12.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-13.jpg" class="gallery-item" onclick="zoom(this)">
+                <img src="lions-gala-14.jpg" class="gallery-item" onclick="zoom(this)">
+            </div>
+        </div>
+    </section>
+
+    <section class="related-section">
+        <h3 class="related-title">You May Also Like</h3>
+        <div class="related-grid">
+            <a href="lions-masooli-service.html" class="related-card">
+                <img src="lions-masooli-main.jpg" alt="Masooli">
+                <h4>Lions Empower 600 Learners in Masooli</h4>
+            </a>
+            <a href="trust-high-service.html" class="related-card">
+                <img src="sweep02.jpg" alt="Cleanup">
+                <h4>Trust High Girls Lead Kijjabijo Cleanup</h4>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h2 style="color:var(--lion-gold); margin:0;">Enjuba Ya Kasangati</h2>
+        <p>&copy; 2026 EyaKa Media Group | "Serving Our Community"</p>
+    </footer>
+
+    <script>
+        function zoomImage(img) {
+            var lb = document.getElementById('lightbox');
+            var lbImg = document.getElementById('lightbox-img');
+            lb.style.display = 'flex';
+            lbImg.src = img.src;
+        }
+    </script>
+</body>
+</html>
