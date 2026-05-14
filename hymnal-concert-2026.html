@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Hymnal Concert 2026: Soul-Stirring Worship at St. Stephen's | Enjuba Ya Kasangati</title>
+    <meta name="description" content="Bethel Choir delivers gospel magic and nostalgia at the annual Hymnal Concert 2026 in Kasangati.">
+    <meta property="og:title" content="🎵 Soul-Stirring Worship: Bethel Choir Hymnal Concert 2026">
+    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/hymnal-choir-main.jpg">
+    <meta property="og:type" content="article">
+
+    <style>
+        :root { --royal-purple: #4a148c; --gold: #ffd700; --church-white: #f5f5f5; --text: #2c3e50; }
+        * { box-sizing: border-box; transition: 0.3s ease; }
+        body { font-family: 'Georgia', serif; margin: 0; background: #fffcf5; color: var(--text); line-height: 1.8; }
+        
+        header { 
+            background: white; padding: 15px 5%; border-bottom: 3px solid var(--royal-purple); 
+            display: flex; justify-content: space-between; align-items: center; 
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-small { text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        .logo-small h1 { font-size: 1.1rem; color: var(--royal-purple); margin: 0; font-weight: 800; font-family: sans-serif; }
+
+        .article-container { 
+            max-width: 850px; margin: 30px auto; background: white; 
+            padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .kicker { color: var(--royal-purple); font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; display: block; margin-bottom: 10px; }
+        h1 { font-size: 2.5rem; line-height: 1.2; color: #1a1a1a; margin-bottom: 20px; font-weight: 900; }
+        .meta-info { font-family: sans-serif; font-size: 0.9rem; color: #666; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+
+        .full-img { width: 100%; border-radius: 4px; margin: 20px 0; cursor: zoom-in; }
+
+        .vocal-showcase { 
+            background: var(--royal-purple); color: white; padding: 30px; 
+            border-radius: 12px; margin: 40px 0; border-left: 8px solid var(--gold);
+        }
+        .vocal-showcase h3 { color: var(--gold); margin-top: 0; }
+
+        /* Leader & Guest Spotlight Boxes */
+        .spotlight-box {
+            display: flex; gap: 20px; background: #fdf7ff; padding: 25px; 
+            border-radius: 12px; align-items: center; margin: 35px 0;
+            border: 1px solid #e1bee7;
+        }
+        .spotlight-box img { width: 140px; height: 140px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0; cursor: zoom-in; }
+        .spotlight-text q { font-style: italic; font-size: 1.1rem; color: var(--royal-purple); display: block; margin-bottom: 10px; }
+        .spotlight-text cite { font-style: normal; font-weight: bold; font-size: 0.9rem; color: #555; font-family: sans-serif; }
+
+        /* Dark Gallery Section */
+        .gallery-section { background: #1a1a1a; padding: 60px 20px; margin-top: 60px; }
+        .gallery-container { max-width: 1000px; margin: 0 auto; text-align: center; }
+        .gallery-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 15px; margin-top: 30px;
+        }
+        .gallery-item { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; cursor: pointer; filter: grayscale(30%); }
+        .gallery-item:hover { filter: grayscale(0%); transform: scale(1.03); border: 2px solid var(--gold); }
+
+        #lightbox {
+            position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center;
+        }
+        #lightbox img { max-width: 90%; max-height: 80%; }
+
+        footer { background: #000; color: white; padding: 50px 5%; text-align: center; font-family: sans-serif; }
+        .wa-float { background: #25d366; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; font-family: sans-serif; display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; }
+
+        @media (max-width: 600px) { h1 { font-size: 1.8rem; } .spotlight-box { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-small">
+            <img src="logo.png" alt="Logo" height="40">
+            <h1>ENJUBA YA KASANGATI</h1>
+        </a>
+        <a href="index.html" style="text-decoration:none; font-weight:bold; color:var(--royal-purple); font-family:sans-serif;">← HOME</a>
+    </header>
+
+    <article class="article-container">
+        <span class="kicker">Gospel Entertainment</span>
+        <h1>Bethel Choir Hymnal Concert 2026 delivers soul-stirring worship, nostalgia and pure gospel magic</h1>
+        <div class="meta-info">By Serwadda Sammy | KASANGATI | May 12, 2026</div>
+
+        <img src="hymnal-choir-main.jpg" alt="Bethel Choir in worship" class="full-img" onclick="zoomImage(this)">
+
+        <p>If there was ever proof that gospel music can heal hearts, spark nostalgia and still feel like premium entertainment, then <strong>Hymnal Concert 2026</strong> was exactly that.</p>
+
+        <p>Held at <strong>St. Stephen's Kasangati Church of Uganda</strong>, the much-anticipated annual concert organized by the beloved Bethel Choir lived up to every bit of its hype.</p>
+
+        <p>From the very first hymn, the atmosphere inside the church transformed into a powerful blend of worship, emotion and musical excellence. The timeless hymns transported congregants back to their childhoods, reviving memories of Sunday services, family prayers and the comforting sound of gospel classics that have stood the test of time.</p>
+
+        <div class="vocal-showcase">
+            <h3>A Full Vocal Showcase</h3>
+            <p>This was not just another church concert. Choir after choir stepped onto the stage with polished harmonies, graceful choreography and elegant dress code that reflected reverence and devotion.</p>
+        </div>
+
+        <p>The lineup featured powerhouse performances from Echoes of Christ Choir, Heavenly Voices Choir, Bishops Choir, Father’s Union Choir, Friends of Bethel Choir and guest performers <strong>Gabriel Ministries Choir</strong>.</p>
+
+        <div class="spotlight-box">
+            <img src="gabriel-ministries.jpg" alt="Gabriel Ministries Choir" onclick="zoomImage(this)">
+            <div class="spotlight-text">
+                <q>Their electrifying performance sent waves through the congregation, leaving many yearning for 'just one more song'.</q>
+                <cite>— Guest Spotlight: Gabriel Ministries Choir</cite>
+            </div>
+        </div>
+
+        <p>Throughout the concert, worshippers swayed, sang along and soaked in every lyric as the hymns touched hearts and strengthened faith. Song after song, the audience responded with smiles, raised hands and emotional reflection, proof that gospel music still carries unmatched power when delivered with passion and authenticity.</p>
+
+        <div class="spotlight-box">
+            <img src="disan-ssemaganda.jpg" alt="Ssalongo Disan Ssemaganda" onclick="zoomImage(this)">
+            <div class="spotlight-text">
+                <q>We celebrate church tradition through the beauty of classical worship that has strengthened faith across generations.</q>
+                <cite>— Ssalongo Disan Ssemaganda, Bethel Choir Founder</cite>
+            </div>
+        </div>
+
+        <p>Beyond the music and entertainment, the concert also served as a celebration of church tradition. The hymns, deeply rooted in the Hymn Book, reminded believers of the enduring beauty of classical worship.</p>
+
+        <p>One thing was clear by the end of the night: Hymnal Concert is no longer just a church event — it is becoming one of the most treasured gospel experiences on the Christian entertainment calendar.</p>
+
+        <div style="text-align: center; padding: 20px; background: #fffde7; border-radius: 8px; margin-top: 30px;">
+            <p style="margin:0; font-weight:bold; color:var(--royal-purple);">Eagerly counting down to Hymnal Concert 2027!</p>
+        </div>
+
+        <center>
+            <a href="https://wa.me/256702972020" class="wa-float">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20"> Share your testimony
+            </a>
+        </center>
+    </article>
+
+   <section class="gallery-section">
+    <div class="gallery-container">
+        <h2 style="color: var(--gold);">📸 The Hymnal 2026 Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Row 1 -->
+            <img src="bet01.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Hymnal 2026 Opening Ceremony in Kasangati">
+            <img src="bet02.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Community Choir performing traditional hymns">
+            <img src="bet03.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Congregation singing during the 2026 Hymnal event">
+            <img src="bet04.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Close-up of religious music scores and hymnals">
+            <img src="bet05.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Church leaders presiding over the music festival">
+            <img src="bet06.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Youth choir group participation in Kasangati">
+            <img src="bet07.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Traditional instruments used in the 2026 Hymnal service">
+            <img src="bet08.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Outdoor worship and singing session in Bulamu Ward">
+
+            <!-- Row 2 -->
+            <img src="bet09.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Evening vespers and choral performances">
+            <img src="bet010.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Religious community gathering for music masterclass">
+            <img src="bet011.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Soloist performing a classic Luganda hymn">
+            <img src="bet012.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Kasangati community members attending the concert">
+            <img src="bet013.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Behind the scenes of the Hymnal 2026 production">
+            <img src="bet014.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Organist and keyboardists playing liturgical music">
+            <img src="bet015.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Mass choir ensemble at the town council headquarters">
+            <img src="bet016.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Appreciation certificates for choral excellence">
+
+            <!-- Row 3 -->
+            <img src="bet017.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Children's choir performing at the music festival">
+            <img src="bet018.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Awarding ceremony for the best local hymn composers">
+            <img src="bet019.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Audience engagement during the worship event">
+            <img src="bet020.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Dignitaries and community leaders at the Hymnal 2026">
+            <img src="bet021.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Vocal training workshop for community journalists and singers">
+            <img src="bet022.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Photography documentation of the religious music event">
+            <img src="bet023.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Cultural dancers merging music with traditional worship">
+            <img src="bet024.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Kasangati Town Council supports local music initiatives">
+
+            <!-- Row 4 -->
+            <img src="bet025.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Group photo of the Enjuba ya Kasangati media team">
+            <img src="bet026.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Evening prayer through song in Gayaza">
+            <img src="bet027.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Hymn lyrics display for the congregation">
+            <img src="bet028.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Volunteer team managing the 2026 festival logistics">
+            <img src="bet029.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Sound and audio engineering for the choral event">
+            <img src="bet030.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Atmosphere of joy and worship in Kasangati Town">
+            <img src="bet031.jpg" class="gallery-item" onclick="zoomImage(this)" alt="Closing remarks from the event organizers">
+            <img src="bet032.jpg" class="gallery-item" onclick="zoomImage(this)" alt="The legacy of the 2026 Hymnal project in Uganda">
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <h2 style="color:var(--gold); margin:0;">Enjuba Ya Kasangati</h2>
+        <p>&copy; 2026 EyaKa Media Group | "Serving Our Community"</p>
+    </footer>
+
+    <script>
+        function zoomImage(img) {
+            var lb = document.getElementById('lightbox');
+            var lbImg = document.getElementById('lightbox-img');
+            lb.style.display = 'flex';
+            lbImg.src = img.src;
+        }
+    </script>
+</body>
+</html>

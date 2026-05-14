@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjuba Ya Kasangati | Your Home Post For Kasangati TC Community News</title>
+
+    <!-- Updated Meta Tags for Social Sharing -->
+    <meta name="title" content="Enjuba Ya Kasangati | Lions Double Score & Community News">
+    <meta name="description" content="A Symphony of Service: Lions Club of Kasangati Greater celebrates historic double induction and clean water mission in Mawule.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
+    <meta property="og:title" content="🦁 Enjuba Ya Kasangati: THE DOUBLE SCORE FOR KASANGATI LIONS">
+    <meta property="og:description" content="Historic growth for Kasangati Greater Lions as new clubs are birthed to serve the community. Read the full impact report.">
+    <meta property="og:image" content="https://gayazab.github.io/EnjubaYaKasangati/lions-gala-main.JPG">
+
+    <style>
+        :root {
+            --red: #d32f2f; --blue: #1976d2; --green: #388e3c; --gold: #fbbf24;
+            --pink: #e91e63; --purple: #6a1b9a;
+            --white: #ffffff; --dark: #1a1a1a; --light-gray: #f4f4f4; --text: #333;
+        }
+
+        * { box-sizing: border-box; transition: 0.3s ease; scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: var(--light-gray); color: var(--text); line-height: 1.6; padding-bottom: 120px; }
+
+        header {
+            position: fixed; top: 0; width: 100%; height: 75px;
+            background: var(--white); display: flex; align-items: center;
+            padding: 0 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1001;
+        }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-area img { height: 55px; border-radius: 5px; }
+        .logo-area h1 { font-size: 1.25rem; color: var(--red); margin: 0; letter-spacing: -0.5px; font-weight: 800; }
+        .logo-area small { display: block; font-size: 0.75rem; color: var(--blue); font-weight: 600; }
+
+        /* Ticker */
+        .ticker-wrapper {
+            position: fixed; top: 75px; width: 100%; height: 38px;
+            background: var(--dark); color: white; display: flex; align-items: center; overflow: hidden; z-index: 1000;
+        }
+        .ticker-label { background: var(--red); padding: 0 15px; height: 100%; display: flex; align-items: center; font-weight: bold; font-size: 0.75rem; z-index: 2; }
+        .ticker-text-move { display: inline-block; white-space: nowrap; padding-left: 100%; animation: scrollText 40s linear infinite; }
+        @keyframes scrollText { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+
+        main { margin-top: 140px; padding: 0 5%; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        
+        .freshness-bar { font-size: 0.8rem; color: #777; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .pulse-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+
+        .section-title { font-size: 1.5rem; color: var(--text); border-left: 5px solid var(--red); padding-left: 15px; margin: 30px 0 20px; }
+
+        /* News Grid */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 20px 0; }
+        .card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; }
+        .card:hover { transform: translateY(-8px); border-bottom: 4px solid var(--red); }
+        .card-img-wrap { width: 100%; height: 210px; overflow: hidden; position: relative; }
+        .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .card-badge { position: absolute; top: 15px; left: 15px; color: white; padding: 4px 12px; font-size: 0.7rem; border-radius: 4px; font-weight: bold; text-transform: uppercase; z-index: 10; }
+        .card-body { padding: 20px; flex-grow: 1; }
+        .card-body h3 { margin: 0 0 10px; font-size: 1.2rem; line-height: 1.3; color: var(--dark); }
+        .card-footer { padding: 15px 20px; border-top: 1px solid #eee; font-size: 0.75rem; color: #888; display: flex; justify-content: space-between; align-items: center; }
+
+        /* Feature Story Layout */
+        .main-layout-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px; }
+        .feature-hero { display: flex; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 40px; }
+        .feature-img { flex: 1.2; position: relative; min-height: 250px; }
+        .feature-img img { width: 100%; height: 100%; object-fit: cover; }
+        .feature-content { flex: 1; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+        .feature-content h1 { font-size: 2.2rem; margin: 0 0 15px 0; color: var(--dark); line-height: 1.1; }
+        .read-more-btn { color: var(--blue); font-weight: 800; margin-top: 15px; }
+
+        /* Sidebar Voices */
+        .community-voices-box { background: white; padding: 20px; border-radius: 15px; border: 1px solid #eee; margin-bottom: 25px; }
+        .sidebar-title { border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin: 0 0 15px 0; }
+        .voice-card { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 10px; margin-bottom: 12px; border: 1px solid rgba(0,0,0,0.05); }
+        .voice-card img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .voice-text p { margin: 0; font-size: 0.85rem; font-style: italic; line-height: 1.3; }
+        .voice-text strong { font-size: 0.75rem; color: var(--dark); display: block; margin-top: 4px; }
+
+        /* Directory Card */
+        .directory-premium-card { background: linear-gradient(135deg, var(--blue), #0d47a1); color: white; padding: 25px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3); }
+        .premium-tag { background: var(--gold); color: var(--dark); display: inline-block; padding: 2px 10px; font-size: 0.7rem; font-weight: 800; border-radius: 4px; margin-bottom: 10px; }
+        .directory-list { list-style: none; padding: 0; margin: 15px 0; font-size: 0.9rem; }
+        .directory-main-btn { display: block; text-align: center; background: white; color: var(--blue); padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 800; }
+
+        /* Archives */
+        .archive-box { background: white; padding: 25px; border-radius: 15px; border: 1px solid #e0e0e0; }
+        .archive-links a { display: block; padding: 10px; margin-bottom: 5px; background: #f8f9fa; border-radius: 6px; font-size: 0.85rem; color: var(--dark); text-decoration: none; border-left: 3px solid var(--gold); }
+        .archive-links a:hover { background: var(--blue); color: white; transform: translateX(5px); }
+
+        /* Floating Controls */
+        .floating-controls {
+            position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 20px; align-items: center; z-index: 2000;
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            padding: 12px 25px; border-radius: 60px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); 
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .float-btn { 
+            width: 50px; height: 50px; border-radius: 50%; border: none; 
+            display: flex; align-items: center; justify-content: center; 
+            cursor: pointer; color: white; text-decoration: none; 
+            position: relative; overflow: hidden; 
+        }
+
+        .music-btn { background: #1a1a1a; }
+        .music-btn.playing::before {
+            content: ''; position: absolute; width: 150%; height: 150%;
+            background: conic-gradient(transparent, var(--pink), var(--gold), var(--blue), transparent);
+            animation: rotateLights 2s linear infinite; z-index: 1;
+        }
+        .music-btn::after { 
+            content: attr(data-icon); position: absolute; inset: 3px; 
+            background: #222; border-radius: 50%; display: flex; 
+            align-items: center; justify-content: center; z-index: 2; font-size: 1.2rem;
+        }
+
+        @keyframes rotateLights { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .wa-btn { background: #25d366; transform: scale(1.15); z-index: 2; }
+        .top-btn { background: var(--red); font-weight: 900; z-index: 2; }
+
+        footer { background: var(--dark); color: white; padding: 60px 5%; text-align: center; }
+
+        @media (max-width: 900px) {
+            .main-layout-grid, .feature-hero { grid-template-columns: 1fr; flex-direction: column; }
+            .feature-content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="welcomeAudio" src="welcome.mp3" loop></audio>
+
+    <header>
+        <div class="logo-area">
+            <img src="logo.png" alt="Enjuba Logo">
+            <div>
+                <h1>ENJUBA YA KASANGATI</h1>
+                <small>"Amawulire ge Kitundu, Nsonga za Batuuze"</small>
+            </div>
+        </div>
+    </header>
+
+    <div class="ticker-wrapper">
+        <div class="ticker-label">LATEST UPDATES</div>
+        <div class="ticker-text-move">
+            <span>🦁 Lions Double Score: Induction of Nangabo & Kasangati II Leo Clubs...</span>
+            <span>💧 Mawule Mission: Lion Joseph Nyende targets UGX 43M for clean water...</span>
+            <span>🎓 Atlas High School excels in 2025 UCE/UACE results...</span>
+            <span>🦁 District Governor Alen Tush hails Kasangati Greater "Milestone of Excellence"...</span>
+        </div>
+    </div>
+
+<main>
+    <div class="freshness-bar">
+        <div class="pulse-dot"></div>
+        Live Updates: Thursday, April 30, 2026 | Kasangati, UG
+    </div>
+
+    <section class="feature-section">
+        <a href="lions-double-score.html" class="feature-link" style="text-decoration:none;">
+            <div class="feature-hero">
+                <div class="feature-img">
+                    <img src="lions-gala-main.JPG" alt="Lions Double Score Gala">
+                    <span class="card-badge" style="background:var(--red); top:20px; left:20px;">NEW STORY</span>
+                </div>
+                <div class="feature-content">
+                    <small style="color:var(--blue); font-weight:bold; text-transform:uppercase;">Impact Report</small>
+                    <h1>A SYMPHONY OF SERVICE: The Lions Double Score</h1>
+                    <p>In a historic weekend of growth, the Lions Club of Kasangati Greater birthed two new clubs while launching an ambitious 43-million-shilling mission for Mawule...</p>
+                    <span class="read-more-btn">Read Full Report →</span>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <div class="main-layout-grid">
+        <div class="content-column">
+            
+            <h2 class="section-title">Latest Community News</h2>
+            <div class="news-grid">
+                <a href="atlas-high-excellence.html" class="card">
+                    <div class="card-img-wrap">
+                        <span class="card-badge" style="background:var(--blue)">EDUCATION</span>
+                        <img src="atlas-high-main.jpg" alt="Atlas High School">
+                    </div>
+                    <div class="card-body">
+                        <h3>Beyond the Grades: The Secret to Atlas High's 2025 Success</h3>
+                        <div class="card-footer"><span>Mar 11, 2026</span></div>
+                    </div>
+                </a>
+
+                <a href="lions-masooli-service.html" class="card">
+                    <div class="card-img-wrap">
+                        <span class="card-badge" style="background:var(--green)">IMPACT</span>
+                        <img src="lions-masooli-main.jpg" alt="Lions Club Masooli">
+                    </div>
+                    <div class="card-body">
+                        <h3>Lions Club Grows "Roots of Hope" for 600 Learners in Masooli</h3>
+                        <div class="card-footer"><span>Mar 11, 2026</span></div>
+                    </div>
+                </a>
+
+                <a href="women-medical-camp.html" class="card">
+                    <div class="card-img-wrap">
+                        <span class="card-badge" style="background:var(--pink)">HEALTH</span>
+                        <img src="dr-frank-women.jpg" alt="Medical Camp">
+                    </div>
+                    <div class="card-body">
+                        <h3>Painless Labour: Innovation at People's Medical</h3>
+                        <div class="card-footer"><span>Mar 8, 2026</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <h2 class="section-title">Local Sports Arena ⚽</h2>
+            <div class="sports-grid">
+                <a href="kyadondo-fc.html" class="card">
+                    <div class="card-img-wrap">
+                        <img src="kyadondo-team.jpg" alt="Kyadondo FC">
+                    </div>
+                    <div class="card-body">
+                        <h3>Kaggo Unveils 2026 Masaza Cup Committee</h3>
+                        <div class="card-footer"><span>Mar 5, 2026</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <aside class="sidebar-column">
+            
+            <div class="directory-premium-card">
+                <div class="premium-tag">SPONSORED</div>
+                <h3>KASANGATI COMMUNITY BUSINESS DIRECTORY 📍</h3>
+                <p>Find & Support Verified Local Service Providers.</p>
+                <ul class="directory-list" style="list-style:none; padding:0; font-size:0.85rem;">
+                    <li>🏥 People's Medical Hospital</li>
+                    <li>🏫 Atlas High School - Gayaza Road</li>
+                    <li>🏫 Bereans EYF School - Manyangwa</li>
+                </ul>
+                <a href="local-directory.html" class="directory-main-btn">EXPLORE DIRECTORY</a>
+            </div>
+
+            <div class="community-voices-box">
+                <h3 class="sidebar-title">Community Voices ✍️</h3>
+                
+                <div class="voice-card" style="background:#fff9c4; border-left: 4px solid var(--gold);">
+                    <img src="joseph-nyende-speech.jpg" alt="Lion Joseph Nyende">
+                    <div class="voice-text">
+                        <p>"Our mission is defined by discipline and action. Clean water for Mawule is our target."</p>
+                        <strong>— Lion Joseph Nyende, President</strong>
+                    </div>
+                </div>
+
+                <div class="voice-card" style="background:#e3f2fd;">
+                    <img src="dg-tush.jpg" alt="DG Alen Tush">
+                    <div class="voice-text">
+                        <p>"Kasangati Greater does not settle for less. This is a milestone of excellence."</p>
+                        <strong>— Lion Alen Tush Naturinda, DG</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="archive-box">
+                <h3 class="sidebar-title">Archive 📁</h3>
+                <div class="archive-links">
+                    <a href="trust-high-service.html">🧹 Kijjabijo Cleanup - Trust High</a>
+                    <a href="obituary-ssebutere.html">👴 Life of Mzee Sebutere</a>
+                    <a href="katikkiro-visit.html">👑 Katikkiro's Visit to Kasangati</a>
+                </div>
+                <a href="full-archive.html" class="view-all-link" style="font-size:0.8rem; font-weight:bold; color:var(--blue); text-decoration:none;">View All History →</a>
+            </div>
+
+        </aside>
+    </div>
+</main>
+
+    <div class="floating-controls">
+        <button id="musicBtn" class="float-btn music-btn" data-icon="🎵" onclick="toggleAudio()" title="Play Sound"></button>
+        <a href="https://wa.me/256702972020" target="_blank" class="float-btn wa-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="28"></a>
+        <button class="float-btn top-btn" onclick="window.scrollTo(0,0)">↑</button>
+    </div>
+
+    <footer>
+        <h2 style="color:var(--red); margin:0;">Enjuba Ya Kasangati</h2>
+        <p style="margin:10px 0;">"Tuli Mu Kitundu Ku Lwe Kitundu"</p>
+        <div style="margin: 20px 0; color: #aaa; font-size: 0.9rem;">
+            Contact: 0702 97 20 20 | Gayaza- Zirobwe Road, Kasangati Town Council.
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2026 EyaKa Media Group</p>
+    </footer>
+
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById("welcomeAudio");
+            var btn = document.getElementById("musicBtn");
+            if (audio.paused) { audio.play(); btn.classList.add("playing"); btn.setAttribute("data-icon", "🔊"); } 
+            else { audio.pause(); btn.classList.remove("playing"); btn.setAttribute("data-icon", "🎵"); }
+        }
+    </script>
+</body>
+</html>
