@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enjuba Ya Kasangati | Budget 2026/2027 Special Report</title>
+    <title>Enjuba Ya Kasangati | Kasangati Town Council News Portal</title>
 
-    <!-- Meta Tags for Social Sharing -->
-    <meta name="title" content="Enjuba Ya Kasangati | Town Council Budget 2026/2027">
-    <meta name="description" content="Inside the Kasangati Town Council 2026/2027 Budget: Key allocations for infrastructure, health, and local development.">
+    <meta name="title" content="Enjuba Ya Kasangati | Governance and Community News">
+    <meta name="description" content="Documenting the pulse of Kasangati Town Council: Live updates on politics, leadership transitions, budget reports, and local development.">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gayazab.github.io/EnjubaYaKasangati/">
-    <meta property="og:title" content="📊 LAST COUNCIL MEETING: What Councilors Say">
-    <meta property="og:description" content="in their last council meeting, they have passed a budget to handle roads majorly.">
-    <meta property="og:image" content="council-group-final.jpg">
+    <meta property="og:title" content="🏛️ NEW ERA: Mayor Hajji Kazibwe Baker Sworn In">
+    <meta property="og:description" content="In a historic ceremony, the new independent mayor calls for political unity and announces major PDM updates.">
+    <meta property="og:image" content="mayor-instruments-power.jpg">
 
     <style>
         :root {
@@ -50,7 +49,7 @@
         .pulse-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; animation: pulse 1.5s infinite; }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
 
-        .section-title { font-size: 1.5rem; color: var(--text); border-left: 5px solid var(--red); padding-left: 15px; margin: 30px 0 20px; }
+        .section-title { font-size: 1.6rem; color: var(--dark); border-left: 6px solid var(--red); padding-left: 15px; margin: 40px 0 20px; font-weight: 800; text-transform: uppercase; letter-spacing: -0.5px; }
 
         /* News Grid */
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 20px 0; }
@@ -72,13 +71,18 @@
         .feature-content h1 { font-size: 2.2rem; margin: 0 0 15px 0; color: var(--dark); line-height: 1.1; }
         .read-more-btn { color: var(--blue); font-weight: 800; margin-top: 15px; }
 
-        /* Sidebar Voices */
-        .community-voices-box { background: white; padding: 20px; border-radius: 15px; border: 1px solid #eee; margin-bottom: 25px; }
-        .sidebar-title { border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin: 0 0 15px 0; }
-        .voice-card { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 10px; margin-bottom: 12px; border: 1px solid rgba(0,0,0,0.05); }
-        .voice-card img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .voice-text p { margin: 0; font-size: 0.85rem; font-style: italic; line-height: 1.3; }
-        .voice-text strong { font-size: 0.75rem; color: var(--dark); display: block; margin-top: 4px; }
+        /* FULL-WIDTH HIGH-VIEWERSHIP COMMUNITY VOICES LAYOUT */
+        .voices-pronounced-section { background: #fff; padding: 40px 30px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin: 30px 0 50px 0; }
+        .voices-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 25px; }
+        .voice-premium-card { background: #f8fafc; border-left: 4px solid var(--blue); border-radius: 0 16px 16px 0; padding: 25px; display: flex; flex-direction: column; justify-content: space-between; border-top: 1px solid #edf2f7; border-right: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7; }
+        .voice-premium-card:hover { background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.06); border-left-color: var(--red); transform: translateY(-2px); }
+        .voice-quote { font-size: 1rem; color: #334155; line-height: 1.7; position: relative; margin: 0 0 20px 0; font-style: italic; }
+        .voice-quote::before { content: "“"; font-size: 3rem; color: #cbd5e1; position: absolute; top: -25px; left: -10px; z-index: 0; font-family: serif; }
+        .voice-quote p { position: relative; z-index: 1; margin: 0; }
+        .voice-author-info { display: flex; align-items: center; gap: 15px; border-top: 1px dashed #e2e8f0; padding-top: 15px; }
+        .voice-author-info img { width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--white); box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #eaeaea; }
+        .author-meta-text h4 { margin: 0; font-size: 0.95rem; color: var(--dark); font-weight: 700; }
+        .author-meta-text span { font-size: 0.78rem; color: var(--blue); font-weight: 600; text-transform: uppercase; display: block; margin-top: 2px; }
 
         /* Directory Card */
         .directory-premium-card { background: linear-gradient(135deg, var(--blue), #0d47a1); color: white; padding: 25px; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3); }
@@ -128,6 +132,7 @@
         @media (max-width: 900px) {
             .main-layout-grid, .feature-hero { grid-template-columns: 1fr; flex-direction: column; }
             .feature-content { padding: 20px; }
+            .voices-pronounced-section { padding: 20px 15px; }
         }
     </style>
 </head>
@@ -145,39 +150,111 @@
         </div>
     </header>
 
-<div class="ticker-wrapper">
+    <div class="ticker-wrapper">
         <div class="ticker-label">LATEST UPDATES</div>
         <div class="ticker-text-move">
-            <span>🏛️ THE FINAL GAVEL: Kasangati Town Council 2021-2026 term officially concludes...</span>
-            <span>🗳️ NEW ERA: Residents of Kasangati share mixed reactions following MUSEVENI inauguration...</span>
-            <span>📊 BUDGET 2026/2027: Council approves strategic revenue and infrastructure plan for the new financial year...</span>
-            <span>🎵 HYMNAL KIVULU: Bethel Choir delivers soul-stirring worship at St. Stephen's Kasangati...</span>
-            <span>🦁 LIONS IMPACT: Double induction of Nangabo and Kasangati II Leo Clubs marks historic growth...</span>
+            <span>🏛️ INAUGURATION: Mayor Hajji Kazibwe Baker calls for political oneness across all 9 wards...</span>
+            <span>🗣️ COMMUNITY VOICES: Citizens and ward councilors air expectations for incoming regime...</span>
+            <span>💰 LOCAL WEALTH: PDM allocations scaled up to Shs 300 Million per Parish inside Kasangati...</span>
+            <span>🗳️ SPEAKER ELECTED: Hon. Kawule Windsor (NRM) wins closely contested house race 18-12...</span>
         </div>
     </div>
 
 <main>
     <div class="freshness-bar">
         <div class="pulse-dot"></div>
-        Live Updates: Thursday, May 14, 2026 | Kasangati, UG
+        Live Updates: Saturday, May 30, 2026 | Kasangati, UG
     </div>
 
-    <!-- FEATURED ARTICLE: THE FINAL COUNCIL MEETING -->
     <section class="feature-section">
-        <a href="final-council-meeting.html" class="feature-link" style="text-decoration:none;">
+        <a href="mayor-inauguration-2026.html" class="feature-link" style="text-decoration:none;">
             <div class="feature-hero">
                 <div class="feature-img">
-                    <img src="council-group-final.jpg" alt="Final Council Meeting Kasangati">
-                    <span class="card-badge" style="background:var(--dark); top:20px; left:20px;">GOVERNANCE</span>
+                    <img src="mayor-instruments-power.jpg" alt="Mayor Hajji Kazibwe Baker Inauguration" onerror="this.src='https://via.placeholder.com/600x400?text=Mayor+Kazibwe+Baker+Inauguration'">
+                    <span class="card-badge" style="background:var(--red); top:20px; left:20px;">LEADERSHIP TRANSITION</span>
                 </div>
                 <div class="feature-content">
-                    <small style="color:var(--red); font-weight:bold; text-transform:uppercase;">Feature Story</small>
-                    <h1>CLOSING THE CHAPTER: The Final Kasangati Town Council Session</h1>
-                    <p>In a marathon final session, the outgoing council finalized key resolutions and budget handovers for the 2026/2027 financial year, marking the end of a transformative term for the community.</p>
-                    <span class="read-more-btn">Read the Full Proceedings →</span>
+                    <small style="color:var(--blue); font-weight:bold; text-transform:uppercase;">Top Headline Story</small>
+                    <h1>ONENESS IN KASANGATI: Mayor Hajji Kazibwe Baker Sworn In, Appoints Cross-Party Executive</h1>
+                    <p>In a powerful inaugural address yesterday, the newly sworn-in independent Mayor rejected identity politics, promised close collaboration with administrative teams, and outlined key development agendas.</p>
+                    <span class="read-more-btn">Read the Inauguration Report →</span>
                 </div>
             </div>
         </a>
+    </section>
+
+    <section class="voices-pronounced-section">
+        <h2 class="section-title" style="margin-top:0;">Vox Pop: Voices from the Inauguration Arena ✍️</h2>
+        <p style="color: #666; font-size: 0.95rem; margin-bottom: 20px;">Enjuba ya Kasangati hit the grounds during the swearing-in layout to pull unfiltered statements, advice, and manifestos directly from stakeholders and leaders.</p>
+        
+        <div class="voices-grid">
+            
+            <div class="voice-premium-card">
+                <div class="voice-quote">
+                    <p>"I thank the people of Kasangati Town Council for trusting me with the leadership position. I promise that God before us, I’m going to lead Kasangati Town Council with integrity and kindness (obuntu bulamu). The Councilors and I are not here to consider differences in all aspects. We are here to get the manifesto from you. Guide us. Share with us what is needed. We are ready to serve. If you have any complaints, do not go to social media, come and we talk about it."</p>
+                </div>
+                <div class="voice-author-info">
+                    <img src="voice-mayor-baker.jpg" alt="Mayor Hajji Baker Kazibwe" onerror="this.src='https://via.placeholder.com/100?text=Mayor'">
+                    <div class="author-meta-text">
+                        <h4>Hajji Baker Kazibwe</h4>
+                        <span>Newly Sworn-In Mayor, Kasangati</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="voice-premium-card">
+                <div class="voice-quote">
+                    <p>"Come and we serve. We are not here to please people but to serve as the law guides. If you find something you do not know, ask. My office door is always open for guidance."</p>
+                </div>
+                <div class="voice-author-info">
+                    <img src="voice-town-clerk.jpg" alt="Town Clerk Jude B. Muganga" onerror="this.src='https://via.placeholder.com/100?text=Town+Clerk'">
+                    <div class="author-meta-text">
+                        <h4>Mr. Jude B. Muganga</h4>
+                        <span>Town Clerk, Technical Wing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="voice-premium-card">
+                <div class="voice-quote">
+                    <p>"As I promised the people of Kazinga – Buyinja, we have already started engaging garbage collecting companies. We are in an Ebola pandemic. Ebola comes due to dirtiness. We are going to come to our villages and sensitize people on how to sort and handle waste. I as well call upon all the community members to stay clean."</p>
+                </div>
+                <div class="voice-author-info">
+                    <img src="voice-batte-isaac.jpg" alt="Councilor Batte Isaac" onerror="this.src='https://via.placeholder.com/100?text=Councilor'">
+                    <div class="author-meta-text">
+                        <h4>Hon. Batte Isaac</h4>
+                        <span>Councilor, Buyinja – Kazinga Ward</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="voice-premium-card">
+                <div class="voice-quote">
+                    <p>"People of Wattuba, it is time to serve again. As we completed last term, we had a number of issues pending. I’m beginning from there. We need the Wattuba health centre issues sorted. And also look forward to having the very first USE Secondary School in Kasangati Town Council constructed from our place. This will solve an issue of many children who fail to continue with education after Primary seven."</p>
+                </div>
+                <div class="voice-author-info">
+                    <img src="michael-wattuba.jpg" alt="Councilor Nakibinge Mike" onerror="this.src='https://via.placeholder.com/100?text=Councilor'">
+                    <div class="author-meta-text">
+                        <h4>Hon. Nakibinge Mike Bute</h4>
+                        <span>Councilor, Wattuba Ward</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="voice-premium-card">
+                <div class="voice-quote">
+                    <p>"I’m happy to talk to Enjuba ya Kasangati on this historic day of inauguration of our leaders. We request the new team that, unlike the outgoing council members, they shouldn’t be bickering and fighting developmental motions. Let them agree and give good services to the community. I as well request the enforcement team not to be harsh when collecting taxes. Let this be a peaceful term."</p>
+                </div>
+                <div class="voice-author-info">
+                    <img src="voice-katerega.jpg" alt="Omulangira Katerega" onerror="this.src='https://via.placeholder.com/100?text=Citizen'">
+                    <div class="author-meta-text">
+                        <h4>Omulangira Katerega</h4>
+                        <span>Community Elder & Resident</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <div class="main-layout-grid">
@@ -186,7 +263,18 @@
             <h2 class="section-title">Latest Community News</h2>
             <div class="news-grid">
                 
-                <!-- STORY 1: Inauguration Reactions -->
+                <a href="final-council-meeting.html" class="card">
+                    <div class="card-img-wrap">
+                        <span class="card-badge" style="background:var(--dark)">GOVERNANCE</span>
+                        <img src="council-group-final.jpg" alt="Final Council Meeting Proceedings">
+                    </div>
+                    <div class="card-body">
+                        <h3>CLOSING THE CHAPTER: The Final Kasangati Town Council Session</h3>
+                        <p style="font-size: 0.9rem; color: #666;">In a marathon final session, the outgoing council finalized key resolutions and budget handovers for the 2026/2027 financial year.</p>
+                        <div class="card-footer"><span>May 14, 2026</span></div>
+                    </div>
+                </a>
+                
                 <a href="inauguration-reactions.html" class="card">
                     <div class="card-img-wrap">
                         <span class="card-badge" style="background:var(--red)">NEW ERA</span>
@@ -199,21 +287,19 @@
                     </div>
                 </a>
 
-                <!-- STORY 2: Hymnal Concert 2026 -->
                 <a href="hymnal-concert-2026.html" class="card">
                     <div class="card-img-wrap">
                         <span class="card-badge" style="background:var(--gold); color: black;">MUSIC & ENTERTAINMENT</span>
                         <img src="hymnal-choir-main.jpg" alt="Hymnal Kivulu 2026">
                     </div>
                     <div class="card-body">
-                        <h3>Hymnal Kivulu 2026: All That You missed is herep</h3>
+                        <h3>Hymnal Kivulu 2026: All That You missed is here</h3>
                         <p style="font-size: 0.9rem; color: #666;">A look back at the massive gathering that united choirs in a night of spiritual excellence.</p>
                         <div class="card-footer"><span>May 11, 2026</span></div>
                     </div>
                 </a>
 
-                <!-- STORY 3: Budget Analysis -->
-                <a href="#".html" class="card">
+                <a href="budget-breakdown.html" class="card">
                     <div class="card-img-wrap">
                         <span class="card-badge" style="background:var(--blue)">ECONOMY</span>
                         <img src="budget-document.jpg" alt="Budget 2026/2027">
@@ -222,21 +308,6 @@
                         <h3>Revenue & Growth: The 2026/2027 Budget Breakdown</h3>
                         <p style="font-size: 0.9rem; color: #666;">Where will the money go? We simplify the revenue and budget allocations for the new financial year.</p>
                         <div class="card-footer"><span>May 10, 2026</span></div>
-                    </div>
-                </a>
-            </div>
-
-            <h2 class="section-title">Educational Spotlight 🏫</h2>
-            <div class="news-grid">
-                <a href="atlas-high-excellence.html" class="card">
-                    <div class="card-img-wrap">
-                        <span class="card-badge" style="background:var(--purple)">NEW CURRICULUM</span>
-                        <img src="atlas-high-main.jpg" alt="Atlas High School">
-                    </div>
-                    <div class="card-body">
-                        <h3>Atlas High School: Leading in Computer Science and Skills</h3>
-                        <p style="font-size: 0.9rem; color: #666;">How the Gayaza institution is preparing students for the digital economy.</p>
-                        <div class="card-footer"><span>Mar 2026</span></div>
                     </div>
                 </a>
             </div>
@@ -254,18 +325,6 @@
                 <a href="local-directory.html" class="directory-main-btn">EXPLORE THE DIRECTORY</a>
             </div>
 
-            <div class="community-voices-box">
-                <h3 class="sidebar-title">Community Voices ✍️</h3>
-                <div class="voice-card">
-                    <img src="michael-wattuba.jpg" alt="Councilor Nakibinge Michael">
-                    <div class="voice-text">
-                        <p>"We have empowered health staff at Wattuba. We have built classrooms at Wattuba UMEA."</p>
-                        <strong>— Hon. Nakibinge Michael; Wattuba Ward</strong>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UPDATED ARCHIVE SECTION WITH MONTHLY TIME CAPSULE STRATEGY -->
             <div class="archive-box">
                 <h3 class="sidebar-title">Archives 📁</h3>
                 <p style="font-size: 1.4rem; color: #000080; margin-bottom: 10px;">Browse Past Monthly Editions:</p>
@@ -286,6 +345,21 @@
                 <a href="full-archive.html" class="view-all-link" style="font-size:0.8rem; font-weight:bold; color:var(--blue); text-decoration:none; display: block; margin-top: 10px;">View Full History →</a>
             </div>
         </aside>
+    </div>
+
+    <h2 class="section-title">Educational Spotlight 🏫</h2>
+    <div class="news-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+        <a href="atlas-high-excellence.html" class="card">
+            <div class="card-img-wrap">
+                <span class="card-badge" style="background:var(--purple)">NEW CURRICULUM</span>
+                <img src="atlas-high-main.jpg" alt="Atlas High School">
+            </div>
+            <div class="card-body">
+                <h3>Atlas High School: Leading in Computer Science and Skills</h3>
+                <p style="font-size: 0.9rem; color: #666;">How the Gayaza institution is preparing students for the digital economy.</p>
+                <div class="card-footer"><span>Mar 2026</span></div>
+            </div>
+        </a>
     </div>
 </main>
 
